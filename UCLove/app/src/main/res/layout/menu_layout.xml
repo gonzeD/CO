@@ -8,9 +8,18 @@
         android:background="#f1f2f7" >
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="test"
+        android:layout_height="50dp"
+        android:textSize="30sp"
+        android:text="test001"
         android:clickable="true"
         android:onClick="clickMenu"
-        android:tag="test"/>
+        android:tag="test1"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="30sp"
+        android:text="test002"
+        android:clickable="true"
+        android:onClick="clickMenu"
+        android:tag="test2"/>
 </LinearLayout>

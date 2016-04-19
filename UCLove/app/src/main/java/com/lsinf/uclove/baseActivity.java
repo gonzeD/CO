@@ -1,17 +1,12 @@
 package com.lsinf.uclove;
 
 import android.content.Intent;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.ListView;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
 
 public class baseActivity extends AppCompatActivity
 {
@@ -47,11 +42,14 @@ public class baseActivity extends AppCompatActivity
 
     public void clickMenu(View v)
     {
-       /* Intent i = new Intent(this); // Your list's Intent
-        i.setFlags(i.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY); // Adds the FLAG_ACTIVITY_NO_HISTORY flag
-        startActivity(i);
-*/
+        Intent i = null;
+        if(v.getTag().equals("test1"))
+            i = new Intent(this,HomeActivity.class ); // Your list's Intent
+        else
+            i = new Intent(this,FriendActivity.class ); // Your list's Intent
 
+        //i.setFlags(i.getFlags() | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // Adds the FLAG_ACTIVITY_NO_HISTORY flag
+        startActivity(i);
     }
 
     @Override
