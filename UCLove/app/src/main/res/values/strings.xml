@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">UCLove</string>
+
+    <string name="connexion_pseudo">pseudo</string>
+    <string name="connexion_password">mot de passe</string>
+    <string name="connexion_connect">se connecter</string>
+    <string name="connexion_register">s\'inscrire</string>
+
+    <string name="navigation_drawer_open">ouvrir</string>
+    <string name="navigation_drawer_close">fermer</string>
 </resources>
