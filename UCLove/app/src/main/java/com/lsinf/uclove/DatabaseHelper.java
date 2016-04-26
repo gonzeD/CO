@@ -97,7 +97,7 @@ public class DatabaseHelper
     }
 
 
-        public static boolean checkInternet(Context ctx)
+    public static boolean checkInternet(Context ctx)
     {
         ConnectivityManager connMgr = (ConnectivityManager)ctx.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
@@ -130,13 +130,13 @@ public class DatabaseHelper
         else return NO_INTERNET;
     }
 
-    public static int register(String p,String mdp,Context ctx)
+    public static int register(String p,String mdp,String sexe,Context ctx)
     {
         if(checkInternet(ctx))
         {
             try {
-                String[] act = new String[]{"action","pseudo","password"};
-                String[] arg = new String[]{"register",p,mdp};
+                String[] act = new String[]{"action","pseudo","password","sexe"};
+                String[] arg = new String[]{"register",p,mdp,sexe};
                 String t = downloadUrl("http://dracognards.be/uclove/main.php",act,arg);
                 Log.e("dodormeur",t);
                 JSONObject jObject = new JSONObject(t);
