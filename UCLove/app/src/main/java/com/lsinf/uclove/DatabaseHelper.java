@@ -35,6 +35,7 @@ import org.json.JSONObject;
 public class DatabaseHelper
 {
     private static String pseudo = null;
+    private static String password = null;
     public static final int NO_INTERNET = -1;
     public static final int INTERNET_ERROR = 0;
     public static final int FIELD_ERROR = -2;
@@ -97,7 +98,7 @@ public class DatabaseHelper
     }
 
 
-        public static boolean checkInternet(Context ctx)
+    public static boolean checkInternet(Context ctx)
     {
         ConnectivityManager connMgr = (ConnectivityManager)ctx.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
@@ -122,6 +123,7 @@ public class DatabaseHelper
                 else if(jObject.has("success"))
                 {
                     pseudo = p;
+                    password = mdp;
                     return OK;
                 }
                 return INTERNET_ERROR;
@@ -130,13 +132,13 @@ public class DatabaseHelper
         else return NO_INTERNET;
     }
 
-    public static int register(String p,String mdp,Context ctx)
+    public static int register(String p,String mdp,String sexe,Context ctx)
     {
         if(checkInternet(ctx))
         {
             try {
-                String[] act = new String[]{"action","pseudo","password"};
-                String[] arg = new String[]{"register",p,mdp};
+                String[] act = new String[]{"action","pseudo","password","sexe"};
+                String[] arg = new String[]{"register",p,mdp,sexe};
                 String t = downloadUrl("http://dracognards.be/uclove/main.php",act,arg);
                 Log.e("dodormeur",t);
                 JSONObject jObject = new JSONObject(t);
@@ -144,6 +146,43 @@ public class DatabaseHelper
                 else if(jObject.has("success"))
                 {
                     pseudo = p;
+                    return 1;
+                }
+                else return INTERNET_ERROR;
+            } catch (JSONException e) {return INTERNET_ERROR;}
+        }
+        else return NO_INTERNET;
+    }
+
+    public static int getMainUser(User user,Context ctx)
+    {
+        if(checkInternet(ctx))
+        {
+            try {
+                String[] act = new String[]{"action","pseudo","password"};
+                String[] arg = new String[]{"user",pseudo,password};
+                String t = downloadUrl("http://dracognards.be/uclove/main.php",act,arg);
+                Log.e("dodormeur",t);
+                JSONObject jObject = new JSONObject(t);
+                if(t == null || jObject == null)return INTERNET_ERROR;
+
+                else if(jObject.has("success"))
+                {
+                    if(jObject.has("ATTIRANCE"))user.setAttirance(jObject.getString("ATTIRANCE"));
+                    if(jObject.has("CHEVEUX"))user.setCheveux(jObject.getString("CHEVEUX"));
+                    if(jObject.has("YEUX"))user.setYeux(jObject.getString("YEUX"));
+                    if(jObject.has("DESCRIPTION"))user.setDescription(jObject.getString("DESCRIPTION"));
+                  //  user.setDisponibilite(jObject.getString("disponibilite"));
+                 //   user.setFiltres(jObject.getString("filtres"));
+                   // user.setHobby(jObject.getString("hobby"));
+                    user.setLangue(jObject.getString("LANGUE"));
+                    if(jObject.has("MAIL"))user.setMail(jObject.getString("MAIL"));
+                    if(jObject.has("DDNAIS"))user.setNaissance(jObject.getString("DDNAIS"));
+                    if(jObject.has("NOM"))user.setNom(jObject.getString("NOM"));
+                    if(jObject.has("PRENOM"))user.setPrenom(jObject.getString("PRENOM"));
+                    if(jObject.has("TEL"))user.setTel(jObject.getString("TEL"));
+                    if(jObject.has("VILLE"))user.setVille(jObject.getString("VILLE"));
+                    if(jObject.has("SEXE"))user.setSexe(jObject.getString("SEXE"));
                     return 1;
                 }
                 else return INTERNET_ERROR;

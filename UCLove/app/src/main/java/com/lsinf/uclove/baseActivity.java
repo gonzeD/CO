@@ -11,6 +11,8 @@ import android.view.View;
 public class baseActivity extends AppCompatActivity
 {
 
+    public static User mainUser = null;
+
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle toggle;
 
