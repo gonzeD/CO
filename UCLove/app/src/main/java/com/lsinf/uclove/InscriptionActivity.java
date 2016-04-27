@@ -29,6 +29,7 @@ public class InscriptionActivity extends AppCompatActivity
                 ((EditText)findViewById(R.id.pseudo)).getText().toString(),
                 ((EditText)findViewById(R.id.password)).getText().toString(),
                 ((EditText)findViewById(R.id.sexe)).getText().toString()
+
             );
     }
 

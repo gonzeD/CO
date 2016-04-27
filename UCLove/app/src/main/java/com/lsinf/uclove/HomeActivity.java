@@ -27,11 +27,10 @@ public class HomeActivity extends baseActivity
         //else ((TextView)findViewById(R.id.sexe)).setText("test");
         if(baseActivity.mainUser.getNom() != null)((TextView)findViewById(R.id.attirance)).setText(baseActivity.mainUser.getAttirance());
         //else ((TextView)findViewById(R.id.attirance)).setText("test");
-        /*String tab0[] = baseActivity.mainUser.getHobby();
-        String temp0 = "";
-        for(int i = 0;i<tab0.length;i++)
-        {temp0=temp0+tab0[i]+" ";}
-        if(baseActivity.mainUser.getNom() != null)((TextView)findViewById(R.id.hobby)).setText(temp0);*/
+        /*String tab[] = mainUser.getHobby();
+        String temp = "";
+        for(int i = 0; i<tab.length; i++) temp+=tab[i];
+        if(baseActivity.mainUser.getNom() != null)((TextView)findViewById(R.id.hobby)).setText(temp);*/
         //else ((TextView)findViewById(R.id.hobby)).setText("test");
         if(baseActivity.mainUser.getNom() != null)((TextView)findViewById(R.id.naissance)).setText(baseActivity.mainUser.getNaissance());
         //else ((TextView)findViewById(R.id.naissance)).setText("test");
