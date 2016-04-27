@@ -54,7 +54,7 @@ public class baseActivity extends AppCompatActivity
         if(v.getTag().equals("home"))
             i = new Intent(this,HomeActivity.class ); // Your list's Intent
         if(v.getTag().equals("requete"))
-            i = new Intent(this,RequetesActivity.class ); // Your list's Intent
+            i = new Intent(this,FriendActivity.class ); // Your list's Intent
 
         //i.setFlags(i.getFlags() | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // Adds the FLAG_ACTIVITY_NO_HISTORY flag
         startActivity(i);
