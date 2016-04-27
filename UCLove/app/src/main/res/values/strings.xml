@@ -10,6 +10,7 @@
     <string name="register_field_error">l\'un des champs renseigné n\'est pas correct...</string>
     <string name="register_pseudo_taken">Ce pseudo est déjà pris</string>
     <string name="register_done">L\'inscription a réussie ! Vous pouvez dès a présent vous connecter</string>
+    <string name="register_age">age</string>
 
     <string name="error_no_internet">erreur réseau. Vérifiez que votre connexion wifi est bien activée</string>
     <string name="error_internet">erreur serveur. vérifiez que vos données sont correctes</string>
