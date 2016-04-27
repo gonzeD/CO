@@ -18,49 +18,13 @@ public class HomeActivity extends baseActivity
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.home_activity);
-<<<<<<< HEAD
-        if (baseActivity.mainUser.getNom() != null)
-            ((TextView) findViewById(R.id.prenom)).setText(baseActivity.mainUser.getPrenom());
-=======
+
         if(baseActivity.mainUser.getPrenom() != null)((TextView)findViewById(R.id.prenom)).setText(baseActivity.mainUser.getPrenom());
->>>>>>> 037f1ab57064d1f7278e2b91789154f0f9efe63a
         //else ((TextView)findViewById(R.id.prenom)).setText("test");
         if (baseActivity.mainUser.getNom() != null)
             ((TextView) findViewById(R.id.nom)).setText(baseActivity.mainUser.getNom());
         //else ((TextView)findViewById(R.id.nom)).setText("test");
-<<<<<<< HEAD
-        if (baseActivity.mainUser.getNom() != null)
-            ((TextView) findViewById(R.id.sexe)).setText(baseActivity.mainUser.getSexe());
-        //else ((TextView)findViewById(R.id.sexe)).setText("test");
-        if (baseActivity.mainUser.getNom() != null)
-            ((TextView) findViewById(R.id.attirance)).setText(baseActivity.mainUser.getAttirance());
-        //else ((TextView)findViewById(R.id.attirance)).setText("test");
-        /*String tab[] = mainUser.getHobby();
-        String temp = "";
-        for(int i = 0; i<tab.length; i++) temp+=tab[i];
-        if(baseActivity.mainUser.getNom() != null)((TextView)findViewById(R.id.hobby)).setText(temp);*/
-        //else ((TextView)findViewById(R.id.hobby)).setText("test");
-        if (baseActivity.mainUser.getNom() != null)
-            ((TextView) findViewById(R.id.naissance)).setText(baseActivity.mainUser.getNaissance());
-        //else ((TextView)findViewById(R.id.naissance)).setText("test");
-        if (baseActivity.mainUser.getNom() != null)
-            ((TextView) findViewById(R.id.ville)).setText(baseActivity.mainUser.getVille());
-        //else ((TextView)findViewById(R.id.ville)).setText("test");
-        if (baseActivity.mainUser.getNom() != null)
-            ((TextView) findViewById(R.id.mail)).setText(baseActivity.mainUser.getMail());
-        //else ((TextView)findViewById(R.id.mail)).setText("test");
-        if (baseActivity.mainUser.getNom() != null)
-            ((TextView) findViewById(R.id.yeux)).setText(baseActivity.mainUser.getYeux());
-        //else ((TextView)findViewById(R.id.yeux)).setText("test");
-        if (baseActivity.mainUser.getNom() != null)
-            ((TextView) findViewById(R.id.cheveux)).setText(baseActivity.mainUser.getCheveux());
-        //else ((TextView)findViewById(R.id.cheveux)).setText("test");
-        if (baseActivity.mainUser.getNom() != null)
-            ((TextView) findViewById(R.id.tel)).setText(baseActivity.mainUser.getTel());
-        //else ((TextView)findViewById(R.id.tel)).setText("test");
-        if (baseActivity.mainUser.getNom() != null)
-            ((TextView) findViewById(R.id.description)).setText(baseActivity.mainUser.getDescription());
-=======
+
         if(baseActivity.mainUser.getSexe() != null)((TextView)findViewById(R.id.sexe)).setText(baseActivity.mainUser.getSexe());
         //else ((TextView)findViewById(R.id.sexe)).setText("test");
         if(baseActivity.mainUser.getAttirance() != null)((TextView)findViewById(R.id.attirance)).setText(baseActivity.mainUser.getAttirance());
@@ -84,7 +48,6 @@ public class HomeActivity extends baseActivity
         if(baseActivity.mainUser.getTel() != null)((TextView)findViewById(R.id.tel)).setText(baseActivity.mainUser.getTel());
         //else ((TextView)findViewById(R.id.tel)).setText("test");
         if(baseActivity.mainUser.getDescription() != null)((TextView)findViewById(R.id.description)).setText(baseActivity.mainUser.getDescription());
->>>>>>> 037f1ab57064d1f7278e2b91789154f0f9efe63a
         //else ((TextView)findViewById(R.id.description)).setText("test");
         String tab1[] = baseActivity.mainUser.getDisponibilite();
         String temp1 = " ";
