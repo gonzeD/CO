@@ -45,12 +45,17 @@ public class baseActivity extends AppCompatActivity
     public void clickMenu(View v)
     {
         Intent i = null;
-        if(v.getTag().equals("test1"))
+        if(v.getTag().equals("disconnect"))
+        {
+            baseActivity.mainUser = null;
+            i = new Intent(this, ConnexionActivity.class);
+        }
+        else if(v.getTag().equals("test1"))
             i = new Intent(this,HomeActivity.class ); // Your list's Intent
         else
-            i = new Intent(this,FriendActivity.class ); // Your list's Intent
+            i = new Intent(this,friendsActivity.class ); // Your list's Intent
 
-        //i.setFlags(i.getFlags() | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // Adds the FLAG_ACTIVITY_NO_HISTORY flag
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(i);
     }
 

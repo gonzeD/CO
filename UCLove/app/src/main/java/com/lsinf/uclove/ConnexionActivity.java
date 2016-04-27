@@ -16,6 +16,7 @@ public class ConnexionActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        baseActivity.mainUser = null;
         setContentView(R.layout.connexion_activity);
     }
 
@@ -37,7 +38,9 @@ public class ConnexionActivity extends AppCompatActivity
     {
         if(downloadDone != 1)return;
         Intent i = new Intent(ConnexionActivity.this,HomeActivity.class);
+        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
         startActivity(i);
+        this.finish();
     }
 
 

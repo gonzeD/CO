@@ -22,4 +22,12 @@
         android:clickable="true"
         android:onClick="clickMenu"
         android:tag="test2"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="30sp"
+        android:text="@string/menu_disconnect"
+        android:clickable="true"
+        android:onClick="clickMenu"
+        android:tag="disconnect"/>
 </LinearLayout>
