@@ -20,6 +20,10 @@
 
     <string name="menu_profil">Profil</string>
     <string name="menu_parametre">Paramètres</string>
+    <string name="menu_ami">Amis</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_requete">Requêtes</string>
+
 
     <string name="error_no_internet">erreur réseau. Vérifiez que votre connexion wifi est bien activée</string>
     <string name="error_internet">erreur serveur. vérifiez que vos données sont correctes</string>

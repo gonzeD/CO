@@ -13,7 +13,7 @@
         android:text="@string/menu_profil"
         android:clickable="true"
         android:onClick="clickMenu"
-        android:tag="test1"/>
+        android:tag="profil"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -21,5 +21,29 @@
         android:text="@string/menu_parametre"
         android:clickable="true"
         android:onClick="clickMenu"
-        android:tag="test2"/>
+        android:tag="param"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="30sp"
+        android:text="@string/menu_ami"
+        android:clickable="true"
+        android:onClick="clickMenu"
+        android:tag="ami"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="30sp"
+        android:text="@string/menu_home"
+        android:clickable="true"
+        android:onClick="clickMenu"
+        android:tag="home"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="30sp"
+        android:text="@string/menu_requete"
+        android:clickable="true"
+        android:onClick="clickMenu"
+        android:tag="requete"/>
 </LinearLayout>
