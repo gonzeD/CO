@@ -13,38 +13,47 @@ public class HomeActivity extends baseActivity
 {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mainUser = new User();
         setContentView(R.layout.home_activity);
-        if(baseActivity.mainUser.getNom() != null)((TextView)findViewById(R.id.prenom)).setText(baseActivity.mainUser.getPrenom());
+        if (baseActivity.mainUser.getNom() != null)
+            ((TextView) findViewById(R.id.prenom)).setText(baseActivity.mainUser.getPrenom());
         //else ((TextView)findViewById(R.id.prenom)).setText("test");
-        if(baseActivity.mainUser.getNom() != null)((TextView)findViewById(R.id.nom)).setText(baseActivity.mainUser.getNom());
+        if (baseActivity.mainUser.getNom() != null)
+            ((TextView) findViewById(R.id.nom)).setText(baseActivity.mainUser.getNom());
         //else ((TextView)findViewById(R.id.nom)).setText("test");
-        if(baseActivity.mainUser.getNom() != null)((TextView)findViewById(R.id.sexe)).setText(baseActivity.mainUser.getSexe());
+        if (baseActivity.mainUser.getNom() != null)
+            ((TextView) findViewById(R.id.sexe)).setText(baseActivity.mainUser.getSexe());
         //else ((TextView)findViewById(R.id.sexe)).setText("test");
-        if(baseActivity.mainUser.getNom() != null)((TextView)findViewById(R.id.attirance)).setText(baseActivity.mainUser.getAttirance());
+        if (baseActivity.mainUser.getNom() != null)
+            ((TextView) findViewById(R.id.attirance)).setText(baseActivity.mainUser.getAttirance());
         //else ((TextView)findViewById(R.id.attirance)).setText("test");
         /*String tab[] = mainUser.getHobby();
         String temp = "";
         for(int i = 0; i<tab.length; i++) temp+=tab[i];
         if(baseActivity.mainUser.getNom() != null)((TextView)findViewById(R.id.hobby)).setText(temp);*/
         //else ((TextView)findViewById(R.id.hobby)).setText("test");
-        if(baseActivity.mainUser.getNom() != null)((TextView)findViewById(R.id.naissance)).setText(baseActivity.mainUser.getNaissance());
+        if (baseActivity.mainUser.getNom() != null)
+            ((TextView) findViewById(R.id.naissance)).setText(baseActivity.mainUser.getNaissance());
         //else ((TextView)findViewById(R.id.naissance)).setText("test");
-        if(baseActivity.mainUser.getNom() != null)((TextView)findViewById(R.id.ville)).setText(baseActivity.mainUser.getVille());
+        if (baseActivity.mainUser.getNom() != null)
+            ((TextView) findViewById(R.id.ville)).setText(baseActivity.mainUser.getVille());
         //else ((TextView)findViewById(R.id.ville)).setText("test");
-        if(baseActivity.mainUser.getNom() != null)((TextView)findViewById(R.id.mail)).setText(baseActivity.mainUser.getMail());
+        if (baseActivity.mainUser.getNom() != null)
+            ((TextView) findViewById(R.id.mail)).setText(baseActivity.mainUser.getMail());
         //else ((TextView)findViewById(R.id.mail)).setText("test");
-        if(baseActivity.mainUser.getNom() != null)((TextView)findViewById(R.id.yeux)).setText(baseActivity.mainUser.getYeux());
+        if (baseActivity.mainUser.getNom() != null)
+            ((TextView) findViewById(R.id.yeux)).setText(baseActivity.mainUser.getYeux());
         //else ((TextView)findViewById(R.id.yeux)).setText("test");
-        if(baseActivity.mainUser.getNom() != null)((TextView)findViewById(R.id.cheveux)).setText(baseActivity.mainUser.getCheveux());
+        if (baseActivity.mainUser.getNom() != null)
+            ((TextView) findViewById(R.id.cheveux)).setText(baseActivity.mainUser.getCheveux());
         //else ((TextView)findViewById(R.id.cheveux)).setText("test");
-        if(baseActivity.mainUser.getNom() != null)((TextView)findViewById(R.id.tel)).setText(baseActivity.mainUser.getTel());
+        if (baseActivity.mainUser.getNom() != null)
+            ((TextView) findViewById(R.id.tel)).setText(baseActivity.mainUser.getTel());
         //else ((TextView)findViewById(R.id.tel)).setText("test");
-        if(baseActivity.mainUser.getNom() != null)((TextView)findViewById(R.id.description)).setText(baseActivity.mainUser.getDescription());
+        if (baseActivity.mainUser.getNom() != null)
+            ((TextView) findViewById(R.id.description)).setText(baseActivity.mainUser.getDescription());
         //else ((TextView)findViewById(R.id.description)).setText("test");
         /*String tab1[] = baseActivity.mainUser.getDisponibilite();
         String temp1 = "";
@@ -54,26 +63,6 @@ public class HomeActivity extends baseActivity
         //else ((TextView)findViewById(R.id.dispo)).setText("test");
 
 
-
-
-
-
-
         createNavigationMenu();
-    }
-
-
-    private class DownloadWebpageTask extends AsyncTask<String, Void, String> {
-        @Override
-        protected String doInBackground(String... urls)
-        {
-            mainUser = new User();
-            return ""+DatabaseHelper.getMainUser(baseActivity.mainUser,HomeActivity.this);
-        }
-        @Override
-        protected void onPostExecute(String result)
-        {
-
-        }
     }
 }
