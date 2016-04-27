@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textSize="30sp"
-        android:text="test001"
+        android:text="@string/menu_profil"
         android:clickable="true"
         android:onClick="clickMenu"
         android:tag="test1"/>
@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textSize="30sp"
-        android:text="test002"
+        android:text="@string/menu_parametre"
         android:clickable="true"
         android:onClick="clickMenu"
         android:tag="test2"/>

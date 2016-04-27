@@ -18,6 +18,8 @@
     <string name="register_phone">Numéro de téléphone</string>
     <string name="register_city">Ville</string>
 
+    <string name="menu_profil">Profil</string>
+    <string name="menu_parametre">Paramètres</string>
 
     <string name="error_no_internet">erreur réseau. Vérifiez que votre connexion wifi est bien activée</string>
     <string name="error_internet">erreur serveur. vérifiez que vos données sont correctes</string>
