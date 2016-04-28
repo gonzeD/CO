@@ -3,11 +3,9 @@ package com.lsinf.uclove;
 import android.os.Bundle;
 
 /**
- * Created by damien on 20/04/16.
+ * Created by damien on 28/04/16.
  */
-public class FriendActivity extends baseActivity
-{
-
+public class profilFriendActivity extends baseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {

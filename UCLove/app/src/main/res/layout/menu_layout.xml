@@ -10,40 +10,24 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textSize="30sp"
-        android:text="@string/menu_profil"
+        android:text="test001"
         android:clickable="true"
         android:onClick="clickMenu"
-        android:tag="profil"/>
+        android:tag="test1"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textSize="30sp"
-        android:text="@string/menu_parametre"
+        android:text="test002"
         android:clickable="true"
         android:onClick="clickMenu"
-        android:tag="param"/>
+        android:tag="test2"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textSize="30sp"
-        android:text="@string/menu_ami"
+        android:text="@string/menu_disconnect"
         android:clickable="true"
         android:onClick="clickMenu"
-        android:tag="ami"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:textSize="30sp"
-        android:text="@string/menu_home"
-        android:clickable="true"
-        android:onClick="clickMenu"
-        android:tag="home"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:textSize="30sp"
-        android:text="@string/menu_requete"
-        android:clickable="true"
-        android:onClick="clickMenu"
-        android:tag="requete"/>
+        android:tag="disconnect"/>
 </LinearLayout>

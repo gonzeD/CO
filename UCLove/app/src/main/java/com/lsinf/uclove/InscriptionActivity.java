@@ -37,7 +37,7 @@ public class InscriptionActivity extends AppCompatActivity
         @Override
         protected String doInBackground(String... urls)
         {
-            return ""+DatabaseHelper.register(urls[0],urls[1],urls[2],InscriptionActivity.this);
+            return ""+DatabaseHelper.register(InscriptionActivity.this,urls);
         }
         @Override
         protected void onPostExecute(String result)

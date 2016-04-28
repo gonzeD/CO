@@ -11,17 +11,18 @@ import android.widget.Toast;
 
 public class ConnexionActivity extends AppCompatActivity
 {
-
+    private int downloadDone = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        baseActivity.mainUser = null;
         setContentView(R.layout.connexion_activity);
     }
 
     public void connect(View v)
     {
-        new DownloadWebpageTask().execute(
+        new DownloadCheckConnection().execute(
                 ((EditText)findViewById(R.id.pseudo)).getText().toString(),
                 ((EditText)findViewById(R.id.password)).getText().toString());
     }
@@ -32,7 +33,18 @@ public class ConnexionActivity extends AppCompatActivity
         startActivity(i);
     }
 
-    private class DownloadWebpageTask extends AsyncTask<String, Void, String> {
+
+    public void finallyConnect()
+    {
+        if(downloadDone != 1)return;
+        Intent i = new Intent(ConnexionActivity.this,HomeActivity.class);
+        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
+        startActivity(i);
+        this.finish();
+    }
+
+
+    private class DownloadCheckConnection extends AsyncTask<String, Void, String> {
         @Override
         protected String doInBackground(String... urls)
         {
@@ -43,14 +55,30 @@ public class ConnexionActivity extends AppCompatActivity
         {
             if(result.equals(""+DatabaseHelper.OK))
             {
-                Intent i = new Intent(ConnexionActivity.this,HomeActivity.class);
-                startActivity(i);
+                new DownloadMainUser().execute();
+
             }
             else if(result.equals(""+DatabaseHelper.NO_INTERNET))
                 Toast.makeText(ConnexionActivity.this, R.string.error_no_internet, Toast.LENGTH_LONG).show();
 
             else if(result.equals(""+DatabaseHelper.INTERNET_ERROR))
                 Toast.makeText(ConnexionActivity.this, R.string.error_internet, Toast.LENGTH_LONG).show();
+        }
+    }
+
+
+    private class DownloadMainUser extends AsyncTask<String, Void, String> {
+        @Override
+        protected String doInBackground(String... urls)
+        {
+            baseActivity.mainUser = new User();
+            return ""+DatabaseHelper.getMainUser(baseActivity.mainUser,ConnexionActivity.this);
+        }
+        @Override
+        protected void onPostExecute(String result)
+        {
+            downloadDone++;
+            finallyConnect();
         }
     }
 

@@ -67,7 +67,7 @@ public class DatabaseHelper
 
             String temp = "";
             if(name != null && args != null)
-            for(int i = 0;i<name.length;i++)
+            for(int i = 0;i<args.length;i++)
             {
                 if(i!= 0)temp+="&";
                 temp+=name[i]+"="+args[i];
@@ -132,20 +132,22 @@ public class DatabaseHelper
         else return NO_INTERNET;
     }
 
-    public static int register(String p,String mdp,String sexe,Context ctx)
+    public static int register(Context ctx,String... urls)
     {
         if(checkInternet(ctx))
         {
             try {
-                String[] act = new String[]{"action","pseudo","password","sexe"};
-                String[] arg = new String[]{"register",p,mdp,sexe};
+                String[] act = new String[]{"action","pseudo","password","nom","prenom","sexe","ddnais","mail","tel","ville"};
+                String[] arg = new String[urls.length+1];
+                arg[0] = "register";
+                for( int i = 0; i < urls.length && i+1<act.length; i++)arg[i+1]=urls[i];
                 String t = downloadUrl("http://dracognards.be/uclove/main.php",act,arg);
                 Log.e("dodormeur",t);
                 JSONObject jObject = new JSONObject(t);
                 if(t == null || jObject == null)return INTERNET_ERROR;
                 else if(jObject.has("success"))
                 {
-                    pseudo = p;
+                    pseudo = urls[0];
                     return 1;
                 }
                 else return INTERNET_ERROR;
