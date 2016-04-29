@@ -11,7 +11,7 @@ public class preferenceActivity extends baseActivity {
     {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.friend_activity);
+        setContentView(R.layout.setting_activity);
         createNavigationMenu();
     }
 }

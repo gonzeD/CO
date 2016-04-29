@@ -11,7 +11,7 @@ public class profilActivity extends baseActivity {
     {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.friend_activity);
+        setContentView(R.layout.profile_activity);
         createNavigationMenu();
     }
 }
