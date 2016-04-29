@@ -55,4 +55,13 @@
         android:clickable="true"
         android:onClick="clickMenu"
         android:tag="disconnect"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="30sp"
+        android:text="reset database"
+        android:clickable="true"
+        android:onClick="clickMenu"
+        android:tag="reset"/>
 </LinearLayout>

@@ -11,7 +11,7 @@ public class requestActivity extends baseActivity {
     {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.friend_activity);
+        setContentView(R.layout.home_activity);
         createNavigationMenu();
     }
 }

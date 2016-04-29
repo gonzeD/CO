@@ -19,7 +19,7 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/ic_drawer"
+            android:src="@drawable/placeholder"
             android:id="@+id/photo1" />
 
         </LinearLayout>
@@ -143,7 +143,7 @@
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/ic_drawer"
+                android:src="@drawable/placeholder"
                 android:id="@+id/photo2" />
 
         </LinearLayout>

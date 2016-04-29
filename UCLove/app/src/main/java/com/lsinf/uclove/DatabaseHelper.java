@@ -36,6 +36,7 @@ public class DatabaseHelper
 {
     private static String pseudo = null;
     private static String password = null;
+    public static int idMain = 0;
     public static final int NO_INTERNET = -1;
     public static final int INTERNET_ERROR = 0;
     public static final int FIELD_ERROR = -2;
@@ -124,10 +125,12 @@ public class DatabaseHelper
                 {
                     pseudo = p;
                     password = mdp;
+                    idMain = jObject.getInt("ID");
+                    Log.e("dodormeur","id : "+idMain);
                     return OK;
                 }
                 return INTERNET_ERROR;
-            } catch (JSONException e) {return INTERNET_ERROR;}
+            } catch (Exception e) {return INTERNET_ERROR;}
         }
         else return NO_INTERNET;
     }
@@ -151,18 +154,18 @@ public class DatabaseHelper
                     return 1;
                 }
                 else return INTERNET_ERROR;
-            } catch (JSONException e) {return INTERNET_ERROR;}
+            } catch (Exception e) {return INTERNET_ERROR;}
         }
         else return NO_INTERNET;
     }
 
-    public static int getMainUser(User user,Context ctx)
+    public static int getUser(User user,int id,Context ctx)
     {
         if(checkInternet(ctx))
         {
             try {
-                String[] act = new String[]{"action","pseudo","password"};
-                String[] arg = new String[]{"user",pseudo,password};
+                String[] act = new String[]{"action","id"};
+                String[] arg = new String[]{"user",""+id};
                 String t = downloadUrl("http://dracognards.be/uclove/main.php",act,arg);
                 Log.e("dodormeur",t);
                 JSONObject jObject = new JSONObject(t);
@@ -170,6 +173,7 @@ public class DatabaseHelper
 
                 else if(jObject.has("success"))
                 {
+                    if(jObject.has("ID"))user.setID(Integer.parseInt(jObject.getString("ID")));
                     if(jObject.has("ATTIRANCE"))user.setAttirance(jObject.getString("ATTIRANCE"));
                     if(jObject.has("CHEVEUX"))user.setCheveux(jObject.getString("CHEVEUX"));
                     if(jObject.has("YEUX"))user.setYeux(jObject.getString("YEUX"));
@@ -188,8 +192,118 @@ public class DatabaseHelper
                     return 1;
                 }
                 else return INTERNET_ERROR;
-            } catch (JSONException e) {return INTERNET_ERROR;}
+            } catch (Exception e) {return INTERNET_ERROR;}
         }
         else return NO_INTERNET;
+    }
+
+
+    public static int getMessages(Context ctx)
+    {
+        if (checkInternet(ctx)) {
+        try {
+            String[] act = new String[]{"action", "id"};
+            String[] arg = new String[]{"messageId", idMain + ""};
+            String t = downloadUrl("http://dracognards.be/uclove/main.php", act, arg);
+            Log.e("dodormeur", t);
+            JSONObject jObject = new JSONObject(t);
+            if (t == null || jObject == null) return INTERNET_ERROR;
+
+            else if (jObject.has("success")) {
+                baseActivity.messages.clear();
+                int nb = 0;
+                if(jObject.has("number"))nb = jObject.getInt("number");
+                for(int i = 0;i<nb;i++)
+                {
+                    if(jObject.has("rec"+i) && jObject.has("ex"+i)&& jObject.has("text"+i)&& jObject.has("date"+i))
+                    {
+                        Log.e("dodormeur","adding");
+                        baseActivity.messages.add(jObject.getInt("rec"+i),jObject.getInt("ex"+i),jObject.getString("date"+i),jObject.getString("text"+i));
+                    }
+                }
+                return 1;
+            } else return INTERNET_ERROR;
+        } catch (Exception e) {
+            return INTERNET_ERROR;
+        }
+    } else return NO_INTERNET;
+    }
+
+    public static int getRelation(Context ctx) {
+        if (checkInternet(ctx)) {
+            try {
+                String[] act = new String[]{"action", "id"};
+                String[] arg = new String[]{"relation", idMain + ""};
+                String t = downloadUrl("http://dracognards.be/uclove/main.php", act, arg);
+                Log.e("dodormeur", t);
+                JSONObject jObject = new JSONObject(t);
+                if (t == null || jObject == null) return INTERNET_ERROR;
+
+                else if (jObject.has("success")) {
+                    int nb = 0;
+                    if(jObject.has("number"))nb = jObject.getInt("number");
+                    for(int i = 0;i<nb;i++)
+                    {
+                        if(jObject.has("id"+i) && jObject.has("state"+i))
+                        {
+                            Log.e("dodormeur","adding");
+                            baseActivity.relation.add(jObject.getInt("id"+i),jObject.getInt("state"+i));
+                        }
+                    }
+                    return 1;
+                } else return INTERNET_ERROR;
+            } catch (Exception e) {
+                return INTERNET_ERROR;
+            }
+        } else return NO_INTERNET;
+    }
+
+
+
+    public static int getAllUsers(Context ctx)
+    {
+        return NO_INTERNET;
+    }
+
+
+    public static int getFiltres(Context ctx)
+    {
+        return NO_INTERNET;
+    }
+
+    public static int sendMessage(String text,int id,Context ctx)
+    {
+    if (checkInternet(ctx)) {
+        try {
+            String[] act = new String[]{"action", "id","getter","text"};
+            String[] arg = new String[]{"sendMessage", idMain + "",""+id,text};
+            String t = downloadUrl("http://dracognards.be/uclove/main.php", act, arg);
+            Log.e("dodormeur", t);
+            JSONObject jObject = new JSONObject(t);
+            if (t == null || jObject == null) return INTERNET_ERROR;
+            else if (jObject.has("success")) {
+                return 1;
+            } else return INTERNET_ERROR;
+        } catch (Exception e) {
+            return INTERNET_ERROR;
+        }
+    } else return NO_INTERNET;
+    }
+
+    public static int reset(Context ctx)
+    {
+
+        Log.e("dodormeur","reseting");
+        if(checkInternet(ctx))
+        {
+            try {
+                Log.e("dodormeur","reseting2");
+
+                String t = downloadUrl("http://dracognards.be/uclove/init.php?mdp=wouldyourmombeproud",null,null);
+                Log.e("dodormeur","doneReseting");
+                Log.e("dodormeur",t);
+            } catch (Exception e) {return INTERNET_ERROR;}
+        }
+        return NO_INTERNET;
     }
 }

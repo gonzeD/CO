@@ -9,9 +9,12 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class ConnexionActivity extends AppCompatActivity
 {
     private int downloadDone = 0;
+    private int downloadToDo = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -56,6 +59,10 @@ public class ConnexionActivity extends AppCompatActivity
             if(result.equals(""+DatabaseHelper.OK))
             {
                 new DownloadMainUser().execute();
+               // new DownloadAllUsers().execute();
+                new DownloadFiltres().execute();
+                new DownloadMessage().execute();
+                new DownloadRelations().execute();
 
             }
             else if(result.equals(""+DatabaseHelper.NO_INTERNET))
@@ -72,14 +79,74 @@ public class ConnexionActivity extends AppCompatActivity
         protected String doInBackground(String... urls)
         {
             baseActivity.mainUser = new User();
-            return ""+DatabaseHelper.getMainUser(baseActivity.mainUser,ConnexionActivity.this);
+            return ""+DatabaseHelper.getUser(baseActivity.mainUser,DatabaseHelper.idMain,ConnexionActivity.this);
         }
         @Override
         protected void onPostExecute(String result)
         {
-            downloadDone++;
-            finallyConnect();
+            if(result.equals("1")){downloadDone++;
+            finallyConnect();}
         }
     }
 
+
+    private class DownloadMessage extends AsyncTask<String, Void, String> {
+        @Override
+        protected String doInBackground(String... urls)
+        {
+            baseActivity.messages = new Messages();
+            return ""+DatabaseHelper.getMessages(ConnexionActivity.this);
+        }
+        @Override
+        protected void onPostExecute(String result)
+        {
+            if(result.equals("1")){downloadDone++;
+            finallyConnect();}
+        }
+    }
+
+    private class DownloadAllUsers extends AsyncTask<String, Void, String> {
+        @Override
+        protected String doInBackground(String... urls)
+        {
+            baseActivity.allUsers = new ArrayList<User>();
+            return ""+DatabaseHelper.getAllUsers(ConnexionActivity.this);
+        }
+        @Override
+        protected void onPostExecute(String result)
+        {
+            if(result.equals("1")){downloadDone++;
+                finallyConnect();}
+        }
+    }
+
+    private class DownloadRelations extends AsyncTask<String, Void, String> {
+        @Override
+        protected String doInBackground(String... urls)
+        {
+            baseActivity.relation = new Relation();
+            return ""+DatabaseHelper.getRelation(ConnexionActivity.this);
+        }
+        @Override
+        protected void onPostExecute(String result)
+        {
+            if(result.equals("1")){downloadDone++;
+                finallyConnect();}
+        }
+    }
+
+    private class DownloadFiltres extends AsyncTask<String, Void, String> {
+        @Override
+        protected String doInBackground(String... urls)
+        {
+            baseActivity.filtres = new ArrayList<Filtre>();
+            return ""+DatabaseHelper.getFiltres(ConnexionActivity.this);
+        }
+        @Override
+        protected void onPostExecute(String result)
+        {
+            if(result.equals("1")){downloadDone++;
+                finallyConnect();}
+        }
+    }
 }

@@ -272,7 +272,6 @@
             android:src="@drawable/ic_drawer"
             android:id="@+id/picturePreview"/>
     <LinearLayout
-        android:id="@+id/drawer_layout"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
