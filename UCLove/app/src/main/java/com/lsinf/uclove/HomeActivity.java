@@ -3,6 +3,7 @@ package com.lsinf.uclove;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -60,4 +61,11 @@ public class HomeActivity extends baseActivity
 
         createNavigationMenu();
     }
+
+
+   public void change(View v) {
+
+       Intent i = new Intent(this, modification_informationActivity.class);
+        startActivity(i);
+   }
 }

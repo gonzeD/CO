@@ -50,7 +50,7 @@ public class baseActivity extends AppCompatActivity
             baseActivity.mainUser = null;
             i = new Intent(this, ConnexionActivity.class);
         }
-        else if(v.getTag().equals("test1"))
+        else if(v.getTag().equals("profil"))
             i = new Intent(this,HomeActivity.class ); // Your list's Intent
         else
             i = new Intent(this,friendsActivity.class ); // Your list's Intent
