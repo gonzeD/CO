@@ -179,7 +179,7 @@ public class DatabaseHelper
                    // user.setHobby(jObject.getString("hobby"));
                     user.setLangue(jObject.getString("LANGUE"));
                     if(jObject.has("MAIL"))user.setMail(jObject.getString("MAIL"));
-                    if(jObject.has("DDNAIS"))user.setNaissance(jObject.getString("DDNAIS"));
+                    if(jObject.has("DDNAISS"))user.setNaissance(jObject.getString("DDNAISS"));
                     if(jObject.has("NOM"))user.setNom(jObject.getString("NOM"));
                     if(jObject.has("PRENOM"))user.setPrenom(jObject.getString("PRENOM"));
                     if(jObject.has("TEL"))user.setTel(jObject.getString("TEL"));
