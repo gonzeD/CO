@@ -2,6 +2,7 @@ package com.lsinf.uclove;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -13,11 +14,14 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import javax.swing.text.html.ImageView;
+
 /**
  * Created by damien on 13/04/16.
  */
 public class InscriptionActivity extends AppCompatActivity
 {
+    Bitmap picture = null;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -64,7 +68,11 @@ public class InscriptionActivity extends AppCompatActivity
 
     public void onActivityResult (int requestCode, int resultCode, Intent data)
     {
-
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            picture = (Bitmap) extras.get("data");
+            ((ImageView)findViewById(R.id.picturePreview)).setImageBitmap(imageBitmap);
+        }
     }
     public void choosePicture(View v)
     {
