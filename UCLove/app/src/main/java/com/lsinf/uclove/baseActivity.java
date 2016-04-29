@@ -52,6 +52,12 @@ public class baseActivity extends AppCompatActivity
         }
         else if(v.getTag().equals("profil"))
             i = new Intent(this,HomeActivity.class ); // Your list's Intent
+        else if(v.getTag().equals("preferences"))
+            i = new Intent(this,preferenceActivity.class ); // Your list's Intent
+        else if(v.getTag().equals("amis"))
+            i = new Intent(this,friendsActivity.class ); // Your list's Intent
+        else if(v.getTag().equals("requetes"))
+            i = new Intent(this,requestActivity.class ); // Your list's Intent
         else
             i = new Intent(this,friendsActivity.class ); // Your list's Intent
 

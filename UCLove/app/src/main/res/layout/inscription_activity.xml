@@ -49,13 +49,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/register_surname"
+            android:text="@string/register_firstname"
             android:layout_gravity="center_horizontal"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/surname"
+            android:id="@+id/firstname"
             android:layout_gravity="center_horizontal"/>
 
 
@@ -68,14 +68,15 @@
 
 
         <RadioGroup
+            android:id="@+id/button_sexe"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <RadioButton android:id="@+id/sexe"
+            <RadioButton android:id="@+id/sexe_m"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/register_m"/>
-            <RadioButton android:id="@+id/sexe"
+            <RadioButton android:id="@+id/sexe_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/register_f"/>
@@ -89,14 +90,15 @@
 
 
         <RadioGroup
+            android:id="@+id/button_attirance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <RadioButton android:id="@+id/attirance"
+            <RadioButton android:id="@+id/attirance_m"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/register_m"/>
-            <RadioButton android:id="@+id/attirance"
+            <RadioButton android:id="@+id/attirance_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/register_f"/>
@@ -161,25 +163,64 @@
 
 
         <RadioGroup
+            android:id="@+id/button_eyes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <RadioButton android:id="@+id/eyes"
+            <RadioButton android:id="@+id/eyes_blue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/register_blue"/>
-            <RadioButton android:id="@+id/eyes"
+            <RadioButton android:id="@+id/eyes_green"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/register_green"/>
-            <RadioButton android:id="@+id/eyes"
+            <RadioButton android:id="@+id/eyes_brown"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/register_brown"/>
-            <RadioButton android:id="@+id/eyes"
+            <RadioButton android:id="@+id/eyes_grey"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/register_grey"/>
+            <RadioButton android:id="@+id/other1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_other"/>
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_color_hair"
+            android:layout_gravity="center_horizontal"/>
+
+        <RadioGroup
+            android:id="@+id/button_color_hair"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton android:id="@+id/hair_blond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_blond"/>
+            <RadioButton android:id="@+id/hair_red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_red"/>
+            <RadioButton android:id="@+id/hair_brown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_brown"/>
+            <RadioButton android:id="@+id/hair_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_dark"/>
+            <RadioButton android:id="@+id/other3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_other"/>
         </RadioGroup>
 
         <TextView
@@ -205,6 +246,47 @@
             android:layout_height="wrap_content"
             android:id="@+id/description"
             android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_langue"
+            android:layout_gravity="center_horizontal"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/langue"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_picture"
+            android:layout_gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:id="@+id/drawer_layout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_take_picture"
+            android:id="@+id/take_picture"
+            android:onClick="takePicture"
+            android:layout_gravity="center_horizontal" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_choose_picture"
+            android:id="@+id/choose_picture"
+            android:onClick="choosePicture"
+            android:layout_gravity="center_horizontal" />
+
+
+    </LinearLayout>
 
         <Button
             android:layout_width="wrap_content"

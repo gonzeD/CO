@@ -11,7 +11,7 @@
     <string name="register_pseudo_taken">Ce pseudo est déjà pris</string>
     <string name="register_done">L\'inscription a réussie ! Vous pouvez dès a présent vous connecter</string>
     <string name="register_name">Nom</string>
-    <string name="register_surname">Prénom</string>
+    <string name="register_firstname">Prénom</string>
     <string name="register_sexe">Sexe</string>
     <string name="register_naissance">Date de naissance</string>
     <string name="register_mail">Adresse e-mail</string>
@@ -27,12 +27,27 @@
     <string name="register_attirance">Attirance</string>
     <string name="register_m">M</string>
     <string name="register_f">F</string>
-
+    <string name="register_langue">Langue</string>
+    <string name="register_color_hair">Couleur des cheveux</string>
+    <string name="register_blond">blond</string>
+    <string name="register_red">roux</string>
+    <string name="register_dark">noir</string>
+    <string name="register_other">autre</string>
+    <string name="register_picture">Photo de profil</string>
+    <string name="register_take_picture">Prendre une photo</string>
+    <string name="register_choose_picture">Choisir une photo</string>
     <string name="menu_profil">Profil</string>
     <string name="menu_preferences">Preferences</string>
     <string name="menu_rencontres">Rencontres</string>
     <string name="menu_amis">Amis</string>
     <string name="menu_requetes">Requetes</string>
+
+    <string name="home_infos_perso">Informations Personnelles</string>
+
+    <string name="menu_parametre">Paramètres</string>
+    <string name="menu_ami">Amis</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_requete">Requêtes</string>
 
 
     <string name="error_no_internet">erreur réseau. Vérifiez que votre connexion wifi est bien activée</string>
@@ -41,4 +56,12 @@
     <string name="navigation_drawer_open">ouvrir</string>
     <string name="navigation_drawer_close">fermer</string>
     <string name="menu_disconnect">Se déconnecter</string>
+
+    <string name="friend_activity">This is the friend activity</string>
+    <string name="setting_langue">Langues</string>
+    <string name="setting_apply">Appliquer</string>
+    <string name="setting_french">Français</string>
+    <string name="setting_english">Anglais</string>
+    <string name="setting_german">Allemand</string>
+    <string name="setting_dutch">Néerlandais</string>
 </resources>

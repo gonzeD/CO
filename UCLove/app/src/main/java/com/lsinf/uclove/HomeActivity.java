@@ -56,7 +56,7 @@ public class HomeActivity extends baseActivity
         for(int i = 0;i<tab1.length;i++)
         {temp1=temp1+tab1[i]+" ";}
         ((TextView)findViewById(R.id.dispo)).setText(temp1);}
-        else ((TextView)findViewById(R.id.dispo)).setText("Mes Disponibilitées");
+        else ((TextView)findViewById(R.id.dispo)).setText("Mes Disponibilités");
 
 
         createNavigationMenu();

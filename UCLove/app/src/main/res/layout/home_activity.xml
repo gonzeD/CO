@@ -24,105 +24,118 @@
 
         </LinearLayout>
         <TextView
-            android:layout_width="149dp"
-            android:layout_height="39dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:textStyle="bold"
             android:textSize="17sp"
-            android:text="Infos Personnel"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="20dp"
+            android:text="@string/home_infos_perso"
+            android:layout_gravity="center_horizontal"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/prenom"
-            android:text="Mon Prénom"
-            android:onClick="change"
-            android:layout_marginTop="20dp"/>
+            android:text="@string/error_no_internet"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/nom"
-            android:text="Mon Nom"
-            android:layout_marginTop="20dp"/>
+            android:text="@string/error_no_internet"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/sexe"
-            android:text="Mon Sexe "
-            android:layout_marginTop="20dp"/>
+            android:text="@string/error_no_internet"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/attirance"
-            android:text="Mon attirance "
-            android:layout_marginTop="20dp"/>
+            android:text="@string/error_no_internet"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/hobby"
-            android:text="Mes Hobbys "
-            android:layout_marginTop="20dp"/>
+            android:text="@string/error_no_internet"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/naissance"
-            android:text="Ma Date de Naissance "
-            android:layout_marginTop="20dp"/>
+            android:text="@string/error_no_internet"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/ville"
-            android:text="Ma Ville "
-            android:layout_marginTop="20dp"/>
+            android:text="@string/error_no_internet"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/mail"
-            android:text="Mon adresse Mail "
-            android:layout_marginTop="20dp"/>
+            android:text="@string/error_no_internet"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"/>
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/yeux"
-            android:text="Ma couleur des yeux "
-            android:layout_marginTop="20dp"/>
+            android:text="@string/error_no_internet"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/cheveux"
-            android:text="Ma couleur de cheveux "
-            android:layout_marginTop="20dp"/>
+            android:text="@string/error_no_internet"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tel"
-            android:text="Mon numéro de téléphone "
-            android:layout_marginTop="20dp"/>
+            android:text="@string/error_no_internet"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/description"
-            android:text="Ma description"
-            android:layout_marginTop="20dp"/>
+            android:text="@string/error_no_internet"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/dispo"
-            android:text="Mes disponibilités"
-            android:layout_marginTop="20dp"/>
+            android:text="@string/error_no_internet"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"/>
 
         <LinearLayout
             android:layout_width="match_parent"
