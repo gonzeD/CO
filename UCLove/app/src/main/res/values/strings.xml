@@ -11,7 +11,7 @@
     <string name="register_pseudo_taken">Ce pseudo est déjà pris</string>
     <string name="register_done">L\'inscription a réussie ! Vous pouvez dès a présent vous connecter</string>
     <string name="register_name">Nom</string>
-    <string name="register_surname">Prénom</string>
+    <string name="register_firstname">Prénom</string>
     <string name="register_sexe">Sexe</string>
     <string name="register_naissance">Date de naissance</string>
     <string name="register_mail">Adresse e-mail</string>
@@ -28,11 +28,6 @@
     <string name="register_m">M</string>
     <string name="register_f">F</string>
     <string name="register_langue">Langue</string>
-    <string name="register_hair">Cheveux</string>
-    <string name="register_shave">rasés</string>
-    <string name="register_short">courts</string>
-    <string name="register_half_long">mi-longs</string>
-    <string name="register_long">longs</string>
     <string name="register_color_hair">Couleur des cheveux</string>
     <string name="register_blond">blond</string>
     <string name="register_red">roux</string>
