@@ -38,6 +38,9 @@
     <string name="register_red">roux</string>
     <string name="register_dark">noir</string>
     <string name="register_other">autre</string>
+    <string name="register_picture">Photo de profil</string>
+    <string name="register_take_picture">Prendre une photo</string>
+    <string name="register_choose_picture">Choisir une photo</string>
     <string name="menu_profil">Profil</string>
     <string name="menu_preferences">Preferences</string>
     <string name="menu_rencontres">Rencontres</string>
