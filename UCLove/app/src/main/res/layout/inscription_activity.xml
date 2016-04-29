@@ -49,13 +49,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/register_surname"
+            android:text="@string/register_firstname"
             android:layout_gravity="center_horizontal"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/surname"
+            android:id="@+id/firstname"
             android:layout_gravity="center_horizontal"/>
 
 
@@ -189,38 +189,6 @@
                 android:text="@string/register_other"/>
         </RadioGroup>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/register_hair"
-            android:layout_gravity="center_horizontal"/>
-
-        <RadioGroup
-            android:id="@+id/button_hair"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <RadioButton android:id="@+id/hair_shave"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/register_shave"/>
-            <RadioButton android:id="@+id/hair_short"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/register_short"/>
-            <RadioButton android:id="@+id/hair_half_long"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/register_half_long"/>
-            <RadioButton android:id="@+id/hair_long"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/register_long"/>
-            <RadioButton android:id="@+id/other2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/register_other"/>
-        </RadioGroup>
 
         <TextView
             android:layout_width="wrap_content"
@@ -307,14 +275,14 @@
             android:layout_height="wrap_content"
             android:text="@string/register_take_picture"
             android:id="@+id/take_picture"
-            android:onClick="take_picture"
+            android:onClick="takePicture"
             android:layout_gravity="center_horizontal" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/register_choose_picture"
             android:id="@+id/choose_picture"
-            android:onClick="choose_picture"
+            android:onClick="choosePicture"
             android:layout_gravity="center_horizontal" />
 
 

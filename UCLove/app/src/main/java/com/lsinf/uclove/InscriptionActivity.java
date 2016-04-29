@@ -4,9 +4,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 /**
@@ -25,12 +29,46 @@ public class InscriptionActivity extends AppCompatActivity
 
     public void register(View v)
     {
-        new DownloadWebpageTask().execute(
-                ((EditText)findViewById(R.id.pseudo)).getText().toString(),
-                ((EditText)findViewById(R.id.password)).getText().toString(),
-                ((EditText)findViewById(R.id.sexe)).getText().toString()
 
-            );
+     //  "pseudo","password","nom","prenom","sexe","ddnais","mail","tel","ville"};
+        DatePicker datePicker = (DatePicker) findViewById(R.id.naissance);
+        int day = datePicker.getDayOfMonth();
+        int month = datePicker.getMonth() + 1;
+        int year = datePicker.getYear();
+        String date = day+"/"+month+"/"+year;
+
+        new DownloadWebpageTask().execute(
+                ((EditText) findViewById(R.id.pseudo)).getText().toString(),
+                ((EditText) findViewById(R.id.password)).getText().toString(),
+                ((EditText) findViewById(R.id.name)).getText().toString(),
+                ((EditText) findViewById(R.id.firstname)).getText().toString(),
+                ((EditText) findViewById(R.id.sexe)).getText().toString(),
+                date,
+                ((EditText) findViewById(R.id.mail)).getText().toString(),
+                ((EditText) findViewById(R.id.phone)).getText().toString(),
+                ((EditText) findViewById(R.id.city)).getText().toString(),
+                ((EditText) findViewById(R.id.hobby)).getText().toString(),
+                ((EditText) findViewById(R.id.description)).getText().toString(),
+                ((EditText) findViewById(R.id.langue)).getText().toString(),
+                ((RadioButton) (findViewById(((RadioGroup) findViewById(R.id.button_sexe)).getCheckedRadioButtonId()))).getText().toString()
+        );
+    }
+
+    public void takePicture(View v)
+    {
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(takePictureIntent, 1);
+        }
+    }
+
+    public void onActivityResult (int requestCode, int resultCode, Intent data)
+    {
+
+    }
+    public void choosePicture(View v)
+    {
+
     }
 
     private class DownloadWebpageTask extends AsyncTask<String, Void, String> {
