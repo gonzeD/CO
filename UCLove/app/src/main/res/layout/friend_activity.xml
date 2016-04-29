@@ -11,7 +11,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="This is the Friend activity"
+            android:text="@string/friend_activity"
             android:id="@+id/textView" />
     </FrameLayout>
     <include layout="@layout/menu_layout"/>

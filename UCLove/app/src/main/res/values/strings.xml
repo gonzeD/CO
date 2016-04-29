@@ -34,7 +34,7 @@
     <string name="menu_amis">Amis</string>
     <string name="menu_requetes">Requetes</string>
 
-    <string name="menu_profil">Profil</string>
+
     <string name="menu_parametre">Paramètres</string>
     <string name="menu_ami">Amis</string>
     <string name="menu_home">Home</string>
@@ -47,4 +47,12 @@
     <string name="navigation_drawer_open">ouvrir</string>
     <string name="navigation_drawer_close">fermer</string>
     <string name="menu_disconnect">Se déconnecter</string>
+
+    <string name="friend_activity">This is the friend activity</string>
+    <string name="setting_langue">Langues</string>
+    <string name="setting_apply">Appliquer</string>
+    <string name="setting_french">Français</string>
+    <string name="setting_english">Anglais</string>
+    <string name="setting_german">Allemand</string>
+    <string name="setting_dutch">Néerlandais</string>
 </resources>
