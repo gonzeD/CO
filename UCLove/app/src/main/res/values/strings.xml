@@ -47,6 +47,7 @@
     <string name="menu_amis">Amis</string>
     <string name="menu_requetes">Requetes</string>
 
+    <string name="home_infos_perso">Informations Personnelles</string>
 
     <string name="error_no_internet">erreur réseau. Vérifiez que votre connexion wifi est bien activée</string>
     <string name="error_internet">erreur serveur. vérifiez que vos données sont correctes</string>
