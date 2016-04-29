@@ -10,18 +10,43 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textSize="30sp"
-        android:text="test001"
+        android:text="@string/menu_profil"
         android:clickable="true"
         android:onClick="clickMenu"
-        android:tag="test1"/>
+        android:tag="profil"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textSize="30sp"
-        android:text="test002"
+        android:text="@string/menu_preferences"
         android:clickable="true"
         android:onClick="clickMenu"
-        android:tag="test2"/>
+        android:tag="preferences"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="30sp"
+        android:text="@string/menu_rencontres"
+        android:clickable="true"
+        android:onClick="clickMenu"
+        android:tag="rencontres"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="30sp"
+        android:text="@string/menu_amis"
+        android:clickable="true"
+        android:onClick="clickMenu"
+        android:tag="amis"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="30sp"
+        android:text="@string/menu_requetes"
+        android:clickable="true"
+        android:onClick="clickMenu"
+        android:tag="requetes"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"

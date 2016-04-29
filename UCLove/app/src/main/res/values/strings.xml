@@ -18,11 +18,17 @@
     <string name="register_phone">Numéro de téléphone</string>
     <string name="register_city">Ville</string>
 
+    <string name="menu_profil">Profil</string>
+    <string name="menu_preferences">Preferences</string>
+    <string name="menu_rencontres">Rencontres</string>
+    <string name="menu_amis">Amis</string>
+    <string name="menu_requetes">Requetes</string>
+
 
     <string name="error_no_internet">erreur réseau. Vérifiez que votre connexion wifi est bien activée</string>
     <string name="error_internet">erreur serveur. vérifiez que vos données sont correctes</string>
 
     <string name="navigation_drawer_open">ouvrir</string>
     <string name="navigation_drawer_close">fermer</string>
-    <string name="menu_disconnect">se déconnecter</string>
+    <string name="menu_disconnect">Se déconnecter</string>
 </resources>
