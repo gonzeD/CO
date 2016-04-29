@@ -129,9 +129,9 @@ public class messageActivity extends baseActivity {
         @Override
         protected void onPostExecute(String result)
         {
-            alreadyLoading = 0;
             if(result.equals("1"))
             {
+                ((EditText)findViewById(R.id.text_to_send)).setText("");
                 displayMessages();
             }
         }
