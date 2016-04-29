@@ -17,6 +17,16 @@
     <string name="register_mail">Adresse e-mail</string>
     <string name="register_phone">Numéro de téléphone</string>
     <string name="register_city">Ville</string>
+    <string name="register_eyes">Couleur des yeux</string>
+    <string name="register_blue">Bleus</string>
+    <string name="register_green">Verts</string>
+    <string name="register_brown">Bruns</string>
+    <string name="register_grey">Gris</string>
+    <string name="register_hobby">Centres d\'intérêts</string>
+    <string name="register_description">Description</string>
+    <string name="register_attirance">Attirance</string>
+    <string name="register_m">M</string>
+    <string name="register_f">F</string>
 
     <string name="menu_profil">Profil</string>
     <string name="menu_preferences">Preferences</string>
