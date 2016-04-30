@@ -34,7 +34,7 @@ import org.json.JSONObject;
  */
 public class DatabaseHelper
 {
-    private static String pseudo = null;
+    public static String pseudo = null;
     private static String password = null;
     public static int idMain = 0;
     public static final int NO_INTERNET = -1;

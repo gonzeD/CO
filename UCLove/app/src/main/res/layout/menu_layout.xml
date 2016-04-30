@@ -6,62 +6,114 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="#f1f2f7" >
-    <TextView
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:textSize="30sp"
-        android:text="@string/menu_profil"
-        android:clickable="true"
-        android:onClick="clickMenu"
-        android:tag="profil"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:textSize="30sp"
-        android:text="@string/menu_preferences"
-        android:clickable="true"
-        android:onClick="clickMenu"
-        android:tag="preferences"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:textSize="30sp"
-        android:text="@string/menu_rencontres"
-        android:clickable="true"
-        android:onClick="clickMenu"
-        android:tag="rencontres"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:textSize="30sp"
-        android:text="@string/menu_amis"
-        android:clickable="true"
-        android:onClick="clickMenu"
-        android:tag="amis"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:textSize="30sp"
-        android:text="@string/menu_requetes"
-        android:clickable="true"
-        android:onClick="clickMenu"
-        android:tag="requetes"/>
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/lighter_gray">
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src = "@drawable/placeholder"
+            android:id = "@+id/avatar"
+            android:layout_margin="16dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/menu_pseudo"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#000"
+            android:layout_marginLeft="16dp"
+            android:id="@+id/menu_pseudo"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/menu_name"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif"
+            android:textColor="#000"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="16dp"
+            android:id="@+id/menu_name"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/darker_gray"/>
+    <LinearLayout style="@style/menuLayout"
+        android:tag="profil">
+        <ImageView
+            style="@style/iconItem"
+            android:src="@drawable/placeholder"/>
+        <TextView
+            style="@style/menuItem"
+            android:text="@string/menu_profil"/>
+    </LinearLayout>
+
+    <LinearLayout style="@style/menuLayout"
+        android:tag="preferences">
+        <ImageView
+            style="@style/iconItem"
+            android:src="@drawable/preferences"/>
+        <TextView
+            style="@style/menuItem"
+            android:text="@string/menu_preferences"/>
+    </LinearLayout>
+
+
+    <LinearLayout style="@style/menuLayout"
+        android:tag="rencontres">
+        <ImageView
+            style="@style/iconItem"
+            android:src="@drawable/meet"/>
+        <TextView
+            style="@style/menuItem"
+            android:text="@string/menu_rencontres"/>
+    </LinearLayout>
+
+    <LinearLayout style="@style/menuLayout"
+        android:tag="amis">
+        <ImageView
+            style="@style/iconItem"
+            android:src="@drawable/friend"/>
+        <TextView
+            style="@style/menuItem"
+            android:text="@string/menu_amis"/>
+    </LinearLayout>
+
+    <LinearLayout style="@style/menuLayout"
+        android:tag="requetes">
+        <ImageView
+            style="@style/iconItem"
+            android:src="@drawable/request"/>
+        <TextView
+            style="@style/menuItem"
+            android:text="@string/menu_requetes"/>
+    </LinearLayout>
+    <LinearLayout style="@style/menuLayout"
+        android:tag="disconnect">
+        <ImageView
+            style="@style/iconItem"
+            android:src="@drawable/log_out"/>
+        <TextView
+            style="@style/menuItem"
+            android:text="@string/menu_disconnect"/>
+    </LinearLayout>
+
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:textSize="30sp"
-        android:text="@string/menu_disconnect"
-        android:clickable="true"
-        android:onClick="clickMenu"
-        android:tag="disconnect"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:textSize="30sp"
+        style="@style/menuItem"
         android:text="reset database"
-        android:clickable="true"
-        android:onClick="clickMenu"
         android:tag="reset"/>
+    </LinearLayout>
+</ScrollView>
 </LinearLayout>

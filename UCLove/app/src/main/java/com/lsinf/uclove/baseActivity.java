@@ -1,14 +1,21 @@
 package com.lsinf.uclove;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import java.io.InputStream;
 import java.util.ArrayList;
 
 public class baseActivity extends AppCompatActivity
@@ -32,7 +39,9 @@ public class baseActivity extends AppCompatActivity
 
     public void createNavigationMenu()
     {
-
+        ((TextView)findViewById(R.id.menu_name)).setText(mainUser.getPrenom()+" "+mainUser.getNom());
+        ((TextView)findViewById(R.id.menu_pseudo)).setText(DatabaseHelper.pseudo);
+        new loadImageWeb((ImageView) findViewById(R.id.avatar)).execute(mainUser.getPhoto());
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
@@ -100,5 +109,8 @@ public class baseActivity extends AppCompatActivity
 
         }
     }
+
+
+
 
 }

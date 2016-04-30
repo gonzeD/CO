@@ -38,7 +38,7 @@ public class User
     public void setPrenom(String prenom) {this.prenom = prenom;}
     public String getSexe() {return sexe;}
     public void setSexe(String sexe) {this.sexe = sexe;}
-    public String[] getPhoto() {if(photo == null)return new String[]{"null"};return photo;}
+    public String[] getPhoto() {if(photo == null)return new String[]{"placeholder.png"};return photo;}
     public void setPhoto(String[] photo) {this.photo = photo;}
     public String getAttirance() {return attirance;}
     public void setAttirance(String attirance) {this.attirance = attirance;}
