@@ -14,25 +14,28 @@ public class Relation
     public static final int DEMAND = 2;
     public static final int FRIEND = 3;
     public static final int FAVORITE = 4;
-    private ArrayList<Integer> idFriend = new ArrayList<Integer>();
+    private ArrayList<Integer> idAsker = new ArrayList<Integer>();
+    private ArrayList<Integer> idReceiver = new ArrayList<Integer>();
     private ArrayList<Integer> state  = new ArrayList<Integer>();
 
-    public int getSize(){if(idFriend == null)return 0;return idFriend.size();}
-    public void add(int id,int state)
+    public int getSize(){if(state == null)return 0;return state.size();}
+    public void add(int asker,int receiver,int state)
     {
-        idFriend.add(id);
+        idAsker.add(asker);
+        idReceiver.add(receiver);
         this.state.add(state);
     }
-    public int getRelationById(int id)
+   /* public int getRelationById(int a)
     {
         for(int i = 0;i<idFriend.size();i++)
             if(idFriend.get(i) == id)
                 return state.get(i);
         return -1;
-    }
+    }*/
     public int getRelation(int i){return state.get(i);}
-    public int getId(int i){return idFriend.get(i);}
-
+    public int getAsker(int i){return idAsker.get(i);}
+    public int getReceiver(int i){return idReceiver.get(i);}
+/*
     public ArrayList<Integer> getState() {
         return state;
     }
@@ -47,5 +50,5 @@ public class Relation
 
     public void setIdFriend(ArrayList<Integer> idFriend) {
         this.idFriend = idFriend;
-    }
+    }*/
 }

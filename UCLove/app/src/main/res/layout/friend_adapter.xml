@@ -1,25 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:onClick="click">
-<ImageView
-    android:layout_width="100dp"
-    android:layout_height="100dp"
-    android:id="@+id/picture"
-    android:src="@drawable/placeholder"/>
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:onClick="click"
+    android:layout_height="wrap_content">
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="100dp">
-        <TextView
+        android:orientation="horizontal" android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:padding="10dp">
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/picture"
+        android:src="@drawable/placeholder"/>
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/name"/>
+            android:layout_weight="1"
+            android:layout_height="60dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/name"/>
+        </LinearLayout>
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:text="@string/friend_rdv"
+            android:onClick="rdv"
+            android:id="@+id/rdv"/>
     </LinearLayout>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/friend_rdv"
-        android:onClick="rdv"
-        android:id="@+id/rdv"/>
+    <View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@color/darker_gray"/>
 </LinearLayout>

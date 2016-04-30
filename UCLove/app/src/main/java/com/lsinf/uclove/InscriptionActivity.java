@@ -29,6 +29,7 @@ import java.io.InputStream;
 public class InscriptionActivity extends AppCompatActivity
 {
     Bitmap picture = null;
+    InputStream imageStream = null;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -40,30 +41,10 @@ public class InscriptionActivity extends AppCompatActivity
 
     public void register(View v)
     {
-    Log.e("LSINF","test");
+        Log.e("LSINF", "starting register");
+        new uploadPicture().execute();
      //  "pseudo","password","nom","prenom","sexe","ddnais","mail","tel","ville"};
-        DatePicker datePicker = (DatePicker) findViewById(R.id.naissance);
-        int day = datePicker.getDayOfMonth();
-        int month = datePicker.getMonth() + 1;
-        int year = datePicker.getYear();
-        String date = day+"/"+month+"/"+year;
-        String sexe =
-                ((RadioButton) (findViewById(((RadioGroup) findViewById(R.id.button_sexe)).getCheckedRadioButtonId()))).getText().toString();
 
-
-        new DownloadWebpageTask().execute(
-                ((EditText) findViewById(R.id.pseudo)).getText().toString(),
-                ((EditText) findViewById(R.id.password)).getText().toString(),
-                ((EditText) findViewById(R.id.name)).getText().toString(),
-                ((EditText) findViewById(R.id.firstname)).getText().toString(),
-                sexe,
-                date,
-                ((EditText) findViewById(R.id.mail)).getText().toString(),
-                ((EditText) findViewById(R.id.phone)).getText().toString(),
-                ((EditText) findViewById(R.id.city)).getText().toString()/*,
-                ((EditText) findViewById(R.id.hobby)).getText().toString(),
-                ((EditText) findViewById(R.id.description)).getText().toString(),
-                ((EditText) findViewById(R.id.langue)).getText().toString()*/);
     }
 
     public void takePicture(View v)
@@ -88,7 +69,6 @@ public class InscriptionActivity extends AppCompatActivity
         {
             Log.e("LSINF","result");
             Uri selectedImage = data.getData();
-            InputStream imageStream = null;
             Log.e("LSINF","result");
             try {
                 imageStream = getContentResolver().openInputStream(selectedImage);
@@ -110,6 +90,50 @@ public class InscriptionActivity extends AppCompatActivity
         startActivityForResult(Intent.createChooser(intent, "Select Picture"), 2);
     }
 
+
+    private class uploadPicture extends AsyncTask<String, Void, String> {
+        @Override
+        protected String doInBackground(String... urls)
+        {
+            return ""+DatabaseHelper.uploadPicture(InscriptionActivity.this,picture);
+        }
+        @Override
+        protected void onPostExecute(String result)
+        {
+            if(result.startsWith("profile"))
+            {
+                DatePicker datePicker = (DatePicker) findViewById(R.id.naissance);
+                int day = datePicker.getDayOfMonth();
+                int month = datePicker.getMonth() + 1;
+                int year = datePicker.getYear();
+                String date = day+"/"+month+"/"+year;
+                String sexe =
+                        ((RadioButton) (findViewById(((RadioGroup) findViewById(R.id.button_sexe)).getCheckedRadioButtonId()))).getText().toString();
+
+
+                new DownloadWebpageTask().execute(
+                        ((EditText) findViewById(R.id.pseudo)).getText().toString(),
+                        ((EditText) findViewById(R.id.password)).getText().toString(),
+                        ((EditText) findViewById(R.id.name)).getText().toString(),
+                        ((EditText) findViewById(R.id.firstname)).getText().toString(),
+                        sexe,
+                        date,
+                        ((EditText) findViewById(R.id.mail)).getText().toString(),
+                        ((EditText) findViewById(R.id.phone)).getText().toString(),
+                        ((EditText) findViewById(R.id.city)).getText().toString(),
+                        result
+
+                        /*,
+                ((EditText) findViewById(R.id.hobby)).getText().toString(),
+                ((EditText) findViewById(R.id.description)).getText().toString(),
+                ((EditText) findViewById(R.id.langue)).getText().toString()*/);
+            }
+            else {
+                Toast.makeText(InscriptionActivity.this, R.string.error_internet, Toast.LENGTH_LONG).show();
+            }
+        }
+    }
+
     private class DownloadWebpageTask extends AsyncTask<String, Void, String> {
         @Override
         protected String doInBackground(String... urls)
@@ -127,17 +151,7 @@ public class InscriptionActivity extends AppCompatActivity
                 setResult(Activity.RESULT_OK,returnIntent);
                 finish();
             }
-            else if(result.equals(""+DatabaseHelper.PSEUDO_TAKEN))
-            {
-                Toast.makeText(InscriptionActivity.this, R.string.register_pseudo_taken, Toast.LENGTH_LONG).show();
-            }
-            else if(result.equals(""+DatabaseHelper.FIELD_ERROR))
-            {
-                Toast.makeText(InscriptionActivity.this, R.string.register_field_error, Toast.LENGTH_LONG).show();
-            }
-            else {
-                Toast.makeText(InscriptionActivity.this, R.string.error_internet, Toast.LENGTH_LONG).show();
-            }
+
         }
     }
 }

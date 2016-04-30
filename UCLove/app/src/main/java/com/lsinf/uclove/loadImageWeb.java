@@ -22,7 +22,8 @@ import java.io.InputStream;
             String urldisplay = urls[0];
             Bitmap mIcon11 = null;
             try {
-                InputStream in = new java.net.URL("http://dracognards.be/uclove/pictures/"+urldisplay).openStream();
+                Log.e("dodormeur","fetching image "+"http://dracognards.be/uclove/pictures/"+urldisplay+".png");
+                InputStream in = new java.net.URL("http://dracognards.be/uclove/pictures/"+urldisplay+".png").openStream();
                 mIcon11 = BitmapFactory.decodeStream(in);
             } catch (Exception e) {
                 Log.e("Error", e.getMessage());

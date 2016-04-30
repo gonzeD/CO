@@ -32,14 +32,14 @@ public class friendsActivity extends baseActivity {
         createNavigationMenu();
         for(int i = 0;i<baseActivity.relation.getSize();i++)
         {
-            if(baseActivity.relation.getRelation(i) >= relation.FRIEND)
+            if(baseActivity.relation.getRelation(i) >= relation.FRIEND && baseActivity.relation.getAsker(i) == DatabaseHelper.idMain)
             {
                 listUsers.add(new User());
-                new DownloadUsers().execute(""+i,""+baseActivity.relation.getId(i));
+                new DownloadUsers().execute(""+(listUsers.size()-1),""+baseActivity.relation.getReceiver(i));
             }
         }
 
-        if(baseActivity.relation.getSize() == 0)
+        if(listUsers.size() == 0)
         {
             findViewById(R.id.alone).setVisibility(View.VISIBLE);
             findViewById(R.id.loading).setVisibility(View.GONE);
@@ -48,7 +48,7 @@ public class friendsActivity extends baseActivity {
 
     public void display()
     {
-        if(done == baseActivity.relation.getSize())
+        if(done == listUsers.size())
         {
 
             for(int i= 0;i<listUsers.size();i++)

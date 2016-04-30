@@ -15,6 +15,8 @@ public class ConnexionActivity extends AppCompatActivity
 {
     private int downloadDone = 0;
     private int downloadToDo = 1;
+
+    private int tryingToConnect = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -25,9 +27,12 @@ public class ConnexionActivity extends AppCompatActivity
 
     public void connect(View v)
     {
-        new DownloadCheckConnection().execute(
-                ((EditText)findViewById(R.id.pseudo)).getText().toString(),
-                ((EditText)findViewById(R.id.password)).getText().toString());
+        if(tryingToConnect == 0) {
+            tryingToConnect = 1;
+            new DownloadCheckConnection().execute(
+                    ((EditText) findViewById(R.id.pseudo)).getText().toString(),
+                    ((EditText) findViewById(R.id.password)).getText().toString());
+        }
     }
 
     public void register(View v)
@@ -40,6 +45,7 @@ public class ConnexionActivity extends AppCompatActivity
     public void finallyConnect()
     {
         if(downloadDone != 1)return;
+        tryingToConnect = 0;
         Intent i = new Intent(ConnexionActivity.this,HomeActivity.class);
         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
         startActivity(i);
@@ -65,11 +71,14 @@ public class ConnexionActivity extends AppCompatActivity
                 new DownloadRelations().execute();
 
             }
-            else if(result.equals(""+DatabaseHelper.NO_INTERNET))
+            else if(result.equals(""+DatabaseHelper.NO_INTERNET)) {;
+                tryingToConnect = 0;
                 Toast.makeText(ConnexionActivity.this, R.string.error_no_internet, Toast.LENGTH_LONG).show();
-
-            else if(result.equals(""+DatabaseHelper.INTERNET_ERROR))
+            }
+            else if(result.equals(""+DatabaseHelper.INTERNET_ERROR)){
+                tryingToConnect = 0;
                 Toast.makeText(ConnexionActivity.this, R.string.error_internet, Toast.LENGTH_LONG).show();
+            }
         }
     }
 
