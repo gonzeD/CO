@@ -1,5 +1,7 @@
 package com.lsinf.uclove;
 
+import android.util.Log;
+
 /**
  * Created by damien on 26/04/16.
  */
@@ -9,6 +11,7 @@ package com.lsinf.uclove;
 public class User
 {
 
+    private int ID= 0;
     private String langue= null;
     private String nom= null;
     private String prenom= null;
@@ -37,8 +40,9 @@ public class User
     public void setPrenom(String prenom) {this.prenom = prenom;}
     public String getSexe() {return sexe;}
     public void setSexe(String sexe) {this.sexe = sexe;}
-    public String[] getPhoto() {return photo;}
-    public void setPhoto(String[] photo) {this.photo = photo;}
+    public String[] getPhoto() {if(photo == null)return new String[]{"placeholder"};return photo;}
+    public void setPhoto(String[] photo) {
+        Log.e("dodormeur","set photo"+photo.length+" "+photo[0]);this.photo = photo;}
     public String getAttirance() {return attirance;}
     public void setAttirance(String attirance) {this.attirance = attirance;}
     public String getDescription() {return description;}
@@ -61,4 +65,12 @@ public class User
     public void setTel(String tel) {this.tel = tel;}
     public Filtre[] getFiltres() {return filtres;}
     public void setFiltres(Filtre[] filtres) {this.filtres = filtres;}
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
 }

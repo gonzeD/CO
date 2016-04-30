@@ -36,11 +36,14 @@
     <string name="register_picture">Photo de profil</string>
     <string name="register_take_picture">Prendre une photo</string>
     <string name="register_choose_picture">Choisir une photo</string>
+
     <string name="menu_profil">Profil</string>
     <string name="menu_preferences">Preferences</string>
     <string name="menu_rencontres">Rencontres</string>
     <string name="menu_amis">Amis</string>
     <string name="menu_requetes">Requetes</string>
+    <string name="menu_name">your name</string>
+    <string name="menu_pseudo">your pseudo</string>
 
     <string name="home_infos_perso">Informations Personnelles</string>
 
@@ -57,7 +60,16 @@
     <string name="navigation_drawer_close">fermer</string>
     <string name="menu_disconnect">Se déconnecter</string>
 
-    <string name="friend_activity">This is the friend activity</string>
+    <string name="friend_forever_alone">Vous n\'avez pas d\'amis... Trouvez en dans l\'onglet rencontres !</string>
+    <string name="friend_loading">Chargement des amis en cours...</string>
+    <string name="friend_rdv">RDV</string>
+
+    <string name="request_forever_alone">Vous n\'avez pas de demande pour l\'instant.</string>
+    <string name="request_loading">Chargement des demandes en cours...</string>
+    <string name="request_block">Bloquer</string>
+    <string name="request_accept">Valider</string>
+
+
     <string name="setting_langue">Langues</string>
     <string name="setting_apply">Appliquer</string>
     <string name="setting_french">Français</string>

@@ -1,0 +1,25 @@
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"   >
+
+    <solid
+        android:color="@color/message_getter" >
+    </solid>
+
+    <stroke
+        android:width="2dp"
+        android:color="#C4CDE0" >
+    </stroke>
+
+    <padding
+        android:left="@dimen/bubble_padding"
+        android:top="@dimen/bubble_padding"
+        android:right="@dimen/bubble_padding"
+        android:bottom="@dimen/bubble_padding"   >
+    </padding>
+
+    <corners
+        android:radius="11dp"   >
+    </corners>
+
+</shape>

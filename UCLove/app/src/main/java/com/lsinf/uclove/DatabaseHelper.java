@@ -3,6 +3,7 @@ package com.lsinf.uclove;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.BufferedWriter;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -17,10 +18,12 @@ import java.util.List;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -34,15 +37,16 @@ import org.json.JSONObject;
  */
 public class DatabaseHelper
 {
-    private static String pseudo = null;
+    public static String pseudo = null;
     private static String password = null;
+    public static int idMain = 0;
     public static final int NO_INTERNET = -1;
     public static final int INTERNET_ERROR = 0;
     public static final int FIELD_ERROR = -2;
     public static final int PSEUDO_TAKEN = -3;
     public static final int OK = 1;
 
-    static private String downloadUrl(String myurl,String name[],String args[])
+    static private String downloadUrl(String myurl,String name[],String args[],boolean ascii)
     {
         InputStream is = null;
         int len = 5000;
@@ -62,8 +66,9 @@ public class DatabaseHelper
 
 
             OutputStream os = conn.getOutputStream();
-            BufferedWriter writer = new BufferedWriter(
-                    new OutputStreamWriter(os, "UTF-8"));
+            BufferedWriter writer = null;
+            if(ascii)writer = new BufferedWriter(new OutputStreamWriter(os, "ASCII"));
+                else writer = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
 
             String temp = "";
             if(name != null && args != null)
@@ -72,6 +77,7 @@ public class DatabaseHelper
                 if(i!= 0)temp+="&";
                 temp+=name[i]+"="+args[i];
             }
+            Log.e("dodormeur",temp);
             writer.write(temp);
             writer.flush();
             writer.close();
@@ -116,7 +122,7 @@ public class DatabaseHelper
             try {
                 String[] act = new String[]{"action","pseudo","password"};
                 String[] arg = new String[]{"connect",p,mdp};
-                String t = downloadUrl("http://dracognards.be/uclove/main.php",act,arg);
+                String t = downloadUrl("http://dracognards.be/uclove/main.php",act,arg,false);
                 Log.e("dodormeur",t);
                 JSONObject jObject = new JSONObject(t);
                 if(jObject == null || t == null)return INTERNET_ERROR;
@@ -124,24 +130,158 @@ public class DatabaseHelper
                 {
                     pseudo = p;
                     password = mdp;
+                    idMain = jObject.getInt("ID");
+                    Log.e("dodormeur","id : "+idMain);
                     return OK;
                 }
                 return INTERNET_ERROR;
-            } catch (JSONException e) {return INTERNET_ERROR;}
+            } catch (Exception e) {return INTERNET_ERROR;}
         }
         else return NO_INTERNET;
     }
+
+
+    public static String uploadPicture(Context ctx, Bitmap b)
+    {
+        Log.e("dodormeur","starting upload");
+        InputStream inputStream;
+        if(checkInternet(ctx))
+        {
+            try {
+                Log.e("dodormeur","starting upload2");
+                // Must compress the Image to reduce image size to make upload easy
+                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                b.compress(Bitmap.CompressFormat.PNG, 50, baos);
+                byte[] imageBytes =baos.toByteArray() ;
+                ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+
+                String encodedString = Base64.encodeToString(imageBytes , Base64.DEFAULT);
+                Log.e("dodormeur",encodedString.length()+"");
+                String[] act = new String[]{"image"};
+                String[] arg = new String[]{encodedString};
+                String t = downloadUrl("http://dracognards.be/uclove/upload.php",act,arg,true);
+                Log.e("dodormeur",t);
+                JSONObject jObject = new JSONObject(t);
+                if(t == null || jObject == null)return ""+INTERNET_ERROR;
+                else if(jObject.has("success"))
+                {
+                    return jObject.getString("file");
+                }
+                else return ""+INTERNET_ERROR;
+            } catch (Exception e) {return ""+INTERNET_ERROR;}
+        }
+        else return ""+NO_INTERNET;
+    }
+
+
+
+    /*
+
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.PNG, 90, stream); //compress to which format you want.
+            byte [] byte_arr = stream.toByteArray();
+            String image_str = Base64.encodeBytes(byte_arr);
+            ArrayList<NameValuePair> nameValuePairs = new  ArrayList<NameValuePair>();
+
+            nameValuePairs.add(new BasicNameValuePair("image",image_str));
+
+             Thread t = new Thread(new Runnable() {
+
+            @Override
+            public void run() {
+                  try{
+                         HttpClient httpclient = new DefaultHttpClient();
+                         HttpPost httppost = new HttpPost("server-link/folder-name/upload_image.php");
+                         httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+                         HttpResponse response = httpclient.execute(httppost);
+                         String the_string_response = convertResponseToString(response);
+                         runOnUiThread(new Runnable() {
+
+                                @Override
+                                public void run() {
+                                    Toast.makeText(UploadImage.this, "Response " + the_string_response, Toast.LENGTH_LONG).show();
+                                }
+                            });
+
+                     }catch(Exception e){
+                          runOnUiThread(new Runnable() {
+
+                            @Override
+                            public void run() {
+                                Toast.makeText(UploadImage.this, "ERROR " + e.getMessage(), Toast.LENGTH_LONG).show();
+                            }
+                        });
+                           System.out.println("Error in http connection "+e.toString());
+                     }
+            }
+        });
+         t.start();
+        }
+
+        public String convertResponseToString(HttpResponse response) throws IllegalStateException, IOException{
+
+             String res = "";
+             StringBuffer buffer = new StringBuffer();
+             inputStream = response.getEntity().getContent();
+             int contentLength = (int) response.getEntity().getContentLength(); //getting content length…..
+              runOnUiThread(new Runnable() {
+
+            @Override
+            public void run() {
+                Toast.makeText(UploadImage.this, "contentLength : " + contentLength, Toast.LENGTH_LONG).show();
+            }
+        });
+
+             if (contentLength < 0){
+             }
+             else{
+                    byte[] data = new byte[512];
+                    int len = 0;
+                    try
+                    {
+                        while (-1 != (len = inputStream.read(data)) )
+                        {
+                            buffer.append(new String(data, 0, len)); //converting to string and appending  to stringbuffer…..
+                        }
+                    }
+                    catch (IOException e)
+                    {
+                        e.printStackTrace();
+                    }
+                    try
+                    {
+                        inputStream.close(); // closing the stream…..
+                    }
+                    catch (IOException e)
+                    {
+                        e.printStackTrace();
+                    }
+                    res = buffer.toString();     // converting stringbuffer to string…..
+
+                    runOnUiThread(new Runnable() {
+
+                    @Override
+                    public void run() {
+                       Toast.makeText(UploadImage.this, "Result : " + res, Toast.LENGTH_LONG).show();
+                    }
+                });
+                    //System.out.println("Response => " +  EntityUtils.toString(response.getEntity()));
+             }
+             return res;
+        }
+}
+     */
 
     public static int register(Context ctx,String... urls)
     {
         if(checkInternet(ctx))
         {
             try {
-                String[] act = new String[]{"action","pseudo","password","nom","prenom","sexe","ddnais","mail","tel","ville"};
+                String[] act = new String[]{"action","pseudo","password","nom","prenom","sexe","ddnais","mail","tel","ville","picture"};
                 String[] arg = new String[urls.length+1];
                 arg[0] = "register";
                 for( int i = 0; i < urls.length && i+1<act.length; i++)arg[i+1]=urls[i];
-                String t = downloadUrl("http://dracognards.be/uclove/main.php",act,arg);
+                String t = downloadUrl("http://dracognards.be/uclove/main.php",act,arg,false);
                 Log.e("dodormeur",t);
                 JSONObject jObject = new JSONObject(t);
                 if(t == null || jObject == null)return INTERNET_ERROR;
@@ -151,29 +291,31 @@ public class DatabaseHelper
                     return 1;
                 }
                 else return INTERNET_ERROR;
-            } catch (JSONException e) {return INTERNET_ERROR;}
+            } catch (Exception e) {return INTERNET_ERROR;}
         }
         else return NO_INTERNET;
     }
 
-    public static int getMainUser(User user,Context ctx)
+    public static int getUser(User user,int id,Context ctx)
     {
         if(checkInternet(ctx))
         {
             try {
-                String[] act = new String[]{"action","pseudo","password"};
-                String[] arg = new String[]{"user",pseudo,password};
-                String t = downloadUrl("http://dracognards.be/uclove/main.php",act,arg);
+                String[] act = new String[]{"action","id"};
+                String[] arg = new String[]{"user",""+id};
+                String t = downloadUrl("http://dracognards.be/uclove/main.php",act,arg,false);
                 Log.e("dodormeur",t);
                 JSONObject jObject = new JSONObject(t);
                 if(t == null || jObject == null)return INTERNET_ERROR;
 
-                else if(jObject.has("success"))
+                else if(jObject.has("success") && jObject.has("PHOTO"))
                 {
+                    if(jObject.has("ID"))user.setID(Integer.parseInt(jObject.getString("ID")));
                     if(jObject.has("ATTIRANCE"))user.setAttirance(jObject.getString("ATTIRANCE"));
                     if(jObject.has("CHEVEUX"))user.setCheveux(jObject.getString("CHEVEUX"));
                     if(jObject.has("YEUX"))user.setYeux(jObject.getString("YEUX"));
                     if(jObject.has("DESCRIPTION"))user.setDescription(jObject.getString("DESCRIPTION"));
+                    if(jObject.has("PHOTO"))user.setPhoto(jObject.getString("PHOTO").split(":"));
                   //  user.setDisponibilite(jObject.getString("disponibilite"));
                  //   user.setFiltres(jObject.getString("filtres"));
                    // user.setHobby(jObject.getString("hobby"));
@@ -188,8 +330,140 @@ public class DatabaseHelper
                     return 1;
                 }
                 else return INTERNET_ERROR;
-            } catch (JSONException e) {return INTERNET_ERROR;}
+            } catch (Exception e) {return INTERNET_ERROR;}
         }
         else return NO_INTERNET;
+    }
+
+
+    public static int getMessages(Context ctx)
+    {
+        if (checkInternet(ctx)) {
+        try {
+            String[] act = new String[]{"action", "id"};
+            String[] arg = new String[]{"messageId", idMain + ""};
+            String t = downloadUrl("http://dracognards.be/uclove/main.php", act, arg,false);
+            Log.e("dodormeur", t);
+            JSONObject jObject = new JSONObject(t);
+            if (t == null || jObject == null) return INTERNET_ERROR;
+
+            else if (jObject.has("success")) {
+                baseActivity.messages.clear();
+                int nb = 0;
+                if(jObject.has("number"))nb = jObject.getInt("number");
+                for(int i = 0;i<nb;i++)
+                {
+                    if(jObject.has("rec"+i) && jObject.has("ex"+i)&& jObject.has("text"+i)&& jObject.has("date"+i))
+                    {
+                        Log.e("dodormeur","adding");
+                        baseActivity.messages.add(jObject.getInt("rec"+i),jObject.getInt("ex"+i),jObject.getString("date"+i),jObject.getString("text"+i));
+                    }
+                }
+                return 1;
+            } else return INTERNET_ERROR;
+        } catch (Exception e) {
+            return INTERNET_ERROR;
+        }
+    } else return NO_INTERNET;
+    }
+
+    public static int getRelation(Context ctx) {
+        if (checkInternet(ctx)) {
+            try {
+                String[] act = new String[]{"action", "id"};
+                String[] arg = new String[]{"relation", idMain + ""};
+                String t = downloadUrl("http://dracognards.be/uclove/main.php", act, arg,false);
+                Log.e("dodormeur", t);
+                JSONObject jObject = new JSONObject(t);
+                if (t == null || jObject == null) return INTERNET_ERROR;
+
+                else if (jObject.has("success")) {
+                    baseActivity.relation = new Relation();
+                    int nb = 0;
+                    if(jObject.has("number"))nb = jObject.getInt("number");
+                    for(int i = 0;i<nb;i++)
+                    {
+                        if(jObject.has("asker"+i) && jObject.has("state"+i))
+                        {
+                            Log.e("dodormeur","adding");
+                            baseActivity.relation.add(jObject.getInt("asker"+i),jObject.getInt("receiver"+i),jObject.getInt("state"+i));
+                        }
+                    }
+                    return 1;
+                } else return INTERNET_ERROR;
+            } catch (Exception e) {
+                return INTERNET_ERROR;
+            }
+        } else return NO_INTERNET;
+    }
+
+
+
+    public static int getAllUsers(Context ctx)
+    {
+        return NO_INTERNET;
+    }
+
+
+    public static int getFiltres(Context ctx)
+    {
+        return NO_INTERNET;
+    }
+
+    public static int sendMessage(String text,int id,Context ctx)
+    {
+    if (checkInternet(ctx)) {
+        try {
+            String[] act = new String[]{"action", "id","getter","text"};
+            String[] arg = new String[]{"sendMessage", idMain + "",""+id,text};
+            String t = downloadUrl("http://dracognards.be/uclove/main.php", act, arg,false);
+            Log.e("dodormeur", t);
+            JSONObject jObject = new JSONObject(t);
+            if (t == null || jObject == null) return INTERNET_ERROR;
+            else if (jObject.has("success")) {
+                return 1;
+            } else return INTERNET_ERROR;
+        } catch (Exception e) {
+            return INTERNET_ERROR;
+        }
+    } else return NO_INTERNET;
+    }
+
+    public static int setRelation(String asker,String receiver,String state,Context ctx)
+    {
+        if(checkInternet(ctx))
+        {
+            try {
+                String[] act = new String[]{"action", "asker","receiver","state"};
+                String[] arg = new String[]{"setRelation", asker,receiver,state};
+                String t = downloadUrl("http://dracognards.be/uclove/main.php",act,arg,false);
+                Log.e("dodormeur",t);
+                JSONObject jObject = new JSONObject(t);
+                if(jObject == null || t == null)return INTERNET_ERROR;
+                else if(jObject.has("success"))
+                {
+                    return OK;
+                }
+                return INTERNET_ERROR;
+            } catch (Exception e) {return INTERNET_ERROR;}
+        }
+        else return NO_INTERNET;
+    }
+
+    public static int reset(Context ctx)
+    {
+
+        Log.e("dodormeur","reseting");
+        if(checkInternet(ctx))
+        {
+            try {
+                Log.e("dodormeur","reseting2");
+
+                String t = downloadUrl("http://dracognards.be/uclove/init.php?mdp=wouldyourmombeproud",null,null,false);
+                Log.e("dodormeur","doneReseting");
+                Log.e("dodormeur",t);
+            } catch (Exception e) {return INTERNET_ERROR;}
+        }
+        return NO_INTERNET;
     }
 }

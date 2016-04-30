@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,6 +20,8 @@ public class HomeActivity extends baseActivity
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.home_activity);
+
+        new loadImageWeb((ImageView) findViewById(R.id.photo1)).execute(mainUser.getPhoto());
 
         if(baseActivity.mainUser.getPrenom() != null)((TextView)findViewById(R.id.prenom)).setText(baseActivity.mainUser.getPrenom());
         //else ((TextView)findViewById(R.id.prenom)).setText("test");
