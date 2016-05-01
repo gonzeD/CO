@@ -24,7 +24,6 @@ public class baseActivity extends AppCompatActivity
     public static User mainUser = null;
     public static Messages messages = null;
     public static ArrayList<User> allUsers = null;
-    public static ArrayList<Filtre> filtres = null;
     public static Relation relation = null;
 
     DrawerLayout drawerLayout;
@@ -66,7 +65,6 @@ public class baseActivity extends AppCompatActivity
             mainUser = null;
             messages = null;
             allUsers = null;
-            filtres = null;
             relation = null;
             i = new Intent(this, ConnexionActivity.class);
         }
@@ -80,6 +78,8 @@ public class baseActivity extends AppCompatActivity
             i = new Intent(this,friendsActivity.class ); // Your list's Intent
         else if(v.getTag().equals("requetes"))
             i = new Intent(this,requestActivity.class ); // Your list's Intent
+        else if(v.getTag().equals("rencontres"))
+            i = new Intent(this,filtreActivity.class );
         else
             i = new Intent(this,friendsActivity.class ); // Your list's Intent
 

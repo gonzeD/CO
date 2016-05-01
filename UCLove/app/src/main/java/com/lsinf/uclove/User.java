@@ -2,6 +2,8 @@ package com.lsinf.uclove;
 
 import android.util.Log;
 
+import java.util.ArrayList;
+
 /**
  * Created by damien on 26/04/16.
  */
@@ -29,7 +31,7 @@ public class User
     private String yeux= null;
     private String cheveux= null;
     private String tel= null;
-    private Filtre filtres[] = null;
+    public ArrayList<Filtre> filtres = null;
 
     //Oui, c'est pas tres lisible, mais c'est juste un set/get pour chaque variable, et oui, ca a été généré automatiquement :p
     public String getLangue() {return langue;}
@@ -63,8 +65,8 @@ public class User
     public void setCheveux(String cheveux) {this.cheveux = cheveux;}
     public String getTel() {return tel;}
     public void setTel(String tel) {this.tel = tel;}
-    public Filtre[] getFiltres() {return filtres;}
-    public void setFiltres(Filtre[] filtres) {this.filtres = filtres;}
+    public ArrayList<Filtre> getFiltres() {return filtres;}
+    public void setFiltres(ArrayList<Filtre> filtres) {this.filtres = filtres;}
 
     public int getID() {
         return ID;

@@ -55,6 +55,7 @@
 
     <string name="error_no_internet">erreur réseau. Vérifiez que votre connexion wifi est bien activée</string>
     <string name="error_internet">erreur serveur. vérifiez que vos données sont correctes</string>
+    <string name="error_no_matching">Aucun utilisateur ne correspond a votre recherche. Essayez avec un autre filtre.</string>
 
     <string name="navigation_drawer_open">ouvrir</string>
     <string name="navigation_drawer_close">fermer</string>
@@ -76,4 +77,53 @@
     <string name="setting_english">Anglais</string>
     <string name="setting_german">Allemand</string>
     <string name="setting_dutch">Néerlandais</string>
+
+    <string name="filtre_no_filtre">Pas de filtre</string>
+    <string name="filtre_modify">Modifier</string>
+    <string name="filtre_loading">Chargement des filtres</string>
+
+    <string name="modify_cheveux">cheveux</string>
+    <string name="modify_yeux">yeux</string>
+    <string name="modify_sexe">genre</string>
+    <string name="modify_attirance">attirance</string>
+    <string name="modify_reset">Tout supprimer</string>
+    <string name="modify_end">Finir la modification</string>
+    <string name="modify_pick_yeux">Quels yeux autoriser?</string>
+    <string name="modify_pick_hair">Quels cheveux autoriser?</string>
+    <string name="modify_pick_genre">Quels genres autoriser?</string>
+    <string name="modify_name_filtre">Nom du filtre</string>
+
+    <string name="profile_actual_relation">Votre relation avec cette personne est :</string>
+    <string name="profile_block">Bloquer</string>
+    <string name="profile_unblock">Débloquer</string>
+    <string name="profile_unfavorite">enlever des favoris ( -> amis)</string>
+    <string name="profile_become_friend">Devenir amis (répondre ou demander)</string>
+    <string name="profile_become_favorite">Ajouter aux favoris</string>
+
+    <string-array name="profile_relation">
+        <item>bloqué</item>
+        <item>pas de relation</item>
+        <item>demande en cours</item>
+        <item>amis</item>
+        <item>favoris</item>
+    </string-array>
+    <string-array name="hair_color">
+        <item>blonds</item>
+        <item>bruns</item>
+        <item>noir</item>
+        <item>roux</item>
+        <item>autre</item>
+    </string-array>
+
+    <string-array name="eye_color">
+        <item>Bleus</item>
+        <item>Verts</item>
+        <item>Bruns</item>
+        <item>Gris</item>
+        <item>Autre</item>
+    </string-array>
+    <string-array name="genre">
+        <item>M</item>
+        <item>F</item>
+    </string-array>
 </resources>
