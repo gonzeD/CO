@@ -2,7 +2,7 @@
     <string name="app_name">UCLove</string>
 
     <string name="connexion_pseudo">Pseudo</string>
-    <string name="connexion_password">Mot de passe</string>
+    <string name="connexion_password">Password</string>
     <string name="connexion_connect">Se connecter</string>
     <string name="connexion_register">S\'inscrire</string>
 
@@ -73,8 +73,8 @@
 
     <string name="setting_langue">Langues</string>
     <string name="setting_apply">Appliquer</string>
-    <string name="setting_french">Français</string>
-    <string name="setting_english">Anglais</string>
+    <string name="setting_french">French</string>
+    <string name="setting_english">English</string>
     <string name="setting_german">Allemand</string>
     <string name="setting_dutch">Néerlandais</string>
 
