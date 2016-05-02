@@ -71,7 +71,7 @@ public class baseActivity extends AppCompatActivity
         else if(v.getTag().equals("profil"))
             i = new Intent(this,HomeActivity.class ); // Your list's Intent
         else if(v.getTag().equals("preferences"))
-            i = new Intent(this,preferenceActivity.class ); // Your list's Intent
+            i = new Intent(this,SettingsActivity.class ); // Your list's Intent
         else if(v.getTag().equals("reset"))
         { new DownloadMainUser().execute();;return;}
         else if(v.getTag().equals("amis"))

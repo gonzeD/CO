@@ -2,6 +2,15 @@ package com.lsinf.uclove;
 
 import android.os.Bundle;
 
+import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+
 /**
  * Created by damien on 20/04/16.
  */
@@ -13,6 +22,10 @@ public class SettingsActivity extends baseActivity
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.setting_activity);
+
+
+
+
          createNavigationMenu();
     }
 }
