@@ -124,6 +124,28 @@ public class InscriptionActivity extends AppCompatActivity
                 View radioButton4 = ((RadioGroup) findViewById(R.id.button_color_hair)).findViewById(radioButtonID);
                 int idx4 = ((RadioGroup) findViewById(R.id.button_color_hair)).indexOfChild(radioButton);
 
+                String  hobby,description,langue;
+                if (((EditText) findViewById(R.id.hobby)).getText() != null){
+                    hobby = ((EditText) findViewById(R.id.hobby)).getText().toString();
+                }
+                else {
+                    hobby = "";
+                }
+                if (((EditText) findViewById(R.id.description)).getText() != null){
+                    description = ((EditText) findViewById(R.id.description)).getText().toString();
+                }
+                else {
+                    description = "";
+                }
+                if (((EditText) findViewById(R.id.langue)).getText() != null){
+                    langue = ((EditText) findViewById(R.id.langue)).getText().toString();
+                }
+                else {
+                    langue = "";
+                }
+
+
+
                 new DownloadWebpageTask().execute(
                         ((EditText) findViewById(R.id.pseudo)).getText().toString(),
                         ((EditText) findViewById(R.id.password)).getText().toString(),
@@ -137,12 +159,10 @@ public class InscriptionActivity extends AppCompatActivity
                         ((EditText) findViewById(R.id.city)).getText().toString(),
                         idx3+"",
                         idx4+"",
-                        result
-
-                        /*,
-                ((EditText) findViewById(R.id.hobby)).getText().toString(),
-                ((EditText) findViewById(R.id.description)).getText().toString(),
-                ((EditText) findViewById(R.id.langue)).getText().toString()*/);
+                        hobby,
+                        description,
+                        langue,
+                        result);
             }
             else {
                 Toast.makeText(InscriptionActivity.this, R.string.error_internet, Toast.LENGTH_LONG).show();

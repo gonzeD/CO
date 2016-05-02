@@ -277,7 +277,7 @@ public class DatabaseHelper
         if(checkInternet(ctx))
         {
             try {
-                String[] act = new String[]{"action","pseudo","password","nom","prenom","sexe","attirance","ddnais","mail","tel","ville","yeux","cheveux","picture"};
+                String[] act = new String[]{"action","pseudo","password","nom","prenom","sexe","attirance","ddnais","mail","tel","ville","yeux","cheveux","hobby","description","langue","picture"};
                 String[] arg = new String[urls.length+1];
                 arg[0] = "register";
                 for( int i = 0; i < urls.length && i+1<act.length && i+1<arg.length; i++)arg[i+1]=urls[i];
