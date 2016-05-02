@@ -10,7 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3f4b52f-940a-4ac8-a914-623de89d0d0d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.iml" afterPath="$PROJECT_DIR$/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="app.iws" />
@@ -2140,7 +2139,13 @@
       <option name="project" value="LOCAL" />
       <updated>1462184308258</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Merge branch 'master' of https://github.com/gonzeD/CO&#10;&#10;# Conflicts:&#10;#&#9;UCLove/app/src/main/java/com/lsinf/uclove/profilActivity.java&#10;#&#9;UCLove/app/src/main/res/layout/profile_activity.xml&#10;">
+      <created>1462184342054</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1462184342054</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
