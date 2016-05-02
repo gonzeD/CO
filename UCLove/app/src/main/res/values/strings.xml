@@ -100,6 +100,8 @@
     <string name="profile_become_friend">Devenir amis (répondre ou demander)</string>
     <string name="profile_become_favorite">Ajouter aux favoris</string>
 
+    <string name="profile_default">default</string>
+
     <string-array name="profile_relation">
         <item>bloqué</item>
         <item>pas de relation</item>

@@ -51,6 +51,7 @@ public class profilActivity extends baseActivity {
             findViewById(R.id.block).setVisibility(View.VISIBLE);
             findViewById(R.id.unfavorite).setVisibility(View.VISIBLE);
         }
+
     }
 
     private class DownloadRelations extends AsyncTask<String, Void, String> {
