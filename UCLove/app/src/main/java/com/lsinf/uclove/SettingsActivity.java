@@ -23,7 +23,8 @@ public class SettingsActivity extends baseActivity
 
         setContentView(R.layout.setting_activity);
 
-
+        //if(baseActivity.mainUser.getVille() != null)((TextView)findViewById(R.id.mycity)).editText.setHint("test");
+        //((TextView)findViewById(R.id.mycity)).setText("test");
 
 
          createNavigationMenu();

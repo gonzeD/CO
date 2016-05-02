@@ -77,6 +77,17 @@
     <string name="setting_english">Anglais</string>
     <string name="setting_german">Allemand</string>
     <string name="setting_dutch">Néerlandais</string>
+    <string name="setting_dispo">Disponibilités rendez-vous</string>
+    <string name="setting_monday">Lundi</string>
+    <string name="setting_tuesday">Mardi</string>
+    <string name="setting_wednesday">Mercredi</string>
+    <string name="setting_thursday">Jeudi</string>
+    <string name="setting_friday">Vendredi</string>
+    <string name="setting_saturday">Samedi</string>
+    <string name="setting_sunday">Dimanche</string>
+    <string name="setting_de">de</string>
+    <string name="setting_a">à</string>
+
 
     <string name="filtre_no_filtre">Pas de filtre</string>
     <string name="filtre_modify">Modifier</string>

@@ -45,6 +45,83 @@
                 android:text="@string/setting_german"/>
         </RadioGroup>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/setting_dispo"
+            android:textSize="25dp"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/setting_monday"
+            android:layout_gravity="center_horizontal" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_de"
+                android:layout_gravity="center_vertical" />
+
+            <TimePicker
+                android:id="@+id/timePicker1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_a"
+                android:layout_gravity="center_vertical" />
+
+            <TimePicker
+                android:id="@+id/timePicker2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/setting_tuesday"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/setting_wednesday"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/setting_thursday"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/setting_friday"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/setting_saturday"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/setting_sunday"
+            android:layout_gravity="center_horizontal" />
+
+
+
+
 
         <Button
             android:layout_width="wrap_content"
@@ -144,6 +221,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/city"
+            android:hint="mycity"
             android:layout_gravity="center_horizontal"/>
 
 
