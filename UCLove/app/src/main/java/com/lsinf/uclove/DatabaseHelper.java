@@ -277,10 +277,10 @@ public class DatabaseHelper
         if(checkInternet(ctx))
         {
             try {
-                String[] act = new String[]{"action","pseudo","password","nom","prenom","sexe","ddnais","mail","tel","ville","picture"};
+                String[] act = new String[]{"action","pseudo","password","nom","prenom","sexe","attirance","ddnais","mail","tel","ville","yeux","cheveux","picture"};
                 String[] arg = new String[urls.length+1];
                 arg[0] = "register";
-                for( int i = 0; i < urls.length && i+1<act.length; i++)arg[i+1]=urls[i];
+                for( int i = 0; i < urls.length && i+1<act.length && i+1<arg.length; i++)arg[i+1]=urls[i];
                 String t = downloadUrl("http://dracognards.be/uclove/main.php",act,arg,false);
                 Log.e("dodormeur",t);
                 JSONObject jObject = new JSONObject(t);

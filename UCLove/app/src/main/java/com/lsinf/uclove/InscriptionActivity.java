@@ -95,7 +95,7 @@ public class InscriptionActivity extends AppCompatActivity
         @Override
         protected String doInBackground(String... urls)
         {
-            return ""+DatabaseHelper.uploadPicture(InscriptionActivity.this,picture);
+            return "profile1";//+DatabaseHelper.uploadPicture(InscriptionActivity.this,picture);
         }
         @Override
         protected void onPostExecute(String result)
@@ -107,20 +107,36 @@ public class InscriptionActivity extends AppCompatActivity
                 int month = datePicker.getMonth() + 1;
                 int year = datePicker.getYear();
                 String date = day+"/"+month+"/"+year;
-                String sexe =
-                        ((RadioButton) (findViewById(((RadioGroup) findViewById(R.id.button_sexe)).getCheckedRadioButtonId()))).getText().toString();
 
+                int radioButtonID = ((RadioGroup) findViewById(R.id.button_sexe)).getCheckedRadioButtonId();
+                View radioButton = ((RadioGroup) findViewById(R.id.button_sexe)).findViewById(radioButtonID);
+                int idx = ((RadioGroup) findViewById(R.id.button_sexe)).indexOfChild(radioButton);
+
+                int radioButtonID2 = ((RadioGroup) findViewById(R.id.button_attirance)).getCheckedRadioButtonId();
+                View radioButton2 = ((RadioGroup) findViewById(R.id.button_attirance)).findViewById(radioButtonID);
+                int idx2 = ((RadioGroup) findViewById(R.id.button_attirance)).indexOfChild(radioButton);
+
+                int radioButtonID3 = ((RadioGroup) findViewById(R.id.button_eyes)).getCheckedRadioButtonId();
+                View radioButton3 = ((RadioGroup) findViewById(R.id.button_eyes)).findViewById(radioButtonID);
+                int idx3 = ((RadioGroup) findViewById(R.id.button_eyes)).indexOfChild(radioButton);
+
+                int radioButtonID4 = ((RadioGroup) findViewById(R.id.button_color_hair)).getCheckedRadioButtonId();
+                View radioButton4 = ((RadioGroup) findViewById(R.id.button_color_hair)).findViewById(radioButtonID);
+                int idx4 = ((RadioGroup) findViewById(R.id.button_hair)).indexOfChild(radioButton);
 
                 new DownloadWebpageTask().execute(
                         ((EditText) findViewById(R.id.pseudo)).getText().toString(),
                         ((EditText) findViewById(R.id.password)).getText().toString(),
                         ((EditText) findViewById(R.id.name)).getText().toString(),
                         ((EditText) findViewById(R.id.firstname)).getText().toString(),
-                        sexe,
+                        idx+"",
+                        idx2+"",
                         date,
                         ((EditText) findViewById(R.id.mail)).getText().toString(),
                         ((EditText) findViewById(R.id.phone)).getText().toString(),
                         ((EditText) findViewById(R.id.city)).getText().toString(),
+                        idx3+"",
+                        idx4+"",
                         result
 
                         /*,
