@@ -71,7 +71,7 @@
     <string name="request_accept">Valider</string>
 
 
-    <string name="setting_langue">Langue d'affichage</string>
+    <string name="setting_langue">Langue affichage</string>
     <string name="setting_apply">Appliquer</string>
     <string name="setting_french">Français</string>
     <string name="setting_english">Anglais</string>
