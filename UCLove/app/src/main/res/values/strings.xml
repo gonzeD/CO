@@ -92,6 +92,8 @@
     <string name="modify_pick_hair">Quels cheveux autoriser?</string>
     <string name="modify_pick_genre">Quels genres autoriser?</string>
     <string name="modify_name_filtre">Nom du filtre</string>
+    <string name="modify_profile">Modifier le profil</string>
+
 
     <string name="profile_actual_relation">Votre relation avec cette personne est :</string>
     <string name="profile_block">Bloquer</string>
