@@ -41,13 +41,6 @@
         </RadioGroup>
 
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/setting_apply"
-            android:id="@+id/register"
-            android:onClick="register"
-            android:layout_gravity="center_horizontal" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -221,14 +214,14 @@
                 android:text="@string/register_take_picture"
                 android:id="@+id/take_picture"
                 android:onClick="takePicture"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="left" />
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/register_choose_picture"
                 android:id="@+id/choose_picture"
                 android:onClick="choosePicture"
-                android:layout_gravity="center_horizontal" />
+                android:gravity="right" />
 
 
         </LinearLayout>
