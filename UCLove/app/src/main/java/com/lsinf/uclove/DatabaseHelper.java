@@ -407,7 +407,40 @@ public class DatabaseHelper
 
     public static int getFiltres(Context ctx)
     {
-        return NO_INTERNET;
+
+        if (checkInternet(ctx)) {
+            try {
+                String[] act = new String[]{"action", "id"};
+                String[] arg = new String[]{"getFiltre", idMain + ""};
+                String t = downloadUrl("http://dracognards.be/uclove/main.php", act, arg,false);
+                Log.e("dodormeur", t);
+                JSONObject jObject = new JSONObject(t);
+                if (t == null || jObject == null) return INTERNET_ERROR;
+                else if (jObject.has("success"))
+                {
+                    Log.e("dodormeur",jObject.getInt("number")+"");
+                    for(int i = 0;i<jObject.getInt("number");i++)
+                    {
+                        Filtre f = new Filtre();
+                        Log.e("dodormeur",jObject.getInt("number")+"");
+                        f.name = jObject.getString("name"+i);
+                        Log.e("dodormeur",jObject.getInt("number")+"");
+                        f.idFiltre = Integer.parseInt(jObject.getString("id"+i));
+                        Log.e("dodormeur",jObject.getInt("number")+"");
+                        f.loadData(jObject.getString("filtre"+i));
+                        Log.e("dodormeur",jObject.getInt("number")+"");
+                        baseActivity.mainUser.getFiltres().add(f);
+                        Log.e("dodormeur",jObject.getInt("number")+"");
+                        Log.e("dodormeur","added filtre");
+                        /*f.data = jObject.getString("data"+i);
+                        f.name = jObject.getString("name"+i);*/
+                    }
+                    return 1;
+                } else return INTERNET_ERROR;
+            } catch (Exception e) {
+                return INTERNET_ERROR;
+            }
+        } else return NO_INTERNET;
     }
 
     public static int sendMessage(String text,int id,Context ctx)
@@ -450,6 +483,50 @@ public class DatabaseHelper
         else return NO_INTERNET;
     }
 
+    public static int setFiltre(String id,String data,String name,Context ctx,boolean add)
+    {
+        if(checkInternet(ctx))
+        {
+            try {
+                String[] act;
+                if(add)act = new String[]{"action","owner","data","name"};
+                else act = new String[]{"action","owner", "id","data","name"};
+                String[] arg;
+                if(add)arg = new String[]{"setFiltre", idMain+"",data,name};
+                else arg = new String[]{"setFiltre", idMain+"",id,data,name};
+                String t = downloadUrl("http://dracognards.be/uclove/main.php",act,arg,false);
+                Log.e("dodormeur",t);
+                JSONObject jObject = new JSONObject(t);
+                if(jObject == null || t == null)return INTERNET_ERROR;
+                else if(jObject.has("success"))
+                {
+                    return OK;
+                }
+                return INTERNET_ERROR;
+            } catch (Exception e) {return INTERNET_ERROR;}
+        }
+        else return NO_INTERNET;
+    }
+    public static int searchUser(String search,Context ctx)
+    {
+        if(checkInternet(ctx))
+        {
+            try {
+                    String[] act = new String[]{"action", "idAsker","data"};
+                    String[] arg = new String[]{"search", idMain+"",search};
+                    String t = downloadUrl("http://dracognards.be/uclove/main.php",act,arg,false);
+                    Log.e("dodormeur",t);
+                    JSONObject jObject = new JSONObject(t);
+                    if(jObject == null || t == null)return INTERNET_ERROR;
+                    else if(jObject.has("success"))
+                    {
+                        return Integer.parseInt(jObject.getString("result"));
+                    }
+                    return INTERNET_ERROR;
+                } catch (Exception e) {return INTERNET_ERROR;}
+        }
+        else return NO_INTERNET;
+    }
     public static int reset(Context ctx)
     {
 

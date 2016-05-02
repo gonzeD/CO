@@ -25,13 +25,13 @@ public class Relation
         idReceiver.add(receiver);
         this.state.add(state);
     }
-   /* public int getRelationById(int a)
+    public int getRelationByAskerId(int a)
     {
-        for(int i = 0;i<idFriend.size();i++)
-            if(idFriend.get(i) == id)
+        for(int i = 0;i<idAsker.size();i++)
+            if(idAsker.get(i) == a && idReceiver.get(i) == DatabaseHelper.idMain)
                 return state.get(i);
-        return -1;
-    }*/
+        return NOTHING;
+    }
     public int getRelation(int i){return state.get(i);}
     public int getAsker(int i){return idAsker.get(i);}
     public int getReceiver(int i){return idReceiver.get(i);}
