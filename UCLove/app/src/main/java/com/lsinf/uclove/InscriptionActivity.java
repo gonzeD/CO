@@ -122,7 +122,7 @@ public class InscriptionActivity extends AppCompatActivity
 
                 int radioButtonID4 = ((RadioGroup) findViewById(R.id.button_color_hair)).getCheckedRadioButtonId();
                 View radioButton4 = ((RadioGroup) findViewById(R.id.button_color_hair)).findViewById(radioButtonID);
-                int idx4 = ((RadioGroup) findViewById(R.id.button_hair)).indexOfChild(radioButton);
+                int idx4 = ((RadioGroup) findViewById(R.id.button_color_hair)).indexOfChild(radioButton);
 
                 new DownloadWebpageTask().execute(
                         ((EditText) findViewById(R.id.pseudo)).getText().toString(),
