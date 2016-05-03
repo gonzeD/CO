@@ -4,6 +4,7 @@ import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -39,10 +40,29 @@ public class profilActivity extends baseActivity {
         if(t.equals("block"))new setRelation().execute(""+Relation.BLOQUED);
         if(t.equals("unblock"))new setRelation().execute(""+Relation.FRIEND);
     }
+    public void disp()
+    {
+        new loadImageWeb((ImageView) findViewById(R.id.profile_picture)).execute(mainUser.getPhoto());
+        ((TextView)findViewById(R.id.profile_name)).setText(user.getNom());
+        ((TextView)findViewById(R.id.profile_firstname)).setText(user.getPrenom());
+        ((TextView)findViewById(R.id.profile_sexe)).setText(user.getSexe());
+        ((TextView)findViewById(R.id.profile_attirance)).setText(user.getAttirance());
+        ((TextView)findViewById(R.id.profile_ddnaiss)).setText(user.getNaissance());
+        ((TextView)findViewById(R.id.profile_mail)).setText(user.getMail());
+        ((TextView)findViewById(R.id.profile_phone)).setText(user.getTel());
+        ((TextView)findViewById(R.id.profile_city)).setText(user.getVille());
+        ((TextView)findViewById(R.id.profile_eyes)).setText(user.getYeux());
+        ((TextView)findViewById(R.id.profile_hair)).setText(user.getCheveux());
+        ((TextView)findViewById(R.id.profile_hobby)).setText(user.getHobby());
+        ((TextView)findViewById(R.id.profile_description)).setText(user.getDescription());
+        ((TextView)findViewById(R.id.profile_language)).setText(user.getLangue());
 
+
+    }
 
     public void display()
     {
+        disp();
         Resources r = getResources();
         state = relation.getRelationByAskerId(id);
         ((TextView)findViewById(R.id.text_relation)).setText(r.getString(R.string.profile_actual_relation)+" "+r.getStringArray(R.array.profile_relation)[relation.getRelationByReceiverId(id)]);
@@ -68,7 +88,6 @@ public class profilActivity extends baseActivity {
             findViewById(R.id.block).setVisibility(View.VISIBLE);
             findViewById(R.id.unfavorite).setVisibility(View.VISIBLE);
         }
-
     }
 
 
