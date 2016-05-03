@@ -18,6 +18,7 @@ import android.widget.TextView;
 import java.io.InputStream;
 import java.util.ArrayList;
 
+//Activity de base s'occupant du menu principal
 public class baseActivity extends AppCompatActivity
 {
 

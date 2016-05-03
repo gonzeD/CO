@@ -39,9 +39,9 @@ public class modifyFiltreActivity extends baseActivity {
             pos = mainUser.filtres.size()-1;
         }
         t = mainUser.filtres.get(pos);
-        for(int i = 0;i<t.cara.size();i++)
+        for(int i = 0;i<t.getSize();i++)
         {
-            addDisplay(t.nameCara.get(i),t.cara.get(i));
+            addDisplay(t.getNameCara(i,this),t.getCara(i,this));
         }
     }
 
@@ -60,8 +60,7 @@ public class modifyFiltreActivity extends baseActivity {
         if(v.getTag().toString().equals("reset"))
         {
             root.removeAllViews();
-            t.cara.clear();
-            t.nameCara.clear();
+            t.clearCara();
         }
         if(v.getTag().toString().equals("end"))
         {
@@ -76,9 +75,9 @@ public class modifyFiltreActivity extends baseActivity {
                     .setItems(R.array.eye_color, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which)
                         {
-                            t.cara.add(getResources().getStringArray(R.array.eye_color)[which]);
-                            t.nameCara.add(getResources().getString(R.string.modify_yeux));
-                            addDisplay(t.nameCara.get(t.nameCara.size()-1),t.cara.get(t.cara.size()-1));
+                            t.getIdCara().add(which);
+                            t.getIdNameCara().add(1);
+                            addDisplay(t.getNameCara(t.getSize()-1,modifyFiltreActivity.this),t.getCara(t.getSize()-1,modifyFiltreActivity.this));
                         }
                     });
             builder.create().show();
@@ -90,9 +89,9 @@ public class modifyFiltreActivity extends baseActivity {
                     .setItems(R.array.hair_color, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which)
                         {
-                            t.cara.add(getResources().getStringArray(R.array.hair_color)[which]);
-                            t.nameCara.add(getResources().getString(R.string.modify_cheveux));
-                            addDisplay(t.nameCara.get(t.nameCara.size()-1),t.cara.get(t.cara.size()-1));
+                            t.getIdCara().add(which);
+                            t.getIdNameCara().add(0);
+                            addDisplay(t.getNameCara(t.getSize()-1,modifyFiltreActivity.this),t.getCara(t.getSize()-1,modifyFiltreActivity.this));
                         }
                     });
             builder.create().show();
@@ -104,9 +103,9 @@ public class modifyFiltreActivity extends baseActivity {
                     .setItems(R.array.genre, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which)
                         {
-                            t.cara.add(getResources().getStringArray(R.array.genre)[which]);
-                            t.nameCara.add(getResources().getString(R.string.modify_sexe));
-                            addDisplay(t.nameCara.get(t.nameCara.size()-1),t.cara.get(t.cara.size()-1));
+                            t.getIdCara().add(which);
+                            t.getIdNameCara().add(2);
+                            addDisplay(t.getNameCara(t.getSize()-1,modifyFiltreActivity.this),t.getCara(t.getSize()-1,modifyFiltreActivity.this));
                         }
                     });
             builder.create().show();

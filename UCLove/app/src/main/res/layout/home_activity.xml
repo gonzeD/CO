@@ -12,149 +12,147 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:layout_height="match_parent"
-        android:weightSum="1">
+        android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="match_parent"
+            android:orientation="horizontal"
             android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:src="@drawable/placeholder"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/photo2" />
         <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_weight="2"
             android:src="@drawable/placeholder"
+            android:layout_margin="10dp"
             android:id="@+id/photo1" />
 
 
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/placeholder"
+                android:id="@+id/photo3" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:padding="25dp"
             android:onClick="change">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:textSize="17sp"
-            android:layout_marginTop="20dp"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
             android:text="@string/home_infos_perso"
+            android:textColor="@color/black"
             android:layout_gravity="center_horizontal"/>
-
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/prenom"
-            android:text="@string/error_no_internet"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center_horizontal"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/nom"
-            android:text="@string/error_no_internet"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center_horizontal"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/sexe"
-            android:text="@string/error_no_internet"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center_horizontal"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/attirance"
-            android:text="@string/error_no_internet"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center_horizontal"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/hobby"
-            android:text="@string/error_no_internet"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center_horizontal"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/naissance"
-            android:text="@string/error_no_internet"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center_horizontal"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ville"
-            android:text="@string/error_no_internet"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center_horizontal"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/mail"
-            android:text="@string/error_no_internet"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center_horizontal"/>
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/yeux"
-            android:text="@string/error_no_internet"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center_horizontal"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/cheveux"
-            android:text="@string/error_no_internet"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center_horizontal"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tel"
-            android:text="@string/error_no_internet"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center_horizontal"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/description"
-            android:text="@string/error_no_internet"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center_horizontal"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/dispo"
-            android:text="@string/error_no_internet"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center_horizontal"/>
-
-        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/placeholder"
-                android:id="@+id/photo2" />
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/home_click_to_edit"
+            android:layout_gravity="center_horizontal"/>
 
+        <LinearLayout style="@style/llHome">
+            <TextView style="@style/homeDescription" android:text="@string/home_firstname"/>
+            <TextView style="@style/homeValue" android:id="@+id/prenom"/>
         </LinearLayout>
+        <View style="@style/separator"/>
 
+        <LinearLayout style="@style/llHome">
+            <TextView style="@style/homeDescription" android:text="@string/home_name"/>
+            <TextView style="@style/homeValue" android:id="@+id/nom"/>
+        </LinearLayout>
+        <View style="@style/separator"/>
+
+
+
+        <LinearLayout style="@style/llHome">
+            <TextView style="@style/homeDescription" android:text="@string/home_sexe"/>
+            <TextView style="@style/homeValue" android:id="@+id/sexe"/>
+        </LinearLayout>
+        <View style="@style/separator"/>
+
+        <LinearLayout style="@style/llHome">
+            <TextView style="@style/homeDescription" android:text="@string/home_attirance"/>
+            <TextView style="@style/homeValue" android:id="@+id/attirance"/>
+        </LinearLayout>
+        <View style="@style/separator"/>
+
+
+
+            <LinearLayout style="@style/llHome">
+                <TextView style="@style/homeDescription" android:text="@string/home_hobby"/>
+                <TextView style="@style/homeValue" android:id="@+id/hobby"/>
+            </LinearLayout>
+            <View style="@style/separator"/>
+
+
+            <LinearLayout style="@style/llHome">
+                <TextView style="@style/homeDescription" android:text="@string/home_naissance"/>
+                <TextView style="@style/homeValue" android:id="@+id/naissance"/>
+            </LinearLayout>
+            <View style="@style/separator"/>
+
+
+            <LinearLayout style="@style/llHome">
+                <TextView style="@style/homeDescription" android:text="@string/home_ville"/>
+                <TextView style="@style/homeValue" android:id="@+id/ville"/>
+            </LinearLayout>
+            <View style="@style/separator"/>
+
+            <LinearLayout style="@style/llHome">
+                <TextView style="@style/homeDescription" android:text="@string/home_mail"/>
+                <TextView style="@style/homeValue" android:id="@+id/mail"/>
+            </LinearLayout>
+            <View style="@style/separator"/>
+
+
+            <LinearLayout style="@style/llHome">
+                <TextView style="@style/homeDescription" android:text="@string/home_yeux"/>
+                <TextView style="@style/homeValue" android:id="@+id/yeux"/>
+            </LinearLayout>
+            <View style="@style/separator"/>
+
+            <LinearLayout style="@style/llHome">
+                <TextView style="@style/homeDescription" android:text="@string/home_cheveux"/>
+                <TextView style="@style/homeValue" android:id="@+id/cheveux"/>
+            </LinearLayout>
+            <View style="@style/separator"/>
+
+            <LinearLayout style="@style/llHome">
+                <TextView style="@style/homeDescription" android:text="@string/home_tel"/>
+                <TextView style="@style/homeValue" android:id="@+id/tel"/>
+            </LinearLayout>
+            <View style="@style/separator"/>
+
+            <LinearLayout style="@style/llHome">
+                <TextView style="@style/homeDescription" android:text="@string/home_description"/>
+                <TextView style="@style/homeValue" android:id="@+id/description"/>
+            </LinearLayout>
+            <View style="@style/separator"/>
+
+            <LinearLayout style="@style/llHome">
+                <TextView style="@style/homeDescription" android:text="@string/home_dispo"/>
+                <TextView style="@style/homeValue" android:id="@+id/dispo"/>
+            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>

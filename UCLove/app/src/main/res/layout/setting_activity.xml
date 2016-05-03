@@ -7,6 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
+        android:padding="10dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -44,6 +45,7 @@
         </RadioGroup>
 
         <TextView
+            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/setting_dispo"
@@ -89,12 +91,13 @@
         </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal">
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="@string/setting_set_time_begin"
             android:id="@+id/set_time_begin1"
             android:tag="start1"
@@ -103,6 +106,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="@string/setting_set_time_end"
             android:id="@+id/set_time_end2"
             android:tag="end1"
@@ -150,12 +154,13 @@
         </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal">
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="@string/setting_set_time_begin"
                 android:id="@+id/set_time_begin3"
                 android:tag="start2"
@@ -164,6 +169,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="@string/setting_set_time_end"
                 android:id="@+id/set_time_end4"
                 android:tag="end2"
@@ -211,12 +217,13 @@
         </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal">
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="@string/setting_set_time_begin"
                 android:id="@+id/set_time_begin5"
                 android:tag="start3"
@@ -225,6 +232,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="@string/setting_set_time_end"
                 android:id="@+id/set_time_end6"
                 android:tag="end3"
@@ -273,12 +281,13 @@
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal">
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="@string/setting_set_time_begin"
                 android:id="@+id/set_time_begin7"
                 android:tag="start4"
@@ -287,6 +296,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="@string/setting_set_time_end"
                 android:id="@+id/set_time_end8"
                 android:tag="end4"
@@ -336,12 +346,13 @@
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal">
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="@string/setting_set_time_begin"
                 android:id="@+id/set_time_begin9"
                 android:tag="start5"
@@ -350,6 +361,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="@string/setting_set_time_end"
                 android:id="@+id/set_time_end10"
                 android:tag="end5"
@@ -397,12 +409,13 @@
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal">
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="@string/setting_set_time_begin"
                 android:id="@+id/set_time_begin11"
                 android:tag="start6"
@@ -411,6 +424,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="@string/setting_set_time_end"
                 android:id="@+id/set_time_end12"
                 android:tag="end6"
@@ -458,12 +472,13 @@
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal">
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="@string/setting_set_time_begin"
                 android:id="@+id/set_time_begin13"
                 android:tag="start7"
@@ -472,6 +487,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="@string/setting_set_time_end"
                 android:id="@+id/set_time_end14"
                 android:tag="end7"
@@ -485,6 +501,7 @@
 
 
         <TextView
+            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/modify_profile"

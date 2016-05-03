@@ -7,6 +7,7 @@
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
+        android:padding="10dp"
         android:layout_height="match_parent" >
 
     <LinearLayout
@@ -31,88 +32,95 @@
                 android:id="@+id/profile_picture"
                 android:layout_gravity="center_horizontal"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/profile_default"
-                android:id="@+id/profile_name"
-                android:layout_gravity="center_horizontal"/>
+            <LinearLayout style="@style/llHome">
+                <TextView style="@style/homeDescription" android:text="@string/home_firstname"/>
+                <TextView style="@style/homeValue" android:id="@+id/prenom"/>
+            </LinearLayout>
+            <View style="@style/separator"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/profile_default"
-                android:id="@+id/profile_firstname"
-                android:layout_gravity="center_horizontal"/>
+            <LinearLayout style="@style/llHome">
+                <TextView style="@style/homeDescription" android:text="@string/home_name"/>
+                <TextView style="@style/homeValue" android:id="@+id/nom"/>
+            </LinearLayout>
+            <View style="@style/separator"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/profile_default"
-                android:id="@+id/profile_sexe"
-                android:layout_gravity="center_horizontal"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/profile_default"
-                android:id="@+id/profile_attirance"
-                android:layout_gravity="center_horizontal"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/profile_default"
-                android:id="@+id/profile_ddnaiss"
-                android:layout_gravity="center_horizontal"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/profile_default"
-                android:id="@+id/profile_mail"
-                android:layout_gravity="center_horizontal"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/profile_default"
-                android:id="@+id/profile_phone"
-                android:layout_gravity="center_horizontal"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/profile_default"
-                android:id="@+id/profile_city"
-                android:layout_gravity="center_horizontal"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/profile_default"
-                android:id="@+id/profile_eyes"
-                android:layout_gravity="center_horizontal"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/profile_default"
-                android:id="@+id/profile_hair"
-                android:layout_gravity="center_horizontal"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/profile_default"
-                android:id="@+id/profile_hobby"
-                android:layout_gravity="center_horizontal"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/profile_default"
-                android:id="@+id/profile_description"
-                android:layout_gravity="center_horizontal"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/profile_default"
-                android:id="@+id/profile_language"
-                android:layout_gravity="center_horizontal"/>
+            <LinearLayout style="@style/llHome">
+                <TextView style="@style/homeDescription" android:text="@string/home_sexe"/>
+                <TextView style="@style/homeValue" android:id="@+id/sexe"/>
+            </LinearLayout>
+            <View style="@style/separator"/>
+
+            <LinearLayout style="@style/llHome">
+                <TextView style="@style/homeDescription" android:text="@string/home_attirance"/>
+                <TextView style="@style/homeValue" android:id="@+id/attirance"/>
+            </LinearLayout>
+            <View style="@style/separator"/>
+
+
+
+            <LinearLayout style="@style/llHome">
+                <TextView style="@style/homeDescription" android:text="@string/home_hobby"/>
+                <TextView style="@style/homeValue" android:id="@+id/hobby"/>
+            </LinearLayout>
+            <View style="@style/separator"/>
+
+
+            <LinearLayout style="@style/llHome">
+                <TextView style="@style/homeDescription" android:text="@string/home_naissance"/>
+                <TextView style="@style/homeValue" android:id="@+id/naissance"/>
+            </LinearLayout>
+            <View style="@style/separator"/>
+
+
+            <LinearLayout style="@style/llHome">
+                <TextView style="@style/homeDescription" android:text="@string/home_ville"/>
+                <TextView style="@style/homeValue" android:id="@+id/ville"/>
+            </LinearLayout>
+            <View style="@style/separator"/>
+
+            <LinearLayout style="@style/llHome">
+                <TextView style="@style/homeDescription" android:text="@string/home_mail"/>
+                <TextView style="@style/homeValue" android:id="@+id/mail"/>
+            </LinearLayout>
+            <View style="@style/separator"/>
+
+
+            <LinearLayout style="@style/llHome">
+                <TextView style="@style/homeDescription" android:text="@string/home_yeux"/>
+                <TextView style="@style/homeValue" android:id="@+id/yeux"/>
+            </LinearLayout>
+            <View style="@style/separator"/>
+
+            <LinearLayout style="@style/llHome">
+                <TextView style="@style/homeDescription" android:text="@string/home_cheveux"/>
+                <TextView style="@style/homeValue" android:id="@+id/cheveux"/>
+            </LinearLayout>
+            <View style="@style/separator"/>
+
+            <LinearLayout style="@style/llHome">
+                <TextView style="@style/homeDescription" android:text="@string/home_tel"/>
+                <TextView style="@style/homeValue" android:id="@+id/tel"/>
+            </LinearLayout>
+            <View style="@style/separator"/>
+
+            <LinearLayout style="@style/llHome">
+                <TextView style="@style/homeDescription" android:text="@string/home_description"/>
+                <TextView style="@style/homeValue" android:id="@+id/description"/>
+            </LinearLayout>
+            <View style="@style/separator"/>
+
+            <LinearLayout style="@style/llHome">
+                <TextView style="@style/homeDescription" android:text="@string/home_dispo"/>
+                <TextView style="@style/homeValue" android:id="@+id/dispo"/>
+            </LinearLayout>
+            <View style="@style/separator"/>
+
+            <LinearLayout style="@style/llHome">
+                <TextView style="@style/homeDescription" android:text="@string/home_langue"/>
+                <TextView style="@style/homeValue" android:id="@+id/langue"/>
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
     <LinearLayout

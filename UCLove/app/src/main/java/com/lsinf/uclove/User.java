@@ -1,5 +1,6 @@
 package com.lsinf.uclove;
 
+import android.content.Context;
 import android.util.Log;
 
 import java.util.ArrayList;
@@ -40,14 +41,20 @@ public class User
     public void setNom(String nom) {this.nom = nom;}
     public String getPrenom() {return prenom;}
     public void setPrenom(String prenom) {this.prenom = prenom;}
-    public String getSexe() {return sexe;}
+
+    public int getIdSexe() {try{return Integer.parseInt(cheveux);}catch (Exception e){return 0;}}
+    public String getSexe(Context ctx){return ctx.getResources().getStringArray(R.array.genre)[getIdSexe()];}
     public void setSexe(String sexe) {this.sexe = sexe;}
+
     public String[] getPhoto() {if(photo == null)return new String[]{"placeholder"};return photo;}
     public void setPhoto(String[] photo) {
         Log.e("dodormeur","set photo"+photo.length+" "+photo[0]);this.photo = photo;}
     public String getAttirance() {return attirance;}
+
     public int getIdAttirance() {try{return Integer.parseInt(attirance);}catch (Exception e){return 0;}}
+    public String getAttirance(Context ctx){return ctx.getResources().getStringArray(R.array.genre)[getIdSexe()];}
     public void setAttirance(String attirance) {this.attirance = attirance;}
+
     public String getDescription() {return description;}
     public void setDescription(String description) {this.description = description;}
     public String getHobby() {return hobby;}
@@ -60,11 +67,15 @@ public class User
     public void setVille(String ville) {this.ville = ville;}
     public String getMail() {return mail;}
     public void setMail(String mail) {this.mail = mail;}
-    public String getYeux() {return yeux;}
+
+    public int getIDYeux() {try{return Integer.parseInt(yeux);}catch (Exception e){return 0;}}
+    public String getYeux(Context ctx){return ctx.getResources().getStringArray(R.array.eye_color)[getIDYeux()];}
     public void setYeux(String yeux) {this.yeux = yeux;}
-    public String getCheveux() {return cheveux;}
+
     public int getIdCheveux() {try{return Integer.parseInt(cheveux);}catch (Exception e){return 0;}}
+    public String getCheveux(Context ctx){return ctx.getResources().getStringArray(R.array.hair_color)[getIdCheveux()];}
     public void setCheveux(String cheveux) {this.cheveux = cheveux;}
+
     public String getTel() {return tel;}
     public void setTel(String tel) {this.tel = tel;}
     public ArrayList<Filtre> getFiltres() {return filtres;}
