@@ -4,6 +4,7 @@ import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -41,6 +42,7 @@ public class profilActivity extends baseActivity {
     }
     public void disp()
     {
+        new loadImageWeb((ImageView) findViewById(R.id.profile_picture)).execute(mainUser.getPhoto());
         ((TextView)findViewById(R.id.profile_name)).setText(user.getNom());
         ((TextView)findViewById(R.id.profile_firstname)).setText(user.getPrenom());
         ((TextView)findViewById(R.id.profile_sexe)).setText(user.getSexe());
@@ -54,8 +56,6 @@ public class profilActivity extends baseActivity {
         ((TextView)findViewById(R.id.profile_hobby)).setText(user.getHobby());
         ((TextView)findViewById(R.id.profile_description)).setText(user.getDescription());
         ((TextView)findViewById(R.id.profile_language)).setText(user.getLangue());
-
-
 
 
     }
