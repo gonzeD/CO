@@ -113,16 +113,16 @@ public class InscriptionActivity extends AppCompatActivity
                 int idx = ((RadioGroup) findViewById(R.id.button_sexe)).indexOfChild(radioButton);
 
                 int radioButtonID2 = ((RadioGroup) findViewById(R.id.button_attirance)).getCheckedRadioButtonId();
-                View radioButton2 = ((RadioGroup) findViewById(R.id.button_attirance)).findViewById(radioButtonID);
-                int idx2 = ((RadioGroup) findViewById(R.id.button_attirance)).indexOfChild(radioButton);
+                View radioButton2 = ((RadioGroup) findViewById(R.id.button_attirance)).findViewById(radioButtonID2);
+                int idx2 = ((RadioGroup) findViewById(R.id.button_attirance)).indexOfChild(radioButton2);
 
                 int radioButtonID3 = ((RadioGroup) findViewById(R.id.button_eyes)).getCheckedRadioButtonId();
-                View radioButton3 = ((RadioGroup) findViewById(R.id.button_eyes)).findViewById(radioButtonID);
-                int idx3 = ((RadioGroup) findViewById(R.id.button_eyes)).indexOfChild(radioButton);
+                View radioButton3 = ((RadioGroup) findViewById(R.id.button_eyes)).findViewById(radioButtonID3);
+                int idx3 = ((RadioGroup) findViewById(R.id.button_eyes)).indexOfChild(radioButton3);
 
                 int radioButtonID4 = ((RadioGroup) findViewById(R.id.button_color_hair)).getCheckedRadioButtonId();
-                View radioButton4 = ((RadioGroup) findViewById(R.id.button_color_hair)).findViewById(radioButtonID);
-                int idx4 = ((RadioGroup) findViewById(R.id.button_color_hair)).indexOfChild(radioButton);
+                View radioButton4 = ((RadioGroup) findViewById(R.id.button_color_hair)).findViewById(radioButtonID4);
+                int idx4 = ((RadioGroup) findViewById(R.id.button_color_hair)).indexOfChild(radioButton4);
 
                 String  hobby,description,langue;
                 if (((EditText) findViewById(R.id.hobby)).getText() != null){
