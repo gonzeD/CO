@@ -33,105 +33,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="InscriptionActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lsinf/uclove/InscriptionActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="124" column="104" selection-start-line="124" selection-start-column="104" selection-end-line="124" selection-end-column="104" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lsinf/uclove/HomeActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="55" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="baseActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lsinf/uclove/baseActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="41" column="82" selection-start-line="41" selection-start-column="82" selection-end-line="42" selection-end-column="93" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile_activity.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="profile_activity.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/res/layout/profile_activity.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.53521127">
-              <caret line="125" column="36" selection-start-line="125" selection-start-column="36" selection-end-line="125" selection-end-column="36" />
-              <folding>
-                <element signature="e#1027#1052#0" expanded="true" />
-                <element signature="e#1321#1346#0" expanded="true" />
-                <element signature="e#1612#1637#0" expanded="true" />
-                <element signature="e#1908#1933#0" expanded="true" />
-                <element signature="e#2199#2224#0" expanded="true" />
-                <element signature="e#2495#2520#0" expanded="true" />
-                <element signature="e#2788#2813#0" expanded="true" />
-                <element signature="e#3078#3103#0" expanded="true" />
-                <element signature="e#3369#3394#0" expanded="true" />
-                <element signature="e#3659#3684#0" expanded="true" />
-                <element signature="e#3949#3974#0" expanded="true" />
-                <element signature="e#4239#4264#0" expanded="true" />
-                <element signature="e#4530#4555#0" expanded="true" />
-                <element signature="e#4827#4852#0" expanded="true" />
-                <element signature="e#5294#5327#0" expanded="true" />
-                <element signature="e#5660#5693#0" expanded="true" />
-                <element signature="e#5978#6009#0" expanded="true" />
-                <element signature="e#6288#6316#0" expanded="true" />
-                <element signature="e#6599#6622#0" expanded="true" />
-                <element signature="e#6909#6934#0" expanded="true" />
-                <element signature="e#7227#7255#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profilActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lsinf/uclove/profilActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
-              <folding>
-                <element signature="e#2648#2693#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lsinf/uclove/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="52" column="31" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
+            <state vertical-scroll-proportion="11.117647">
+              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
               <folding />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home_activity.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/res/layout/home_activity.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.5588236">
-              <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="23" selection-end-column="39" />
-              <folding>
-                <element signature="e#1797#1824#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
           <provider editor-type-id="android-designer">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profilActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lsinf/uclove/profilActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3039867">
+              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -2112,7 +2033,13 @@
       <option name="project" value="LOCAL" />
       <updated>1462270902249</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="profilActivity">
+      <created>1462272389406</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1462272389406</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2129,16 +2056,16 @@
     <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.49697885" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35792953" sideWeight="0.46784565" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35792953" sideWeight="0.46570203" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3006608" sideWeight="0.12433012" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3006608" sideWeight="0.1318328" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3006608" sideWeight="0.8756699" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14630225" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.49249732" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3006608" sideWeight="0.8681672" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14630225" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.4903537" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.4939577" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2175,7 +2102,8 @@
     <MESSAGE value="commit" />
     <MESSAGE value="réduction des images&#10;" />
     <MESSAGE value="hobby string" />
-    <option name="LAST_COMMIT_MESSAGE" value="hobby string" />
+    <MESSAGE value="profilActivity" />
+    <option name="LAST_COMMIT_MESSAGE" value="profilActivity" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2202,7 +2130,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="45" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="45" />
-          <folding />
+          <folding>
+            <element signature="e#8846#8879#0" expanded="true" />
+          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -2245,29 +2175,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="142" column="34" selection-start-line="142" selection-start-column="34" selection-end-line="142" selection-end-column="34" />
-          <folding>
-            <element signature="e#1027#1052#0" expanded="true" />
-            <element signature="e#1321#1346#0" expanded="true" />
-            <element signature="e#1612#1637#0" expanded="true" />
-            <element signature="e#1908#1933#0" expanded="true" />
-            <element signature="e#2199#2224#0" expanded="true" />
-            <element signature="e#2495#2520#0" expanded="true" />
-            <element signature="e#2788#2813#0" expanded="true" />
-            <element signature="e#3078#3103#0" expanded="true" />
-            <element signature="e#3369#3394#0" expanded="true" />
-            <element signature="e#3659#3684#0" expanded="true" />
-            <element signature="e#3949#3974#0" expanded="true" />
-            <element signature="e#4239#4264#0" expanded="true" />
-            <element signature="e#4530#4555#0" expanded="true" />
-            <element signature="e#4827#4852#0" expanded="true" />
-            <element signature="e#5294#5327#0" expanded="true" />
-            <element signature="e#5660#5693#0" expanded="true" />
-            <element signature="e#5978#6009#0" expanded="true" />
-            <element signature="e#6288#6316#0" expanded="true" />
-            <element signature="e#6599#6622#0" expanded="true" />
-            <element signature="e#6909#6934#0" expanded="true" />
-            <element signature="e#7227#7255#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -2294,7 +2202,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="57" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="57" />
-          <folding />
+          <folding>
+            <element signature="e#8846#8879#0" expanded="true" />
+          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -2337,29 +2247,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="142" column="34" selection-start-line="142" selection-start-column="34" selection-end-line="142" selection-end-column="34" />
-          <folding>
-            <element signature="e#1027#1052#0" expanded="true" />
-            <element signature="e#1321#1346#0" expanded="true" />
-            <element signature="e#1612#1637#0" expanded="true" />
-            <element signature="e#1908#1933#0" expanded="true" />
-            <element signature="e#2199#2224#0" expanded="true" />
-            <element signature="e#2495#2520#0" expanded="true" />
-            <element signature="e#2788#2813#0" expanded="true" />
-            <element signature="e#3078#3103#0" expanded="true" />
-            <element signature="e#3369#3394#0" expanded="true" />
-            <element signature="e#3659#3684#0" expanded="true" />
-            <element signature="e#3949#3974#0" expanded="true" />
-            <element signature="e#4239#4264#0" expanded="true" />
-            <element signature="e#4530#4555#0" expanded="true" />
-            <element signature="e#4827#4852#0" expanded="true" />
-            <element signature="e#5294#5327#0" expanded="true" />
-            <element signature="e#5660#5693#0" expanded="true" />
-            <element signature="e#5978#6009#0" expanded="true" />
-            <element signature="e#6288#6316#0" expanded="true" />
-            <element signature="e#6599#6622#0" expanded="true" />
-            <element signature="e#6909#6934#0" expanded="true" />
-            <element signature="e#7227#7255#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -2400,7 +2288,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="57" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="57" />
-          <folding />
+          <folding>
+            <element signature="e#8846#8879#0" expanded="true" />
+          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -2452,17 +2342,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/setting_activity.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="45" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lsinf/uclove/filtreAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2483,14 +2362,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="118" column="25" selection-start-line="118" selection-start-column="25" selection-end-line="118" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lsinf/uclove/SettingsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -2527,14 +2398,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lsinf/uclove/InscriptionActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="124" column="104" selection-start-line="124" selection-start-column="104" selection-end-line="124" selection-end-column="104" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/home_activity.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.5588236">
@@ -2556,9 +2419,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lsinf/uclove/SettingsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32890365">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/setting_activity.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7200704">
+          <caret line="229" column="0" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
+          <folding>
+            <element signature="e#8846#8879#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lsinf/uclove/baseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.3654485">
           <caret line="41" column="82" selection-start-line="41" selection-start-column="82" selection-end-line="42" selection-end-column="93" />
           <folding />
         </state>
@@ -2566,53 +2450,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lsinf/uclove/HomeActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.8039867">
           <caret line="34" column="55" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lsinf/uclove/profilActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lsinf/uclove/InscriptionActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
-          <folding>
-            <element signature="e#2648#2693#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.81727576">
+          <caret line="124" column="104" selection-start-line="124" selection-start-column="104" selection-end-line="124" selection-end-column="104" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/profile_activity.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53521127">
-          <caret line="125" column="36" selection-start-line="125" selection-start-column="36" selection-end-line="125" selection-end-column="36" />
-          <folding>
-            <element signature="e#1027#1052#0" expanded="true" />
-            <element signature="e#1321#1346#0" expanded="true" />
-            <element signature="e#1612#1637#0" expanded="true" />
-            <element signature="e#1908#1933#0" expanded="true" />
-            <element signature="e#2199#2224#0" expanded="true" />
-            <element signature="e#2495#2520#0" expanded="true" />
-            <element signature="e#2788#2813#0" expanded="true" />
-            <element signature="e#3078#3103#0" expanded="true" />
-            <element signature="e#3369#3394#0" expanded="true" />
-            <element signature="e#3659#3684#0" expanded="true" />
-            <element signature="e#3949#3974#0" expanded="true" />
-            <element signature="e#4239#4264#0" expanded="true" />
-            <element signature="e#4530#4555#0" expanded="true" />
-            <element signature="e#4827#4852#0" expanded="true" />
-            <element signature="e#5294#5327#0" expanded="true" />
-            <element signature="e#5660#5693#0" expanded="true" />
-            <element signature="e#5978#6009#0" expanded="true" />
-            <element signature="e#6288#6316#0" expanded="true" />
-            <element signature="e#6599#6622#0" expanded="true" />
-            <element signature="e#6909#6934#0" expanded="true" />
-            <element signature="e#7227#7255#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="11.117647">
+          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lsinf/uclove/profilActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3039867">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>

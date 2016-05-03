@@ -48,8 +48,7 @@ public class profilActivity extends baseActivity {
         ((TextView)findViewById(R.id.profile_sexe)).setText(user.getSexe());
         ((TextView)findViewById(R.id.profile_attirance)).setText(user.getAttirance());
         ((TextView)findViewById(R.id.profile_ddnaiss)).setText(user.getNaissance());
-        ((TextView)findViewById(R.id.profile_mail)).setText(user.getMail());
-        ((TextView)findViewById(R.id.profile_phone)).setText(user.getTel());
+
         ((TextView)findViewById(R.id.profile_city)).setText(user.getVille());
         ((TextView)findViewById(R.id.profile_eyes)).setText(user.getYeux());
         ((TextView)findViewById(R.id.profile_hair)).setText(user.getCheveux());
