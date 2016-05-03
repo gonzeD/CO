@@ -22,7 +22,7 @@ public class User
     private String attirance= null;
     private String description = null;
 
-    private String hobby[] = null;
+    private String hobby = null;
     private String naissance= null;
     private String disponibilite[] = null;
 
@@ -49,8 +49,8 @@ public class User
     public void setAttirance(String attirance) {this.attirance = attirance;}
     public String getDescription() {return description;}
     public void setDescription(String description) {this.description = description;}
-    public String[] getHobby() {return hobby;}
-    public void setHobby(String[] hobby) {this.hobby = hobby;}
+    public String getHobby() {return hobby;}
+    public void setHobby(String hobby) {this.hobby = hobby;}
     public String getNaissance() {return naissance;}
     public void setNaissance(String naissance) {this.naissance = naissance;}
     public String[] getDisponibilite() {return disponibilite;}
