@@ -9,11 +9,12 @@ import java.util.ArrayList;
 //gêre les relation de l'utilisateur
 public class Relation
 {
-    public static final int BLOQUED = 0;
-    public static final int NOTHING = 1;
-    public static final int DEMAND = 2;
-    public static final int FRIEND = 3;
-    public static final int FAVORITE = 4;
+    public static final int NOTHING = 0;
+    public static final int BLOQUED = 1;
+    public static final int ISDEMANDED = 2;
+    public static final int DEMAND = 3;
+    public static final int FRIEND = 4;
+    public static final int FAVORITE = 5;
     private ArrayList<Integer> idAsker = new ArrayList<Integer>();
     private ArrayList<Integer> idReceiver = new ArrayList<Integer>();
     private ArrayList<Integer> state  = new ArrayList<Integer>();
@@ -32,6 +33,14 @@ public class Relation
                 return state.get(i);
         return NOTHING;
     }
+    public int getRelationByReceiverId(int a)
+    {
+        for(int i = 0;i<idReceiver.size();i++)
+            if(idReceiver.get(i) == a && idAsker.get(i) == DatabaseHelper.idMain)
+                return state.get(i);
+        return NOTHING;
+    }
+
     public int getRelation(int i){return state.get(i);}
     public int getAsker(int i){return idAsker.get(i);}
     public int getReceiver(int i){return idReceiver.get(i);}

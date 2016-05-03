@@ -2,7 +2,7 @@
     <string name="app_name">UCLove</string>
 
     <string name="connexion_pseudo">Pseudo</string>
-    <string name="connexion_password">Mot de passe</string>
+    <string name="connexion_password">Password</string>
     <string name="connexion_connect">Se connecter</string>
     <string name="connexion_register">S\'inscrire</string>
 
@@ -73,21 +73,10 @@
 
     <string name="setting_langue">Langues</string>
     <string name="setting_apply">Appliquer</string>
-    <string name="setting_french">Français</string>
-    <string name="setting_english">Anglais</string>
+    <string name="setting_french">French</string>
+    <string name="setting_english">English</string>
     <string name="setting_german">Allemand</string>
     <string name="setting_dutch">Néerlandais</string>
-    <string name="setting_dispo">Disponibilités rendez-vous</string>
-    <string name="setting_monday">Lundi</string>
-    <string name="setting_tuesday">Mardi</string>
-    <string name="setting_wednesday">Mercredi</string>
-    <string name="setting_thursday">Jeudi</string>
-    <string name="setting_friday">Vendredi</string>
-    <string name="setting_saturday">Samedi</string>
-    <string name="setting_sunday">Dimanche</string>
-    <string name="setting_de">de</string>
-    <string name="setting_a">à</string>
-
 
     <string name="filtre_no_filtre">Pas de filtre</string>
     <string name="filtre_modify">Modifier</string>
