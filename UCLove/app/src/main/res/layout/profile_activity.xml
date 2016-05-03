@@ -24,17 +24,11 @@
 
 
             <!--début des infos du profil -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:text="@string/profile_default"
                 android:id="@+id/profile_picture"
-                android:layout_gravity="center_horizontal"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/profile_default"
-                android:id="@+id/profile_pseudo"
                 android:layout_gravity="center_horizontal"/>
 
             <TextView

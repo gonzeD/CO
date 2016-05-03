@@ -21,7 +21,6 @@ public class HomeActivity extends baseActivity
 
         setContentView(R.layout.home_activity);
 
-        new loadImageWeb((ImageView) findViewById(R.id.photo1)).execute(mainUser.getPhoto());
 
         if(baseActivity.mainUser.getPrenom() != null)((TextView)findViewById(R.id.prenom)).setText(baseActivity.mainUser.getPrenom());
         //else ((TextView)findViewById(R.id.prenom)).setText("test");
@@ -33,11 +32,10 @@ public class HomeActivity extends baseActivity
         //else ((TextView)findViewById(R.id.sexe)).setText("test");
         if(baseActivity.mainUser.getAttirance() != null)((TextView)findViewById(R.id.attirance)).setText(baseActivity.mainUser.getAttirance());
         //else ((TextView)findViewById(R.id.attirance)).setText("test");
-        String tab[] = baseActivity.mainUser.getHobby();
+        String tab= baseActivity.mainUser.getHobby();
         String temp = " ";
         if(tab != null){
-            for(int i = 0; i<tab.length; i++) temp+=tab[i];
-        ((TextView)findViewById(R.id.hobby)).setText(temp);}
+        ((TextView)findViewById(R.id.hobby)).setText(tab);}
         else ((TextView)findViewById(R.id.hobby)).setText("Liste de mes Hobbys");
         if(baseActivity.mainUser.getNaissance() != null)((TextView)findViewById(R.id.naissance)).setText(baseActivity.mainUser.getNaissance());
         //else ((TextView)findViewById(R.id.naissance)).setText("test");
@@ -63,6 +61,9 @@ public class HomeActivity extends baseActivity
 
 
         createNavigationMenu();
+
+
+        new loadImageWeb((ImageView) findViewById(R.id.photo1)).execute(mainUser.getPhoto());
     }
 
 
