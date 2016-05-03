@@ -85,8 +85,13 @@
     <string name="setting_friday">Vendredi</string>
     <string name="setting_saturday">Samedi</string>
     <string name="setting_sunday">Dimanche</string>
-    <string name="setting_de">de</string>
-    <string name="setting_a">à</string>
+    <string name="setting_de"> &#160;&#032;de&#160;&#032; </string>
+    <string name="setting_a"> &#032;&#160;à&#160;&#032; </string>
+    <string name="setting_set_time_begin">Heure début</string>
+    <string name="setting_set_time_end">Heure fin</string>
+
+    <string name="setting_init_time">00:00</string>
+
 
 
     <string name="filtre_no_filtre">Pas de filtre</string>
