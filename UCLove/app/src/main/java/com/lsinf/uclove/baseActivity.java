@@ -69,7 +69,7 @@ public class baseActivity extends AppCompatActivity
             i = new Intent(this, ConnexionActivity.class);
         }
         else if(v.getTag().equals("profil"))
-            i = new Intent(this,HomeActivity.class ); // Your list's Intent
+            i = new Intent(this,profilActivity.class ); // Your list's Intent
         else if(v.getTag().equals("preferences"))
             i = new Intent(this,SettingsActivity.class ); // Your list's Intent
         else if(v.getTag().equals("reset"))
