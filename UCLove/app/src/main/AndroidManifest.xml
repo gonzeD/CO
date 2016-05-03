@@ -16,22 +16,22 @@
 
 
 
-        <activity android:name=".askRdvActivity" android:configChanges="locale|orientation"></activity>
-        <activity android:name=".filtreActivity" android:configChanges="locale|orientation"></activity>
-        <activity android:name=".friendsActivity"></activity>
-        <activity android:name=".messageActivity"></activity>
-        <activity android:name=".modifyFiltreActivity"></activity>
-        <activity android:name=".profilActivity"></activity>
-        <activity android:name=".receiveRdvActivity"></activity>
-        <activity android:name=".requestActivity"></activity>
-        <activity android:name=".setDateActivity"></activity>
-        <activity android:name="HomeActivity"/>
-        <activity android:name="SettingsActivity" android:configChanges="locale|orientation"/>
+        <activity android:name=".askRdvActivity" android:configChanges="locale|orientation" android:screenOrientation="portrait"></activity>
+        <activity android:name=".filtreActivity" android:configChanges="locale|orientation" android:screenOrientation="portrait"></activity>
+        <activity android:name=".friendsActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".messageActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".modifyFiltreActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".profilActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".receiveRdvActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".requestActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".setDateActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name="HomeActivity" android:screenOrientation="portrait"/>
+        <activity android:name="SettingsActivity" android:configChanges="locale|orientation" android:screenOrientation="portrait"/>
 
         <activity android:name="InscriptionActivity"
-            android:label="@string/app_name" />
+            android:label="@string/app_name" android:screenOrientation="portrait" />
         <activity android:name="ConnexionActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name" android:screenOrientation="portrait" >
 
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />

@@ -40,7 +40,6 @@ public class baseActivity extends AppCompatActivity
     {
         ((TextView)findViewById(R.id.menu_name)).setText(mainUser.getPrenom()+" "+mainUser.getNom());
         ((TextView)findViewById(R.id.menu_pseudo)).setText(DatabaseHelper.pseudo);
-        new loadImageWeb((ImageView) findViewById(R.id.avatar)).execute(mainUser.getPhoto());
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
@@ -55,6 +54,7 @@ public class baseActivity extends AppCompatActivity
         };
         drawerLayout.setDrawerListener(toggle);
         toggle.syncState();
+        new loadImageWeb((ImageView) findViewById(R.id.avatar)).execute(mainUser.getPhoto());
     }
 
     public void clickMenu(View v)
@@ -69,7 +69,7 @@ public class baseActivity extends AppCompatActivity
             i = new Intent(this, ConnexionActivity.class);
         }
         else if(v.getTag().equals("profil"))
-            i = new Intent(this,profilActivity.class ); // Your list's Intent
+            i = new Intent(this,HomeActivity.class ); // Your list's Intent
         else if(v.getTag().equals("preferences"))
             i = new Intent(this,SettingsActivity.class ); // Your list's Intent
         else if(v.getTag().equals("reset"))

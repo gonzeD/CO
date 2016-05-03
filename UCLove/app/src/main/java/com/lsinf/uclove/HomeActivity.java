@@ -21,7 +21,6 @@ public class HomeActivity extends baseActivity
 
         setContentView(R.layout.home_activity);
 
-        new loadImageWeb((ImageView) findViewById(R.id.photo1)).execute(mainUser.getPhoto());
 
         if(baseActivity.mainUser.getPrenom() != null)((TextView)findViewById(R.id.prenom)).setText(baseActivity.mainUser.getPrenom());
         //else ((TextView)findViewById(R.id.prenom)).setText("test");
@@ -62,12 +61,15 @@ public class HomeActivity extends baseActivity
 
 
         createNavigationMenu();
+
+
+        new loadImageWeb((ImageView) findViewById(R.id.photo1)).execute(mainUser.getPhoto());
     }
 
 
    public void change(View v) {
 
-       Intent i = new Intent(this, modification_informationActivity.class);
+       Intent i = new Intent(this, SettingsActivity.class);
         startActivity(i);
    }
 }

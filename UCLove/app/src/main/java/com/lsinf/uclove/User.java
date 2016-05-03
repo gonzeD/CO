@@ -46,6 +46,7 @@ public class User
     public void setPhoto(String[] photo) {
         Log.e("dodormeur","set photo"+photo.length+" "+photo[0]);this.photo = photo;}
     public String getAttirance() {return attirance;}
+    public int getIdAttirance() {try{return Integer.parseInt(attirance);}catch (Exception e){return 0;}}
     public void setAttirance(String attirance) {this.attirance = attirance;}
     public String getDescription() {return description;}
     public void setDescription(String description) {this.description = description;}
@@ -62,6 +63,7 @@ public class User
     public String getYeux() {return yeux;}
     public void setYeux(String yeux) {this.yeux = yeux;}
     public String getCheveux() {return cheveux;}
+    public int getIdCheveux() {try{return Integer.parseInt(cheveux);}catch (Exception e){return 0;}}
     public void setCheveux(String cheveux) {this.cheveux = cheveux;}
     public String getTel() {return tel;}
     public void setTel(String tel) {this.tel = tel;}

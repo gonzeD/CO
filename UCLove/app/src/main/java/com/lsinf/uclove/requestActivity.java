@@ -60,14 +60,14 @@ public class requestActivity extends baseActivity {
     public void block(View v) {
         if (working == 0) {
             working = 1;
-            new changeRelation().execute(""+ids.get(Integer.parseInt(v.getTag().toString())),""+0);
+            new changeRelation().execute(""+ids.get(Integer.parseInt(v.getTag().toString())),""+Relation.BLOQUED);
         }
     }
     public void accept(View v)
     {
         if (working == 0) {
             working = 1;
-            new changeRelation().execute(""+ids.get(Integer.parseInt(v.getTag().toString())),""+3);
+            new changeRelation().execute(""+ids.get(Integer.parseInt(v.getTag().toString())),""+Relation.FRIEND);
 
         }
     }//recreate ()
