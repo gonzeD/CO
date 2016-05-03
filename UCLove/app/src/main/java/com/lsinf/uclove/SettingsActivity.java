@@ -6,8 +6,10 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.util.Locale;
@@ -32,7 +34,28 @@ public class SettingsActivity extends baseActivity
         setContentView(R.layout.setting_activity);
 
 
+        EditText et;
+        et = (EditText)findViewById(R.id.mail);
+        et.setText(baseActivity.mainUser.getMail());
 
+        et = (EditText)findViewById(R.id.phone);
+        et.setText(baseActivity.mainUser.getTel());
+
+        et = (EditText)findViewById(R.id.city);
+        et.setText(baseActivity.mainUser.getVille());
+
+        //a decomenter une fois que hobby n'est plus un tableau
+        //et = (EditText)findViewById(R.id.hobby);
+        //et.setText(baseActivity.mainUser.getHobby());
+
+        et = (EditText)findViewById(R.id.description);
+        et.setText(baseActivity.mainUser.getDescription());
+
+        RadioGroup ra;
+        ra = (RadioGroup)findViewById(R.id.button_attirance);
+        ((RadioButton)ra.getChildAt(mainUser.getIdAttirance())).setChecked(true);
+        ra = (RadioGroup)findViewById(R.id.button_color_hair);
+        ((RadioButton)ra.getChildAt(mainUser.getIdCheveux())).setChecked(true);
 
          createNavigationMenu();
     }

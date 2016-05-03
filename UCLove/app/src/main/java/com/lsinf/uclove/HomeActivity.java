@@ -68,7 +68,7 @@ public class HomeActivity extends baseActivity
 
    public void change(View v) {
 
-       Intent i = new Intent(this, modification_informationActivity.class);
+       Intent i = new Intent(this, SettingsActivity.class);
         startActivity(i);
    }
 }
