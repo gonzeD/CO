@@ -50,9 +50,9 @@ public class SettingsActivity extends baseActivity
         et = (EditText)findViewById(R.id.city);
         et.setText(baseActivity.mainUser.getVille());
 
-        //a decomenter une fois que hobby n'est plus un tableau
-        //et = (EditText)findViewById(R.id.hobby);
-        //et.setText(baseActivity.mainUser.getHobby());
+
+        et = (EditText)findViewById(R.id.hobby);
+        et.setText(baseActivity.mainUser.getHobby());
 
         et = (EditText)findViewById(R.id.description);
         et.setText(baseActivity.mainUser.getDescription());

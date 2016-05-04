@@ -1,5 +1,7 @@
 package com.lsinf.uclove;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 
 /**
@@ -28,6 +30,7 @@ public class Relation
     }
     public int getRelationByAskerId(int a)
     {
+        Log.e("dodormeur", "asker size "+getSize()+" id" +a);
         for(int i = 0;i<idAsker.size();i++)
             if(idAsker.get(i) == a && idReceiver.get(i) == DatabaseHelper.idMain)
                 return state.get(i);

@@ -22,6 +22,8 @@ public class filtreActivity extends baseActivity {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
+    private int actualFiltre = 0;
+
     public void create(View v)
     {
         Intent i = new Intent(this,modifyFiltreActivity.class);
@@ -31,8 +33,13 @@ public class filtreActivity extends baseActivity {
 
     public void search(View v)
     {
-        new SearchFriend().execute(mainUser.getFiltres().get(Integer.parseInt(v.getTag().toString())).getData());
-    }
+        actualFiltre = Integer.parseInt(v.getTag().toString());
+
+        Intent i = new Intent(filtreActivity.this,profilActivity.class);
+        i.putExtra("idFiltre",actualFiltre);
+        startActivity(i);
+       // new SearchFriend().execute(mainUser.getFiltres().get(actualFiltre).getData());
+}
 
     public void modify(View v)
     {
@@ -83,7 +90,7 @@ public class filtreActivity extends baseActivity {
             if(result.equals("1"))display();
         }
     }
-
+/*
     private class SearchFriend extends AsyncTask<String, Void, String> {
         @Override
         protected String doInBackground(String... urls)
@@ -100,8 +107,8 @@ public class filtreActivity extends baseActivity {
             {
                 Intent i = new Intent(filtreActivity.this,profilActivity.class);
                 i.putExtra("id",r);
-                startActivity(i);
+                startActivityForResult(i,1);
             }
         }
-    }
+    }*/
 }

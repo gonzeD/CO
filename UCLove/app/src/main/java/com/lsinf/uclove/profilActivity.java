@@ -1,11 +1,14 @@
 package com.lsinf.uclove;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by damien on 28/04/16.
@@ -13,16 +16,26 @@ import android.widget.TextView;
 public class profilActivity extends baseActivity {
 
     User user = new User();
+    int idFiltre;
     int id;
+    int display = 0;
     int state = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        id = getIntent().getIntExtra("id",-1);
-        if(id != -1)
+        int temp = getIntent().getIntExtra("refresh",-1);
+        display = getIntent().getIntExtra("dontdisplay",0);
+        idFiltre = getIntent().getIntExtra("idFiltre",-1);
+        if(temp != -1)
         {
-            new DownloadUser().execute();
+            id = temp;
+            new DownloadUser().execute(temp+"");
+
+        }
+        else if(idFiltre != -1)
+        {
+            new SearchFriend().execute(mainUser.getFiltres().get(idFiltre).getData());
         }
     }
 
@@ -41,10 +54,27 @@ public class profilActivity extends baseActivity {
     {
         setContentView(R.layout.profile_activity);
         createNavigationMenu();
+        if(display != 0)findViewById(R.id.tuto).setVisibility(View.GONE);
+        else
+        {
+            findViewById(R.id.wraperTel).setVisibility(View.GONE);
+            findViewById(R.id.wraperDispo).setVisibility(View.GONE);
+            findViewById(R.id.wraperMail).setVisibility(View.GONE);
+            findViewById(R.id.wraperHobby).setVisibility(View.GONE);
+            findViewById(R.id.llprofile).setOnTouchListener(new OnSwipeTouchListener(profilActivity.this) {
 
+
+                public void onSwipeRight() {
+                    recreate();
+                }
+
+                public void onSwipeLeft() {
+                    recreate();
+                }
+            });
+        }
         new loadImageWeb((ImageView) findViewById(R.id.profile_picture)).execute(mainUser.getPhoto());
-        ((TextView)findViewById(R.id.nom)).setText(user.getNom());
-        ((TextView)findViewById(R.id.prenom)).setText(user.getPrenom());
+        ((TextView)findViewById(R.id.prenom)).setText(user.getPrenom()+" "+user.getNom());
         ((TextView)findViewById(R.id.sexe)).setText(user.getSexe(this));
         ((TextView)findViewById(R.id.attirance)).setText(user.getAttirance());
         ((TextView)findViewById(R.id.naissance)).setText(user.getNaissance());
@@ -65,7 +95,8 @@ public class profilActivity extends baseActivity {
         disp();
         Resources r = getResources();
         state = relation.getRelationByAskerId(id);
-        ((TextView)findViewById(R.id.text_relation)).setText(r.getString(R.string.profile_actual_relation)+" "+r.getStringArray(R.array.profile_relation)[relation.getRelationByReceiverId(id)]);
+        Log.e("dodormeur",state+" relation "+id);
+        ((TextView)findViewById(R.id.text_relation)).setText(r.getString(R.string.profile_actual_relation) + " " + r.getStringArray(R.array.profile_relation)[relation.getRelationByReceiverId(id)]);
 
         if(state == Relation.NOTHING)
         {
@@ -104,7 +135,11 @@ public class profilActivity extends baseActivity {
         {
             if(result.equals("1"))
             {
-                recreate();
+                Intent i = new Intent(profilActivity.this,profilActivity.class);
+                i.putExtra("refresh",id);i.putExtra("dontdisplay",display);
+                i.putExtra("idFiltre",idFiltre);
+                startActivity(i);
+                finish();
             }
         }
     }
@@ -132,7 +167,7 @@ public class profilActivity extends baseActivity {
         @Override
         protected String doInBackground(String... urls)
         {
-            return ""+DatabaseHelper.getUser(user,id,profilActivity.this);
+            return ""+DatabaseHelper.getUser(user, Integer.parseInt(urls[0]), profilActivity.this);
         }
         @Override
         protected void onPostExecute(String result)
@@ -140,6 +175,26 @@ public class profilActivity extends baseActivity {
             if(result.equals("1"))
             {
                 new DownloadRelations().execute();
+            }
+        }
+    }
+
+    private class SearchFriend extends AsyncTask<String, Void, String> {
+        @Override
+        protected String doInBackground(String... urls)
+        {
+            return ""+DatabaseHelper.searchUser(urls[0], profilActivity.this);
+        }
+        @Override
+        protected void onPostExecute(String result)
+        {
+            int r = Integer.parseInt(result);
+            id = r;
+            Log.e("dodormeur", "result =" + r);
+            if(r<=0) Toast.makeText(profilActivity.this, R.string.error_no_matching, Toast.LENGTH_LONG).show();
+            else
+            {
+                new DownloadUser().execute(r+"");
             }
         }
     }

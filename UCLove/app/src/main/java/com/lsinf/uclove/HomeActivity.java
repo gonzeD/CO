@@ -65,8 +65,8 @@ public class HomeActivity extends baseActivity
 
 
         if(mainUser.getPhoto().length>0)new loadImageWeb((ImageView) findViewById(R.id.photo1)).execute(mainUser.getPhoto()[0]);
-        if(mainUser.getPhoto().length>1)new loadImageWeb((ImageView) findViewById(R.id.photo1)).execute(mainUser.getPhoto()[1]);
-        if(mainUser.getPhoto().length>2)new loadImageWeb((ImageView) findViewById(R.id.photo1)).execute(mainUser.getPhoto()[2]);
+        if(mainUser.getPhoto().length>1)new loadImageWeb((ImageView) findViewById(R.id.photo2)).execute(mainUser.getPhoto()[1]);
+        if(mainUser.getPhoto().length>2)new loadImageWeb((ImageView) findViewById(R.id.photo3)).execute(mainUser.getPhoto()[2]);
     }
 
 

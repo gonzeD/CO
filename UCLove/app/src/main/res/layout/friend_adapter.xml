@@ -23,7 +23,14 @@
                 android:id="@+id/name"/>
         </LinearLayout>
         <Button
-            android:layout_width="70dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/friend_profile"
+            android:onClick="profil"
+            android:layout_marginRight="5dp"
+            android:id="@+id/profile"/>
+        <Button
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="@string/friend_rdv"
             android:onClick="rdv"
