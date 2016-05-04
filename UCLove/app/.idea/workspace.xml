@@ -7,18 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca8d26bf-8817-4666-a07d-cc6d7aeb304c" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Laurent\Desktop\Projetuclove\UCLove\app\.idea\libraries\animated_vector_drawable_23_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Laurent\Desktop\Projetuclove\UCLove\app\.idea\libraries\appcompat_v7_23_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Laurent\Desktop\Projetuclove\UCLove\app\.idea\libraries\design_23_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Laurent\Desktop\Projetuclove\UCLove\app\.idea\libraries\recyclerview_v7_23_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Laurent\Desktop\Projetuclove\UCLove\app\.idea\libraries\support_annotations_23_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Laurent\Desktop\Projetuclove\UCLove\app\.idea\libraries\support_v4_23_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Laurent\Desktop\Projetuclove\UCLove\app\.idea\libraries\support_vector_drawable_23_2_1.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="app.iws" />
@@ -377,6 +365,13 @@
       <option name="number" value="Default" />
       <updated>1462282944094</updated>
     </task>
+    <task id="LOCAL-00001" summary="rien">
+      <created>1462353350202</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1462353350202</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -424,6 +419,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="rien" />
+    <option name="LAST_COMMIT_MESSAGE" value="rien" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
