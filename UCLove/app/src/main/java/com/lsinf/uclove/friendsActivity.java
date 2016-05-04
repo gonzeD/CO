@@ -78,6 +78,13 @@ public class friendsActivity extends baseActivity {
     {
         Log.e("dodormeur","rdv"+v.getTag().toString());
     }
+    public void profil(View v)
+    {
+        Intent i = new Intent(friendsActivity.this,profilActivity.class);
+        i.putExtra("dontdisplay",1);
+        i.putExtra("refresh",friendList.get(Integer.parseInt(v.getTag().toString())).id);
+        startActivity(i);
+    }
     public void click(View v)
     {
         Log.e("dodormeur","click"+v.getTag().toString());

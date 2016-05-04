@@ -42,7 +42,7 @@ public class User
     public String getPrenom() {return prenom;}
     public void setPrenom(String prenom) {this.prenom = prenom;}
 
-    public int getIdSexe() {try{return Integer.parseInt(cheveux);}catch (Exception e){return 0;}}
+    public int getIdSexe() {try{if(Integer.parseInt(cheveux)>1)return 0; return Integer.parseInt(cheveux);}catch (Exception e){return 0;}}
     public String getSexe(Context ctx){return ctx.getResources().getStringArray(R.array.genre)[getIdSexe()];}
     public void setSexe(String sexe) {this.sexe = sexe;}
 

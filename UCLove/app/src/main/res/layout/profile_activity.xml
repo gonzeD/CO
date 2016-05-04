@@ -7,7 +7,6 @@
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
-        android:padding="10dp"
         android:layout_height="match_parent" >
 
     <LinearLayout
@@ -17,32 +16,45 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/svprofile"
         android:layout_weight="1">
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
+            android:id="@+id/llprofile"
+            android:padding="10dp"
             android:layout_height="match_parent">
 
 
             <!--début des infos du profil -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:text="@string/profile_default"
                 android:id="@+id/profile_picture"
-                android:layout_gravity="center_horizontal"/>
+                android:layout_gravity="center_horizontal"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/swipe"
+                    android:layout_margin="20dp"
+                    android:id="@+id/tuto"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
 
             <LinearLayout style="@style/llHome">
-                <TextView style="@style/homeDescription" android:text="@string/home_firstname"/>
-                <TextView style="@style/homeValue" android:id="@+id/prenom"/>
+                <TextView style="@style/homeValueCenter" android:layout_gravity="center" android:id="@+id/prenom"/>
             </LinearLayout>
             <View style="@style/separator"/>
 
-            <LinearLayout style="@style/llHome">
-                <TextView style="@style/homeDescription" android:text="@string/home_name"/>
-                <TextView style="@style/homeValue" android:id="@+id/nom"/>
-            </LinearLayout>
-            <View style="@style/separator"/>
 
 
 
@@ -59,13 +71,15 @@
             <View style="@style/separator"/>
 
 
-
+<LinearLayout
+    android:layout_width="wrap_content" android:orientation="vertical"
+    android:layout_height="wrap_content" android:id="@+id/wraperHobby">
             <LinearLayout style="@style/llHome">
                 <TextView style="@style/homeDescription" android:text="@string/home_hobby"/>
                 <TextView style="@style/homeValue" android:id="@+id/hobby"/>
             </LinearLayout>
             <View style="@style/separator"/>
-
+</LinearLayout>
 
             <LinearLayout style="@style/llHome">
                 <TextView style="@style/homeDescription" android:text="@string/home_naissance"/>
@@ -80,12 +94,15 @@
             </LinearLayout>
             <View style="@style/separator"/>
 
+        <LinearLayout
+            android:layout_width="wrap_content" android:orientation="vertical"
+                android:layout_height="wrap_content" android:id="@+id/wraperMail">
             <LinearLayout style="@style/llHome">
                 <TextView style="@style/homeDescription" android:text="@string/home_mail"/>
                 <TextView style="@style/homeValue" android:id="@+id/mail"/>
             </LinearLayout>
             <View style="@style/separator"/>
-
+            </LinearLayout>
 
             <LinearLayout style="@style/llHome">
                 <TextView style="@style/homeDescription" android:text="@string/home_yeux"/>
@@ -99,11 +116,16 @@
             </LinearLayout>
             <View style="@style/separator"/>
 
-            <LinearLayout style="@style/llHome">
-                <TextView style="@style/homeDescription" android:text="@string/home_tel"/>
-                <TextView style="@style/homeValue" android:id="@+id/tel"/>
+            <LinearLayout
+                android:layout_width="wrap_content" android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:id="@+id/wraperTel">
+                <LinearLayout style="@style/llHome">
+                    <TextView style="@style/homeDescription" android:text="@string/home_tel"/>
+                    <TextView style="@style/homeValue" android:id="@+id/tel"/>
+                </LinearLayout>
+                <View style="@style/separator"/>
             </LinearLayout>
-            <View style="@style/separator"/>
 
             <LinearLayout style="@style/llHome">
                 <TextView style="@style/homeDescription" android:text="@string/home_description"/>
@@ -111,11 +133,18 @@
             </LinearLayout>
             <View style="@style/separator"/>
 
+
+
+            <LinearLayout
+                android:layout_width="wrap_content" android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:id="@+id/wraperDispo">
             <LinearLayout style="@style/llHome">
                 <TextView style="@style/homeDescription" android:text="@string/home_dispo"/>
                 <TextView style="@style/homeValue" android:id="@+id/dispo"/>
             </LinearLayout>
             <View style="@style/separator"/>
+            </LinearLayout>
 
             <LinearLayout style="@style/llHome">
                 <TextView style="@style/homeDescription" android:text="@string/home_langue"/>
@@ -125,6 +154,7 @@
     </ScrollView>
     <LinearLayout
         android:orientation="vertical"
+        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView

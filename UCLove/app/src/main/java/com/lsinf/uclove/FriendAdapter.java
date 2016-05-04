@@ -48,6 +48,9 @@ public class FriendAdapter extends RecyclerView.Adapter<FriendAdapter.ViewHolder
         holder.name.setText(mDataset.get(position).name);
         holder.root.setTag(position);
         holder.root.findViewById(R.id.rdv).setTag(position);
+        holder.root.findViewById(R.id.profile).setTag(position);
+
+        new loadImageWeb((ImageView) holder.root.findViewById(R.id.picture)).execute(mDataset.get(position).photo);
 
     }
 

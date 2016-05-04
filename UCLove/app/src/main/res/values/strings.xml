@@ -53,11 +53,11 @@
     <string name="home_sexe">Genre</string>
     <string name="home_attirance">Attirance</string>
     <string name="home_hobby">Hobbies</string>
-    <string name="home_naissance">Date de naissance</string>
+    <string name="home_naissance">Naissance</string>
     <string name="home_ville">Ville</string>
     <string name="home_mail">Adresse mail</string>
-    <string name="home_yeux">Couleur des yeux</string>
-    <string name="home_cheveux">Couleur des cheveux</string>
+    <string name="home_yeux">Yeux</string>
+    <string name="home_cheveux">Cheveux</string>
     <string name="home_tel">Téléphone</string>
     <string name="home_description">Description</string>
     <string name="home_dispo">Disponibilités</string>
@@ -80,6 +80,7 @@
     <string name="friend_forever_alone">Vous n\'avez pas d\'amis... Trouvez en dans l\'onglet rencontres !</string>
     <string name="friend_loading">Chargement des amis en cours...</string>
     <string name="friend_rdv">RDV</string>
+    <string name="friend_profile">profil</string>
 
     <string name="request_forever_alone">Vous n\'avez pas de demande pour l\'instant.</string>
     <string name="request_loading">Chargement des demandes en cours...</string>
