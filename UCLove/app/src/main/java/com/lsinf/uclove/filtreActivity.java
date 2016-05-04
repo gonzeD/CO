@@ -94,6 +94,7 @@ public class filtreActivity extends baseActivity {
         protected void onPostExecute(String result)
         {
             int r = Integer.parseInt(result);
+            Log.e("dodormeur","result ="+r);
             if(r<=0) Toast.makeText(filtreActivity.this, R.string.error_no_matching, Toast.LENGTH_LONG).show();
             else
             {

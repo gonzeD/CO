@@ -28,6 +28,7 @@ public class ConnexionActivity extends AppCompatActivity
 
     public void connect(View v)
     {
+        Log.e("dodormeur","connecting");
         if(tryingToConnect == 0) {
             tryingToConnect = 1;
             new DownloadCheckConnection().execute(

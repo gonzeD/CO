@@ -46,6 +46,22 @@
     <string name="menu_pseudo">your pseudo</string>
 
     <string name="home_infos_perso">Informations Personnelles</string>
+    <string name="home_click_to_edit">Appuyer pour éditer</string>
+    <string name="home_pseudo">Pseudo</string>
+    <string name="home_name">Nom</string>
+    <string name="home_firstname">Prénom</string>
+    <string name="home_sexe">Genre</string>
+    <string name="home_attirance">Attirance</string>
+    <string name="home_hobby">Hobbies</string>
+    <string name="home_naissance">Date de naissance</string>
+    <string name="home_ville">Ville</string>
+    <string name="home_mail">Adresse mail</string>
+    <string name="home_yeux">Couleur des yeux</string>
+    <string name="home_cheveux">Couleur des cheveux</string>
+    <string name="home_tel">Téléphone</string>
+    <string name="home_description">Description</string>
+    <string name="home_dispo">Disponibilités</string>
+    <string name="home_langue">Langue</string>
 
     <string name="menu_parametre">Paramètres</string>
     <string name="menu_ami">Amis</string>
@@ -129,6 +145,13 @@
         <item>amis</item>
         <item>favoris</item>
     </string-array>
+
+    <string-array name="nameCara">
+        <item>Cheveux</item>
+        <item>Yeux</item>
+        <item>Genre</item>
+    </string-array>
+
     <string-array name="hair_color">
         <item>blonds</item>
         <item>bruns</item>

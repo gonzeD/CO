@@ -50,7 +50,7 @@ public class DatabaseHelper
     {
         InputStream is = null;
         int len = 5000;
-
+        Log.e("dodormeur","downloading"+myurl);
         try
         {
 
@@ -122,6 +122,7 @@ public class DatabaseHelper
             try {
                 String[] act = new String[]{"action","pseudo","password"};
                 String[] arg = new String[]{"connect",p,mdp};
+                Log.e("dodormeur","internet connecting");
                 String t = downloadUrl("http://dracognards.be/uclove/main.php",act,arg,false);
                 Log.e("dodormeur",t);
                 JSONObject jObject = new JSONObject(t);

@@ -28,7 +28,7 @@ public class HomeActivity extends baseActivity
             ((TextView) findViewById(R.id.nom)).setText(baseActivity.mainUser.getNom());
         //else ((TextView)findViewById(R.id.nom)).setText("test");
 
-        if(baseActivity.mainUser.getSexe() != null)((TextView)findViewById(R.id.sexe)).setText(baseActivity.mainUser.getSexe());
+        if(baseActivity.mainUser.getSexe(this) != null)((TextView)findViewById(R.id.sexe)).setText(baseActivity.mainUser.getSexe(this));
         //else ((TextView)findViewById(R.id.sexe)).setText("test");
         if(baseActivity.mainUser.getAttirance() != null)((TextView)findViewById(R.id.attirance)).setText(baseActivity.mainUser.getAttirance());
         //else ((TextView)findViewById(R.id.attirance)).setText("test");
@@ -43,27 +43,30 @@ public class HomeActivity extends baseActivity
         //else ((TextView)findViewById(R.id.ville)).setText("test");
         if(baseActivity.mainUser.getMail() != null)((TextView)findViewById(R.id.mail)).setText(baseActivity.mainUser.getMail());
         //else ((TextView)findViewById(R.id.mail)).setText("test");
-        if(baseActivity.mainUser.getYeux() != null)((TextView)findViewById(R.id.yeux)).setText(baseActivity.mainUser.getYeux());
+        if(baseActivity.mainUser.getYeux(this) != null)((TextView)findViewById(R.id.yeux)).setText(baseActivity.mainUser.getYeux(this));
         //else ((TextView)findViewById(R.id.yeux)).setText("test");
-        if(baseActivity.mainUser.getCheveux() != null)((TextView)findViewById(R.id.cheveux)).setText(baseActivity.mainUser.getCheveux());
+        if(baseActivity.mainUser.getCheveux(this) != null)((TextView)findViewById(R.id.cheveux)).setText(baseActivity.mainUser.getCheveux(this));
         //else ((TextView)findViewById(R.id.cheveux)).setText("test");
         if(baseActivity.mainUser.getTel() != null)((TextView)findViewById(R.id.tel)).setText(baseActivity.mainUser.getTel());
         //else ((TextView)findViewById(R.id.tel)).setText("test");
-        if(baseActivity.mainUser.getDescription() != null)((TextView)findViewById(R.id.description)).setText(baseActivity.mainUser.getDescription());
+       // if(baseActivity.mainUser.getDescription() != null)((TextView)findViewById(R.id.description)).setText(baseActivity.mainUser.getDescription());
         //else ((TextView)findViewById(R.id.description)).setText("test");
         String tab1[] = baseActivity.mainUser.getDisponibilite();
         String temp1 = " ";
-        if(tab1 != null){
-        for(int i = 0;i<tab1.length;i++)
-        {temp1=temp1+tab1[i]+" ";}
-        ((TextView)findViewById(R.id.dispo)).setText(temp1);}
+        if(tab1 != null)
+        {
+            for(int i = 0;i<tab1.length;i++){temp1=temp1+tab1[i]+" ";}
+            ((TextView)findViewById(R.id.dispo)).setText(temp1);
+        }
         else ((TextView)findViewById(R.id.dispo)).setText("Mes Disponibilités");
 
 
         createNavigationMenu();
 
 
-        new loadImageWeb((ImageView) findViewById(R.id.photo1)).execute(mainUser.getPhoto());
+        if(mainUser.getPhoto().length>0)new loadImageWeb((ImageView) findViewById(R.id.photo1)).execute(mainUser.getPhoto()[0]);
+        if(mainUser.getPhoto().length>1)new loadImageWeb((ImageView) findViewById(R.id.photo1)).execute(mainUser.getPhoto()[1]);
+        if(mainUser.getPhoto().length>2)new loadImageWeb((ImageView) findViewById(R.id.photo1)).execute(mainUser.getPhoto()[2]);
     }
 
 

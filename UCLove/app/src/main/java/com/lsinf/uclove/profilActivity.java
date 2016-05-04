@@ -20,9 +20,6 @@ public class profilActivity extends baseActivity {
     {
         super.onCreate(savedInstanceState);
         id = getIntent().getIntExtra("id",-1);
-        setContentView(R.layout.profile_activity);
-        createNavigationMenu();
-
         if(id != -1)
         {
             new DownloadUser().execute();
@@ -42,19 +39,23 @@ public class profilActivity extends baseActivity {
     }
     public void disp()
     {
-        new loadImageWeb((ImageView) findViewById(R.id.profile_picture)).execute(mainUser.getPhoto());
-        ((TextView)findViewById(R.id.profile_name)).setText(user.getNom());
-        ((TextView)findViewById(R.id.profile_firstname)).setText(user.getPrenom());
-        ((TextView)findViewById(R.id.profile_sexe)).setText(user.getSexe());
-        ((TextView)findViewById(R.id.profile_attirance)).setText(user.getAttirance());
-        ((TextView)findViewById(R.id.profile_ddnaiss)).setText(user.getNaissance());
+        setContentView(R.layout.profile_activity);
+        createNavigationMenu();
 
-        ((TextView)findViewById(R.id.profile_city)).setText(user.getVille());
-        ((TextView)findViewById(R.id.profile_eyes)).setText(user.getYeux());
-        ((TextView)findViewById(R.id.profile_hair)).setText(user.getCheveux());
-        ((TextView)findViewById(R.id.profile_hobby)).setText(user.getHobby());
-        ((TextView)findViewById(R.id.profile_description)).setText(user.getDescription());
-        ((TextView)findViewById(R.id.profile_language)).setText(user.getLangue());
+        new loadImageWeb((ImageView) findViewById(R.id.profile_picture)).execute(mainUser.getPhoto());
+        ((TextView)findViewById(R.id.nom)).setText(user.getNom());
+        ((TextView)findViewById(R.id.prenom)).setText(user.getPrenom());
+        ((TextView)findViewById(R.id.sexe)).setText(user.getSexe(this));
+        ((TextView)findViewById(R.id.attirance)).setText(user.getAttirance());
+        ((TextView)findViewById(R.id.naissance)).setText(user.getNaissance());
+        ((TextView)findViewById(R.id.mail)).setText(user.getMail());
+        ((TextView)findViewById(R.id.tel)).setText(user.getTel());
+        ((TextView)findViewById(R.id.ville)).setText(user.getVille());
+        ((TextView)findViewById(R.id.yeux)).setText(user.getYeux(this));
+        ((TextView)findViewById(R.id.cheveux)).setText(user.getCheveux(this));
+        ((TextView)findViewById(R.id.hobby)).setText(user.getHobby());
+        ((TextView)findViewById(R.id.description)).setText(user.getDescription());
+        ((TextView)findViewById(R.id.langue)).setText(user.getLangue());
 
 
     }
