@@ -31,7 +31,7 @@
     <string name="register_choose_picture">Choose a picture</string>
 
     <string name="menu_profil">Profile</string>
-    <string name="menu_preferences">Preferences</string>
+    <string name="menu_preferences">Settings</string>
     <string name="menu_rencontres">Meetings</string>
     <string name="menu_amis">Friends</string>
     <string name="menu_requetes">Requests</string>
@@ -70,12 +70,12 @@
     <string name="navigation_drawer_close">close</string>
     <string name="menu_disconnect">Disconnect</string>
 
-    <string name="friend_forever_alone">You don't have friends... Find new one in the meeting tab !</string>
+    <string name="friend_forever_alone">You don\'t have friends... Find new one in the meeting tab !</string>
     <string name="friend_loading">Loading friends ...</string>
     <string name="friend_rdv">Appointment</string>
     <string name="friend_profile">profile</string>
 
-    <string name="request_forever_alone">You don't have ask at moment.</string>
+    <string name="request_forever_alone">You don\'t have ask at moment.</string>
     <string name="request_loading">Loading asks ...</string>
     <string name="request_block">Block</string>
     <string name="request_accept">Confirm</string>
