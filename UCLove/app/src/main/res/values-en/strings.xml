@@ -3,7 +3,7 @@
 
     <string name="connexion_pseudo">Username</string>
     <string name="connexion_password">Password</string>
-    <string name="connexion_connect">Connect</string>
+    <string name="connexion_connect">Log in</string>
     <string name="connexion_register">Register</string>
 
     <string name="register">Register</string>
@@ -68,7 +68,7 @@
 
     <string name="navigation_drawer_open">open</string>
     <string name="navigation_drawer_close">close</string>
-    <string name="menu_disconnect">Disconnect</string>
+    <string name="menu_disconnect">Log out</string>
 
     <string name="friend_forever_alone">You don't have friends... Find new one in the meeting tab !</string>
     <string name="friend_loading">Loading friends ...</string>
