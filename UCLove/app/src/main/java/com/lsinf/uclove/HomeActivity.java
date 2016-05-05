@@ -30,7 +30,7 @@ public class HomeActivity extends baseActivity
 
         if(baseActivity.mainUser.getSexe(this) != null)((TextView)findViewById(R.id.sexe)).setText(baseActivity.mainUser.getSexe(this));
         //else ((TextView)findViewById(R.id.sexe)).setText("test");
-        if(baseActivity.mainUser.getAttirance() != null)((TextView)findViewById(R.id.attirance)).setText(baseActivity.mainUser.getAttirance());
+        if(baseActivity.mainUser.getAttirance(this) != null)((TextView)findViewById(R.id.attirance)).setText(baseActivity.mainUser.getAttirance(this));
         //else ((TextView)findViewById(R.id.attirance)).setText("test");
         String tab= baseActivity.mainUser.getHobby();
         if(tab != null){((TextView)findViewById(R.id.hobby)).setText(tab);}

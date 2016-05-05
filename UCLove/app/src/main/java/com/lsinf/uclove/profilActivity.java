@@ -76,7 +76,7 @@ public class profilActivity extends baseActivity {
         new loadImageWeb((ImageView) findViewById(R.id.profile_picture)).execute(mainUser.getPhoto());
         ((TextView)findViewById(R.id.prenom)).setText(user.getPrenom()+" "+user.getNom());
         ((TextView)findViewById(R.id.sexe)).setText(user.getSexe(this));
-        ((TextView)findViewById(R.id.attirance)).setText(user.getAttirance());
+        ((TextView)findViewById(R.id.attirance)).setText(user.getAttirance(this));
         ((TextView)findViewById(R.id.naissance)).setText(user.getNaissance());
         ((TextView)findViewById(R.id.mail)).setText(user.getMail());
         ((TextView)findViewById(R.id.tel)).setText(user.getTel());
