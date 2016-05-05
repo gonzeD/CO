@@ -30,24 +30,42 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="@string/profile_default"
+                    android:id="@+id/profile_picture2"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="gone"
+                    android:layout_margin="20dp"
+                    android:layout_alignParentLeft="true" />
             <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
                 android:text="@string/profile_default"
-                android:id="@+id/profile_picture"
+                android:id="@+id/profile_picture1"
                 android:layout_gravity="center_horizontal"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true" />
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/swipe"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="@string/profile_default"
+                    android:id="@+id/profile_picture3"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="gone"
                     android:layout_margin="20dp"
+                    android:layout_alignParentRight="true" />
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
                     android:id="@+id/tuto"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true" />
+                    android:src="@drawable/swipe"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="20dp"
+                    android:layout_alignParentRight="true" />
             </RelativeLayout>
 
             <LinearLayout style="@style/llHome">
