@@ -44,7 +44,7 @@
     <string name="home_firstname">Prénom</string>
     <string name="home_sexe">Genre</string>
     <string name="home_attirance">Attirance</string>
-    <string name="home_hobby">Hobbies</string>
+    <string name="home_hobby">Hobby\'s</string>
     <string name="home_naissance">Naissance</string>
     <string name="home_ville">Ville</string>
     <string name="home_mail">Adresse mail</string>
@@ -113,9 +113,9 @@
     <string name="modify_attirance">attirance</string>
     <string name="modify_reset">Tout supprimer</string>
     <string name="modify_end">Finir la modification</string>
-    <string name="modify_pick_yeux">Quels yeux autoriser?</string>
-    <string name="modify_pick_hair">Quels cheveux autoriser?</string>
-    <string name="modify_pick_genre">Quels genres autoriser?</string>
+    <string name="modify_pick_yeux">Quels yeux autoriser ?</string>
+    <string name="modify_pick_hair">Quels cheveux autoriser ?</string>
+    <string name="modify_pick_genre">Quels genres autoriser ?</string>
     <string name="modify_name_filtre">Nom du filtre</string>
     <string name="modify_profile">Modifier le profil</string>
 
@@ -157,11 +157,11 @@
 
 
 
-    <string name="hair0">blonds</string>
-    <string name="hair1">bruns</string>
-    <string name="hair2">noir</string>
-    <string name="hair3">roux</string>
-    <string name="hair4">autre</string>
+    <string name="hair0">Blonds</string>
+    <string name="hair1">Bruns</string>
+    <string name="hair2">Noir</string>
+    <string name="hair3">Roux</string>
+    <string name="hair4">Autre</string>
 
     <string-array name="hair_color">
         <item>@string/hair0</item>
