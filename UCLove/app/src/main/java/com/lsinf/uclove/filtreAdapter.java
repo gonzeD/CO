@@ -57,7 +57,7 @@ public class filtreAdapter extends RecyclerView.Adapter<filtreAdapter.ViewHolder
         // - replace the contents of the view with that element
         holder.text.setText(mDataset.get(position));
         holder.root.setTag(position);
-        holder.button1.setTag(position);
+        //holder.button1.setTag(position);
         holder.button.setTag(position);
         /*holder.root.setTag(position);
         holder.root.findViewById(R.id.rdv).setTag(position);*/
