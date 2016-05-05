@@ -55,7 +55,10 @@ public class HomeActivity extends baseActivity
         String temp1 = " ";
         if(tab1 != null)
         {
-            for(int i = 0;i<tab1.length;i++){temp1=temp1+tab1[i]+" ";}
+            for(int i = 0;i<tab1.length/2;i++)
+            {
+                temp1+=Integer.parseInt(tab1[i])/100+":"+Integer.parseInt(tab1[i])%100+"\n";
+            }
             ((TextView)findViewById(R.id.dispo)).setText(temp1);
         }
         else ((TextView)findViewById(R.id.dispo)).setText("Mes Disponibilités");
@@ -73,6 +76,11 @@ public class HomeActivity extends baseActivity
    public void change(View v) {
 
        Intent i = new Intent(this, SettingsActivity.class);
-        startActivity(i);
+        startActivityForResult(i,1);
    }
+
+    public void onActivityResult (int requestCode, int resultCode, Intent data)
+    {
+        recreate();
+    }
 }

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -128,6 +129,7 @@ public class SettingsActivity extends baseActivity
 
     public void set(View v)
     {
+        Log.e("dodormeur","setting");
      /*   DatePicker datePicker = (DatePicker) findViewById(R.id.naissance);
         int day = datePicker.getDayOfMonth();
         int month = datePicker.getMonth() + 1;
@@ -172,7 +174,8 @@ public class SettingsActivity extends baseActivity
 
 
         String Sdispo = "";
-        for(int i = 0;i<14;i++)Sdispo += times[i].split(":")[0]+times[i].split(":")+":";
+        for(int i = 0;i<14;i++)Sdispo += times[i].split(":")[0]+times[i].split(":")[1]+":";
+        Log.e("dodormeur","exe");
         new DownloadWebpageTask().execute(
                 DatabaseHelper.pseudo,
                 DatabaseHelper.password,
@@ -199,6 +202,7 @@ public class SettingsActivity extends baseActivity
         @Override
         protected String doInBackground(String... urls)
         {
+            Log.e("dodormeur","setting");
             return ""+DatabaseHelper.setRegister(SettingsActivity.this,urls);
         }
         @Override
@@ -206,14 +210,29 @@ public class SettingsActivity extends baseActivity
         {
             if(result.equals(""+DatabaseHelper.OK))
             {
-                Toast.makeText(SettingsActivity.this, R.string.register_done, Toast.LENGTH_LONG).show();
-                Intent returnIntent = new Intent();
-                returnIntent.putExtra("result","ok");
-                setResult(Activity.RESULT_OK,returnIntent);
-                finish();
+                new DownloadMainUser().execute();
             }
 
         }
     }
+
+    private class DownloadMainUser extends AsyncTask<String, Void, String> {
+        @Override
+        protected String doInBackground(String... urls)
+        {
+            baseActivity.mainUser = new User();
+            return ""+DatabaseHelper.getUser(baseActivity.mainUser,DatabaseHelper.idMain,SettingsActivity.this);
+        }
+        @Override
+        protected void onPostExecute(String result)
+        {
+            if(result.equals("1")){Toast.makeText(SettingsActivity.this, R.string.register_done, Toast.LENGTH_LONG).show();
+                Intent returnIntent = new Intent();
+                returnIntent.putExtra("result","ok");
+                setResult(Activity.RESULT_OK,returnIntent);
+                finish();}
+        }
+    }
+
 }
 
