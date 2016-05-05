@@ -1,5 +1,6 @@
 package com.lsinf.uclove;
 
+import android.net.Uri;
 import android.os.Bundle;
 
 import android.content.Intent;
@@ -114,6 +115,14 @@ public class SettingsActivity extends baseActivity
         }
 
 
+    }
+
+    public void choosePicture(View v)
+    {
+        String url = "http://www.dracognards.be/uclove/up.php?id="+DatabaseHelper.idMain;
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        startActivity(i);
     }
 }
 

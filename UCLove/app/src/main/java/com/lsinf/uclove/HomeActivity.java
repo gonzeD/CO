@@ -33,10 +33,8 @@ public class HomeActivity extends baseActivity
         if(baseActivity.mainUser.getAttirance() != null)((TextView)findViewById(R.id.attirance)).setText(baseActivity.mainUser.getAttirance());
         //else ((TextView)findViewById(R.id.attirance)).setText("test");
         String tab= baseActivity.mainUser.getHobby();
-        String temp = " ";
-        if(tab != null){
-        ((TextView)findViewById(R.id.hobby)).setText(tab);}
-        else ((TextView)findViewById(R.id.hobby)).setText("Liste de mes Hobbys");
+        if(tab != null){((TextView)findViewById(R.id.hobby)).setText(tab);}
+        else ((TextView)findViewById(R.id.hobby)).setText("Liste de mes Hobbies");
         if(baseActivity.mainUser.getNaissance() != null)((TextView)findViewById(R.id.naissance)).setText(baseActivity.mainUser.getNaissance());
         //else ((TextView)findViewById(R.id.naissance)).setText("test");
         if(baseActivity.mainUser.getVille() != null)((TextView)findViewById(R.id.ville)).setText(baseActivity.mainUser.getVille());
@@ -49,8 +47,8 @@ public class HomeActivity extends baseActivity
         //else ((TextView)findViewById(R.id.cheveux)).setText("test");
         if(baseActivity.mainUser.getTel() != null)((TextView)findViewById(R.id.tel)).setText(baseActivity.mainUser.getTel());
         //else ((TextView)findViewById(R.id.tel)).setText("test");
-       // if(baseActivity.mainUser.getDescription() != null)((TextView)findViewById(R.id.description)).setText(baseActivity.mainUser.getDescription());
-        //else ((TextView)findViewById(R.id.description)).setText("test");
+        if(baseActivity.mainUser.getDescription() != null)((TextView)findViewById(R.id.description)).setText(baseActivity.mainUser.getDescription());
+        else ((TextView)findViewById(R.id.description)).setText("test");
         String tab1[] = baseActivity.mainUser.getDisponibilite();
         String temp1 = " ";
         if(tab1 != null)

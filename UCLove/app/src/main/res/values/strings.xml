@@ -18,21 +18,12 @@
     <string name="register_phone">Numéro de téléphone</string>
     <string name="register_city">Ville</string>
     <string name="register_eyes">Couleur des yeux</string>
-    <string name="register_blue">Bleus</string>
-    <string name="register_green">Verts</string>
-    <string name="register_brown">Bruns</string>
-    <string name="register_grey">Gris</string>
+
     <string name="register_hobby">Centres d\'intérêts</string>
     <string name="register_description">Description</string>
     <string name="register_attirance">Attirance</string>
-    <string name="register_m">M</string>
-    <string name="register_f">F</string>
     <string name="register_langue">Langue</string>
     <string name="register_color_hair">Couleur des cheveux</string>
-    <string name="register_blond">blond</string>
-    <string name="register_red">roux</string>
-    <string name="register_dark">noir</string>
-    <string name="register_other">autre</string>
     <string name="register_picture">Photo de profil</string>
     <string name="register_take_picture">Prendre une photo</string>
     <string name="register_choose_picture">Choisir une photo</string>
@@ -153,23 +144,41 @@
         <item>Genre</item>
     </string-array>
 
+
+
+    <string name="hair0">blonds</string>
+    <string name="hair1">bruns</string>
+    <string name="hair2">noir</string>
+    <string name="hair3">roux</string>
+    <string name="hair4">autre</string>
+
     <string-array name="hair_color">
-        <item>blonds</item>
-        <item>bruns</item>
-        <item>noir</item>
-        <item>roux</item>
-        <item>autre</item>
+        <item>@string/hair0</item>
+        <item>@string/hair1</item>
+        <item>@string/hair2</item>
+        <item>@string/hair3</item>
+        <item>@string/hair4</item>
     </string-array>
 
+
+    <string name="eye0">Bleus</string>
+    <string name="eye1">Verts</string>
+    <string name="eye2">Bruns</string>
+    <string name="eye3">Gris</string>
+    <string name="eye4">Autre</string>
+
     <string-array name="eye_color">
-        <item>Bleus</item>
-        <item>Verts</item>
-        <item>Bruns</item>
-        <item>Gris</item>
-        <item>Autre</item>
+        <item>@string/eye0</item>
+        <item>@string/eye1</item>
+        <item>@string/eye2</item>
+        <item>@string/eye3</item>
+        <item>@string/eye4</item>
     </string-array>
+
+    <string name="genre0">M</string>
+    <string name="genre1">F</string>
     <string-array name="genre">
-        <item>M</item>
-        <item>F</item>
+        <item>@string/genre0</item>
+        <item>@string/genre1</item>
     </string-array>
 </resources>

@@ -12,6 +12,9 @@ import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.webkit.ValueCallback;
+import android.webkit.WebChromeClient;
+import android.webkit.WebView;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -36,6 +39,7 @@ public class InscriptionActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.inscription_activity);
+
         // createNavigationMenu();
     }
 
@@ -55,7 +59,7 @@ public class InscriptionActivity extends AppCompatActivity
         }
     }
 
-    public void onActivityResult (int requestCode, int resultCode, Intent data)
+   /* public void onActivityResult (int requestCode, int resultCode, Intent data)
     {
         Log.e("LSINF","result");
         if (requestCode == 1 && resultCode == RESULT_OK) {
@@ -89,7 +93,7 @@ public class InscriptionActivity extends AppCompatActivity
         intent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(Intent.createChooser(intent, "Select Picture"), 2);
     }
-
+*/
 
     private class uploadPicture extends AsyncTask<String, Void, String> {
         @Override
