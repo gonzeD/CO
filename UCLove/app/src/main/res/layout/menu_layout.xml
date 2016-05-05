@@ -110,10 +110,6 @@
     </LinearLayout>
 
 
-    <TextView
-        style="@style/menuItem"
-        android:text="reset database"
-        android:tag="reset"/>
     </LinearLayout>
 </ScrollView>
 </LinearLayout>

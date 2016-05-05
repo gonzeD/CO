@@ -69,7 +69,9 @@ public class SettingsActivity extends baseActivity
        {
            String temp[] = mainUser.getDisponibilite();
            for(int i = 0;i<14;i++){
-               Log.e("dodormeur",times[i]);times[i] = format(temp[i]);
+               if(temp.length <= i)times[i] = format("0000");
+               else if(temp[i] == "")times[i] = format("0000");
+               else times[i] = format(temp[i]);
        }}
         refreshShowDate();
          createNavigationMenu();
