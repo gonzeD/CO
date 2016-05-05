@@ -58,7 +58,7 @@ public class HomeActivity extends baseActivity
         {
             for(int i = 0;i<tab1.length/2;i++)
             {
-                temp1+=jours[i]+":  "+Integer.parseInt(tab1[i])/100+":"+Integer.parseInt(tab1[i])%100+"\n";
+                temp1+=jours[i]+":  "+format(tab1[i*2])+"->"+format(tab1[i*2+1])+"\n";
             }
             ((TextView)findViewById(R.id.dispo)).setText(temp1);
         }
@@ -73,6 +73,10 @@ public class HomeActivity extends baseActivity
         if(mainUser.getPhoto().length>2)new loadImageWeb((ImageView) findViewById(R.id.photo3)).execute(mainUser.getPhoto()[2]);
     }
 
+    public String format(String a)
+    {
+        return Integer.parseInt(a)/100+":"+Integer.parseInt(a)%100;
+    }
 
    public void change(View v) {
 
