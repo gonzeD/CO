@@ -53,11 +53,12 @@ public class HomeActivity extends baseActivity
         else ((TextView)findViewById(R.id.description)).setText("test");
         String tab1[] = baseActivity.mainUser.getDisponibilite();
         String temp1 = " ";
+        String jours[] = getResources().getStringArray(R.array.days);
         if(tab1 != null)
         {
             for(int i = 0;i<tab1.length/2;i++)
             {
-                temp1+=Integer.parseInt(tab1[i])/100+":"+Integer.parseInt(tab1[i])%100+"\n";
+                temp1+=jours[i]+":  "+Integer.parseInt(tab1[i])/100+":"+Integer.parseInt(tab1[i])%100+"\n";
             }
             ((TextView)findViewById(R.id.dispo)).setText(temp1);
         }

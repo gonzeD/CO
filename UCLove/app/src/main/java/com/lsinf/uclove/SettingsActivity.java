@@ -65,8 +65,17 @@ public class SettingsActivity extends baseActivity
         ((RadioButton)ra.getChildAt(mainUser.getIdAttirance())).setChecked(true);
         ra = (RadioGroup)findViewById(R.id.button_color_hair);
         ((RadioButton)ra.getChildAt(mainUser.getIdCheveux())).setChecked(true);
-
+       if(mainUser.getDisponibilite() != null)
+       {
+           times = mainUser.getDisponibilite();
+           for(int i = 0;i<14;i++)times[i] = format(times[i]);
+       }
+        refreshShowDate();
          createNavigationMenu();
+    }
+    public String format(String s)
+    {
+        return Integer.parseInt(s)/100+":"+Integer.parseInt(s)%100;
     }
 
     public void langue(View v)
@@ -108,17 +117,22 @@ public class SettingsActivity extends baseActivity
     String times[] = {"00:00","00:00","00:00","00:00","00:00","00:00","00:00","00:00","00:00","00:00","00:00","00:00","00:00","00:00"};
     public void setDate(int day,int start,String time)
     {
-        int ids[] = {R.id.textView1,R.id.textView2,R.id.textView3,R.id.textView4,R.id.textView5,R.id.textView6,R.id.textView7,R.id.textView8
-    ,R.id.textView9,R.id.textView10,R.id.textView11,R.id.textView12,R.id.textView13,R.id.textView14};
         times[day*2+start] = time;
-        for(int i = 0;i<14;i++)
-        {
-            ((TextView)findViewById(ids[i])).setText(times[i]);
-        }
+        refreshShowDate();
 
 
     }
 
+    public void refreshShowDate()
+    {
+        int ids[] = {R.id.textView1,R.id.textView2,R.id.textView3,R.id.textView4,R.id.textView5,R.id.textView6,R.id.textView7,R.id.textView8
+                ,R.id.textView9,R.id.textView10,R.id.textView11,R.id.textView12,R.id.textView13,R.id.textView14};
+
+        for(int i = 0;i<14;i++)
+        {
+            ((TextView)findViewById(ids[i])).setText(times[i]);
+        }
+    }
     public void choosePicture(View v)
     {
         String url = "http://www.dracognards.be/uclove/up.php?id="+DatabaseHelper.idMain;
@@ -221,12 +235,12 @@ public class SettingsActivity extends baseActivity
         protected String doInBackground(String... urls)
         {
             baseActivity.mainUser = new User();
-            return ""+DatabaseHelper.getUser(baseActivity.mainUser,DatabaseHelper.idMain,SettingsActivity.this);
+            return ""+DatabaseHelper.getUser(baseActivity.mainUser, DatabaseHelper.idMain, SettingsActivity.this);
         }
         @Override
         protected void onPostExecute(String result)
         {
-            if(result.equals("1")){Toast.makeText(SettingsActivity.this, R.string.register_done, Toast.LENGTH_LONG).show();
+            if(result.equals("1")){Toast.makeText(SettingsActivity.this, R.string.update_done, Toast.LENGTH_LONG).show();
                 Intent returnIntent = new Intent();
                 returnIntent.putExtra("result","ok");
                 setResult(Activity.RESULT_OK,returnIntent);
