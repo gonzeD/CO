@@ -61,7 +61,7 @@ public class profilActivity extends baseActivity {
             findViewById(R.id.wraperDispo).setVisibility(View.GONE);
             findViewById(R.id.wraperMail).setVisibility(View.GONE);
             findViewById(R.id.wraperHobby).setVisibility(View.GONE);
-          /*  findViewById(R.id.llprofile).setOnTouchListener(new OnSwipeTouchListener(profilActivity.this) {
+            findViewById(R.id.llprofile).setOnTouchListener(new OnSwipeTouchListener(profilActivity.this) {
 
 
                 public void onSwipeRight() {
@@ -71,7 +71,7 @@ public class profilActivity extends baseActivity {
                 public void onSwipeLeft() {
                     recreate();
                 }
-            });*///TODO : décommenter et faire add avant de commit !
+            });
         }
         new loadImageWeb((ImageView) findViewById(R.id.profile_picture)).execute(mainUser.getPhoto());
         ((TextView)findViewById(R.id.prenom)).setText(user.getPrenom()+" "+user.getNom());

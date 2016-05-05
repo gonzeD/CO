@@ -129,6 +129,16 @@
 
     <string name="profile_default">default</string>
 
+    <string name="rdv_dispo">Disponibilités</string>
+    <string name="rdv_prenom">Prénom</string>
+    <string name="rdv_monday">Lundi</string>
+    <string name="rdv_tuesday">Mardi</string>
+    <string name="rdv_wednesday">Mercredi</string>
+    <string name="rdv_thursday">Jeudi</string>
+    <string name="rdv_friday">Vendredi</string>
+    <string name="rdv_saturday">Samedi</string>
+    <string name="rdv_sunday">Dimanche</string>
+    <string name="rdv_send_message">Envoyer un message</string>
     <string-array name="profile_relation">
         <item>pas de relation</item>
         <item>bloqué</item>
@@ -181,4 +191,5 @@
         <item>@string/genre0</item>
         <item>@string/genre1</item>
     </string-array>
+    <string name="to">à</string>
 </resources>

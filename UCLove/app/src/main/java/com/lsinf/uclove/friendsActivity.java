@@ -77,6 +77,9 @@ public class friendsActivity extends baseActivity {
     public void rdv(View v)
     {
         Log.e("dodormeur","rdv"+v.getTag().toString());
+        Intent i = new Intent(friendsActivity.this,askRdvActivity.class);
+        i.putExtra("id",friendList.get(Integer.parseInt(v.getTag().toString())).id);
+        startActivity(i);
     }
     public void profil(View v)
     {

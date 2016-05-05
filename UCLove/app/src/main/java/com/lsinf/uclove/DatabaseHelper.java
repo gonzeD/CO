@@ -543,7 +543,7 @@ public class DatabaseHelper {
         }
         return NO_INTERNET;
     }
-
+/*
     public static int setDispo(String time, Context ctx) {
 
         //12:00;18:00;15:00;1800
@@ -568,5 +568,5 @@ public class DatabaseHelper {
 
         } else return NO_INTERNET;
 
-    }
+    }*/
 }
