@@ -47,6 +47,8 @@ public class HomeActivity extends baseActivity
         //else ((TextView)findViewById(R.id.cheveux)).setText("test");
         if(baseActivity.mainUser.getTel() != null)((TextView)findViewById(R.id.tel)).setText(baseActivity.mainUser.getTel());
         //else ((TextView)findViewById(R.id.tel)).setText("test");
+        if(baseActivity.mainUser.getLangue() != null)((TextView)findViewById(R.id.lang)).setText(baseActivity.mainUser.getLangue());
+        //else ((TextView)findViewById(R.id.lang)).setText("test");
         if(baseActivity.mainUser.getDescription() != null)((TextView)findViewById(R.id.description)).setText(baseActivity.mainUser.getDescription());
         else ((TextView)findViewById(R.id.description)).setText("test");
         String tab1[] = baseActivity.mainUser.getDisponibilite();
