@@ -524,11 +524,11 @@
             <RadioButton android:id="@+id/attirance_m"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/register_m"/>
+                android:text="@string/genre0"/>
             <RadioButton android:id="@+id/attirance_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/register_f"/>
+                android:text="@string/genre1"/>
         </RadioGroup>
 
         <TextView
@@ -584,23 +584,23 @@
             <RadioButton android:id="@+id/hair_blond"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/register_blond"/>
+                android:text="@string/hair0"/>
             <RadioButton android:id="@+id/hair_red"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/register_red"/>
+                android:text="@string/hair1"/>
             <RadioButton android:id="@+id/hair_brown"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/register_brown"/>
+                android:text="@string/hair2"/>
             <RadioButton android:id="@+id/hair_dark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/register_dark"/>
+                android:text="@string/hair3"/>
             <RadioButton android:id="@+id/other3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/register_other"/>
+                android:text="@string/hair4"/>
         </RadioGroup>
 
         <TextView
@@ -632,41 +632,48 @@
             android:layout_height="wrap_content"
             android:text="@string/register_picture"
             android:layout_gravity="center_horizontal"/>
-
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height = "200dp"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/placeholder"
-            android:id="@+id/picturePreview"/>
-        <LinearLayout
-            android:orientation="horizontal"
+        <Button
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/register_take_picture"
-                android:id="@+id/take_picture"
-                android:onClick="takePicture"
-                android:layout_gravity="left" />
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/register_choose_picture"
-                android:id="@+id/choose_picture"
-                android:onClick="choosePicture"
-                android:gravity="right" />
+            android:layout_height="wrap_content"
+            android:text="@string/register_choose_picture"
+            android:id="@+id/choose_picture"
+            android:onClick="choosePicture"
+            android:gravity="center" />
+
+        <!-- <ImageView
+              android:layout_width="200dp"
+              android:layout_height = "200dp"
+              android:layout_gravity="center_horizontal"
+              android:src="@drawable/placeholder"
+              android:id="@+id/picturePreview"/>
+          <LinearLayout
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+              <Button
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/register_take_picture"
+                  android:id="@+id/take_picture"
+                  android:onClick="takePicture"
+                  android:layout_gravity="left" />
+              <Button
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/register_choose_picture"
+                  android:id="@+id/choose_picture"
+                  android:onClick="choosePicture"
+                  android:gravity="right" />
 
 
-        </LinearLayout>
+          </LinearLayout>-->
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/modify_end"
-            android:id="@+id/register"
-            android:onClick="register"
+            android:id="@+id/set"
+            android:onClick="set"
             android:layout_gravity="center_horizontal" />
 
 

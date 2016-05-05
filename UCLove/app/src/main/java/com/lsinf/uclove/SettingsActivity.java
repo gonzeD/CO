@@ -1,11 +1,13 @@
 package com.lsinf.uclove;
 
+import android.net.Uri;
 import android.os.Bundle;
 
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
@@ -114,6 +116,104 @@ public class SettingsActivity extends baseActivity
         }
 
 
+    }
+
+    public void choosePicture(View v)
+    {
+        String url = "http://www.dracognards.be/uclove/up.php?id="+DatabaseHelper.idMain;
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        startActivity(i);
+    }
+
+    public void set(View v)
+    {
+        DatePicker datePicker = (DatePicker) findViewById(R.id.naissance);
+        int day = datePicker.getDayOfMonth();
+        int month = datePicker.getMonth() + 1;
+        int year = datePicker.getYear();
+        String date = day+"/"+month+"/"+year;
+
+        int radioButtonID = ((RadioGroup) findViewById(R.id.button_sexe)).getCheckedRadioButtonId();
+        View radioButton = ((RadioGroup) findViewById(R.id.button_sexe)).findViewById(radioButtonID);
+        int idx = ((RadioGroup) findViewById(R.id.button_sexe)).indexOfChild(radioButton);
+
+        int radioButtonID2 = ((RadioGroup) findViewById(R.id.button_attirance)).getCheckedRadioButtonId();
+        View radioButton2 = ((RadioGroup) findViewById(R.id.button_attirance)).findViewById(radioButtonID2);
+        int idx2 = ((RadioGroup) findViewById(R.id.button_attirance)).indexOfChild(radioButton2);
+
+        int radioButtonID3 = ((RadioGroup) findViewById(R.id.button_eyes)).getCheckedRadioButtonId();
+        View radioButton3 = ((RadioGroup) findViewById(R.id.button_eyes)).findViewById(radioButtonID3);
+        int idx3 = ((RadioGroup) findViewById(R.id.button_eyes)).indexOfChild(radioButton3);
+
+        int radioButtonID4 = ((RadioGroup) findViewById(R.id.button_color_hair)).getCheckedRadioButtonId();
+        View radioButton4 = ((RadioGroup) findViewById(R.id.button_color_hair)).findViewById(radioButtonID4);
+        int idx4 = ((RadioGroup) findViewById(R.id.button_color_hair)).indexOfChild(radioButton4);
+
+        String  hobby,description,langue;
+        if (((EditText) findViewById(R.id.hobby)).getText() != null){
+            hobby = ((EditText) findViewById(R.id.hobby)).getText().toString();
+        }
+        else {
+            hobby = "";
+        }
+        if (((EditText) findViewById(R.id.description)).getText() != null){
+            description = ((EditText) findViewById(R.id.description)).getText().toString();
+        }
+        else {
+            description = "";
+        }
+        if (((EditText) findViewById(R.id.langue)).getText() != null){
+            langue = ((EditText) findViewById(R.id.langue)).getText().toString();
+        }
+        else {
+            langue = "";
+        }
+
+
+        String Sdispo = "";
+        for(int i = 0;i<14;i++)Sdispo += times[i].split(":")[0]+times[i].split(":")+":";
+        new DownloadWebpageTask().execute(
+                ((EditText) findViewById(R.id.pseudo)).getText().toString(),
+                ((EditText) findViewById(R.id.password)).getText().toString(),
+                ((EditText) findViewById(R.id.name)).getText().toString(),
+                ((EditText) findViewById(R.id.firstname)).getText().toString(),
+                idx+"",
+                idx2+"",
+                date,
+                ((EditText) findViewById(R.id.mail)).getText().toString(),
+                ((EditText) findViewById(R.id.phone)).getText().toString(),
+                ((EditText) findViewById(R.id.city)).getText().toString(),
+                idx3+"",
+                idx4+"",
+                hobby,
+                description,
+                langue,
+                Sdispo);
+    }
+
+
+
+
+    private class DownloadWebpageTask extends AsyncTask<String, Void, String> {
+        @Override
+        protected String doInBackground(String... urls)
+        {
+            return ""+DatabaseHelper.register(SettingsActivity.this,urls);
+        }
+        @Override
+        protected void onPostExecute(String result)
+        {
+            if(result.equals(""+DatabaseHelper.OK))
+            {
+                Toast.makeText(SettingsActivity.this, R.string.register_done, Toast.LENGTH_LONG).show();
+                Intent returnIntent = new Intent();
+                returnIntent.putExtra("result","ok");
+                setResult(Activity.RESULT_OK,returnIntent);
+                finish();
+            }
+
+        }
     }
 }
 
