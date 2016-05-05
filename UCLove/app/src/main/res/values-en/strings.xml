@@ -1,3 +1,213 @@
 <resources>
+    <string name="app_name">UCLove</string>
+
+    <string name="connexion_pseudo">Pseudo</string>
+    <string name="connexion_password">Mot de passe</string>
+    <string name="connexion_connect">Se connecter</string>
+    <string name="connexion_register">S\'inscrire</string>
+
+    <string name="register">S\'inscrire</string>
+    <string name="register_field_error">l\'un des champs renseigné n\'est pas correct...</string>
+    <string name="register_pseudo_taken">Ce pseudo est déjà pris</string>
+    <string name="register_done">L\'inscription a réussie ! Vous pouvez dès a présent vous connecter</string>
+    <string name="update_done">Vos modifications ont bien été enregistrées</string>
+    <string name="register_name">Nom</string>
+    <string name="register_firstname">Prénom</string>
+    <string name="register_sexe">Sexe</string>
+    <string name="register_naissance">Date de naissance</string>
+    <string name="register_mail">Adresse e-mail</string>
+    <string name="register_phone">Numéro de téléphone</string>
+    <string name="register_city">Ville</string>
+    <string name="register_eyes">Couleur des yeux</string>
+
+    <string name="register_hobby">Centres d\'intérêts</string>
+    <string name="register_description">Description</string>
+    <string name="register_attirance">Attirance</string>
+    <string name="register_langue">Langue</string>
+    <string name="register_color_hair">Couleur des cheveux</string>
+    <string name="register_picture">Photo de profil</string>
+    <string name="register_take_picture">Prendre une photo</string>
+    <string name="register_choose_picture">Choisir une photo</string>
+
+    <string name="menu_profil">Profil</string>
+    <string name="menu_preferences">Preferences</string>
+    <string name="menu_rencontres">Rencontres</string>
+    <string name="menu_amis">Amis</string>
+    <string name="menu_requetes">Requetes</string>
+    <string name="menu_name">your name</string>
+    <string name="menu_pseudo">your pseudo</string>
+
+    <string name="home_infos_perso">Informations Personnelles</string>
+    <string name="home_click_to_edit">Appuyer pour éditer</string>
+    <string name="home_pseudo">Pseudo</string>
+    <string name="home_name">Nom</string>
+    <string name="home_firstname">Prénom</string>
+    <string name="home_sexe">Genre</string>
+    <string name="home_attirance">Attirance</string>
+    <string name="home_hobby">Hobbies</string>
+    <string name="home_naissance">Naissance</string>
+    <string name="home_ville">Ville</string>
+    <string name="home_mail">Adresse mail</string>
+    <string name="home_yeux">Yeux</string>
+    <string name="home_cheveux">Cheveux</string>
+    <string name="home_tel">Téléphone</string>
+    <string name="home_description">Description</string>
+    <string name="home_dispo">Disponibilités</string>
+    <string name="home_langue">Langue</string>
+
+    <string name="menu_parametre">Paramètres</string>
+    <string name="menu_ami">Amis</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_requete">Requêtes</string>
+
+
+    <string name="error_no_internet">erreur réseau. Vérifiez que votre connexion wifi est bien activée</string>
+    <string name="error_internet">erreur serveur. vérifiez que vos données sont correctes</string>
+    <string name="error_no_matching">Aucun utilisateur ne correspond a votre recherche. Essayez avec un autre filtre.</string>
+
+    <string name="navigation_drawer_open">ouvrir</string>
+    <string name="navigation_drawer_close">fermer</string>
+    <string name="menu_disconnect">Se déconnecter</string>
+
+    <string name="friend_forever_alone">Vous n\'avez pas d\'amis... Trouvez en dans l\'onglet rencontres !</string>
+    <string name="friend_loading">Chargement des amis en cours...</string>
+    <string name="friend_rdv">RDV</string>
+    <string name="friend_profile">profil</string>
+
+    <string name="request_forever_alone">Vous n\'avez pas de demande pour l\'instant.</string>
+    <string name="request_loading">Chargement des demandes en cours...</string>
+    <string name="request_block">Bloquer</string>
+    <string name="request_accept">Valider</string>
+
+
+    <string name="setting_langue">Langue affichage</string>
+    <string name="setting_apply">Appliquer</string>
+    <string name="setting_french">Français</string>
+    <string name="setting_english">Anglais</string>
+    <string name="setting_german">Allemand</string>
+    <string name="setting_dutch">Néerlandais</string>
+    <string name="setting_dispo">Disponibilités rendez-vous</string>
+    <string name="setting_monday">Lundi</string>
+    <string name="setting_tuesday">Mardi</string>
+    <string name="setting_wednesday">Mercredi</string>
+    <string name="setting_thursday">Jeudi</string>
+    <string name="setting_friday">Vendredi</string>
+    <string name="setting_saturday">Samedi</string>
+    <string name="setting_sunday">Dimanche</string>
+    <string name="setting_de"> &#160;&#032;de&#160;&#032; </string>
+    <string name="setting_a"> &#032;&#160;à&#160;&#032; </string>
+    <string name="setting_set_time_begin">Heure début</string>
+    <string name="setting_set_time_end">Heure fin</string>
+
+    <string name="setting_init_time">00:00</string>
+
+
+
+    <string name="filtre_no_filtre">Pas de filtre</string>
+    <string name="filtre_modify">Modifier</string>
+    <string name="filtre_loading">Chargement des filtres</string>
+
+    <string name="modify_cheveux">cheveux</string>
+    <string name="modify_yeux">yeux</string>
+    <string name="modify_sexe">genre</string>
+    <string name="modify_attirance">attirance</string>
+    <string name="modify_reset">Tout supprimer</string>
+    <string name="modify_end">Finir la modification</string>
+    <string name="modify_pick_yeux">Quels yeux autoriser?</string>
+    <string name="modify_pick_hair">Quels cheveux autoriser?</string>
+    <string name="modify_pick_genre">Quels genres autoriser?</string>
+    <string name="modify_name_filtre">Nom du filtre</string>
+    <string name="modify_profile">Modifier le profil</string>
+
+
+    <string name="profile_actual_relation">Votre relation avec cette personne est :</string>
+    <string name="profile_block">Lock</string>
+    <string name="profile_unblock">Unlock</string>
+    <string name="profile_unfavorite">remove from favorites ( -> friend)</string>
+    <string name="profile_become_friend">Become friend</string>
+    <string name="profile_ask_friend">Ask to be friend</string>
+    <string name="profile_become_favorite">Add to favorite</string>
+
+    <string name="profile_default">default</string>
+
+    <string name="rdv_dispo">Availability</string>
+    <string name="rdv_prenom">First Name</string>
+    <string name="rdv_monday">Monday</string>
+    <string name="rdv_tuesday">Tuesday</string>
+    <string name="rdv_wednesday">Wednesday</string>
+    <string name="rdv_thursday">Thursday</string>
+    <string name="rdv_friday">Friday</string>
+    <string name="rdv_saturday">Saturday</string>
+    <string name="rdv_sunday">Sunday</string>
+    <string name="rdv_send_message">Send a message</string>
+    <string-array name="profile_relation">
+        <item>no relation</item>
+        <item>blocked</item>
+        <item>You sent a friend request</item>
+        <item>request in progress</item>
+        <item>friends</item>
+        <item>Favorites</item>
+    </string-array>
+
+    <string-array name="nameCara">
+        <item>Hair</item>
+        <item>Eyes</item>
+        <item>Gender</item>
+    </string-array>
+
+
+
+    <string name="hair0">blond</string>
+    <string name="hair1">brown</string>
+    <string name="hair2">black</string>
+    <string name="hair3">red</string>
+    <string name="hair4">other</string>
+
+    <string-array name="hair_color">
+        <item>@string/hair0</item>
+        <item>@string/hair1</item>
+        <item>@string/hair2</item>
+        <item>@string/hair3</item>
+        <item>@string/hair4</item>
+    </string-array>
+
+
+    <string name="eye0">Blue</string>
+    <string name="eye1">Green</string>
+    <string name="eye2">Brown</string>
+    <string name="eye3">Grey</string>
+    <string name="eye4">Other</string>
+
+    <string-array name="eye_color">
+        <item>@string/eye0</item>
+        <item>@string/eye1</item>
+        <item>@string/eye2</item>
+        <item>@string/eye3</item>
+        <item>@string/eye4</item>
+    </string-array>
+
+    <string-array name="days">
+        <item>@string/day0</item>
+        <item>@string/day1</item>
+        <item>@string/day2</item>
+        <item>@string/day3</item>
+        <item>@string/day4</item>
+        <item>@string/day5</item>
+        <item>@string/day6</item>
+    </string-array>
+    <string name="day0">Monday</string>
+    <string name="day1">Tuesday</string>
+    <string name="day2">Wednesday</string>
+    <string name="day3">Thursday</string>
+    <string name="day4">Friday</string>
+    <string name="day5">Saturday</string>
+    <string name="day6">Sunday</string>
+    <string name="genre0">M</string>
+    <string name="genre1">F</string>
+    <string-array name="genre">
+        <item>@string/genre0</item>
+        <item>@string/genre1</item>
+    </string-array>
+    <string name="to">to</string>
 
 </resources>
