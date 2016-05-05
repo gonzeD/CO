@@ -132,38 +132,38 @@
 
     <string name="profile_default">default</string>
 
-    <string name="rdv_dispo">Disponibilités</string>
-    <string name="rdv_prenom">Prénom</string>
-    <string name="rdv_monday">Lundi</string>
-    <string name="rdv_tuesday">Mardi</string>
-    <string name="rdv_wednesday">Mercredi</string>
-    <string name="rdv_thursday">Jeudi</string>
-    <string name="rdv_friday">Vendredi</string>
-    <string name="rdv_saturday">Samedi</string>
-    <string name="rdv_sunday">Dimanche</string>
-    <string name="rdv_send_message">Envoyer un message</string>
+    <string name="rdv_dispo">Availabilities</string>
+    <string name="rdv_prenom">First Name</string>
+    <string name="rdv_monday">Monday</string>
+    <string name="rdv_tuesday">Tuesday</string>
+    <string name="rdv_wednesday">Wednesday</string>
+    <string name="rdv_thursday">Thursday</string>
+    <string name="rdv_friday">Friday</string>
+    <string name="rdv_saturday">Saturday</string>
+    <string name="rdv_sunday">Sunday</string>
+    <string name="rdv_send_message">Send a message</string>
     <string-array name="profile_relation">
-        <item>pas de relation</item>
-        <item>bloqué</item>
-        <item>Vous a demandé en amis</item>
-        <item>demande en cours</item>
-        <item>amis</item>
-        <item>favoris</item>
+        <item>No relation</item>
+        <item>Blocked</item>
+        <item>Has asked you as friend</item>
+        <item>Asking ...</item>
+        <item>friends</item>
+        <item>favorite</item>
     </string-array>
 
     <string-array name="nameCara">
-        <item>Cheveux</item>
-        <item>Yeux</item>
-        <item>Genre</item>
+        <item>Hair</item>
+        <item>Eyes</item>
+        <item>Gender</item>
     </string-array>
 
 
 
-    <string name="hair0">blonds</string>
-    <string name="hair1">bruns</string>
-    <string name="hair2">noir</string>
-    <string name="hair3">roux</string>
-    <string name="hair4">autre</string>
+    <string name="hair0">blond</string>
+    <string name="hair1">brown</string>
+    <string name="hair2">black</string>
+    <string name="hair3">red</string>
+    <string name="hair4">other</string>
 
     <string-array name="hair_color">
         <item>@string/hair0</item>
@@ -174,11 +174,11 @@
     </string-array>
 
 
-    <string name="eye0">Bleus</string>
-    <string name="eye1">Verts</string>
-    <string name="eye2">Bruns</string>
-    <string name="eye3">Gris</string>
-    <string name="eye4">Autre</string>
+    <string name="eye0">Blue</string>
+    <string name="eye1">Green</string>
+    <string name="eye2">Brown</string>
+    <string name="eye3">Grey</string>
+    <string name="eye4">Other</string>
 
     <string-array name="eye_color">
         <item>@string/eye0</item>
@@ -194,5 +194,5 @@
         <item>@string/genre0</item>
         <item>@string/genre1</item>
     </string-array>
-    <string name="to">à</string>
+    <string name="to">to</string>
 </resources>
