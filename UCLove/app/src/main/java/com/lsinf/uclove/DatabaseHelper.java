@@ -37,7 +37,7 @@ import org.json.JSONObject;
  */
 public class DatabaseHelper {
     public static String pseudo = null;
-    private static String password = null;
+    public static String password = null;
     public static int idMain = 0;
     public static final int NO_INTERNET = -1;
     public static final int INTERNET_ERROR = 0;

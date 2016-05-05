@@ -128,23 +128,23 @@ public class SettingsActivity extends baseActivity
 
     public void set(View v)
     {
-        DatePicker datePicker = (DatePicker) findViewById(R.id.naissance);
+     /*   DatePicker datePicker = (DatePicker) findViewById(R.id.naissance);
         int day = datePicker.getDayOfMonth();
         int month = datePicker.getMonth() + 1;
         int year = datePicker.getYear();
         String date = day+"/"+month+"/"+year;
-
-        int radioButtonID = ((RadioGroup) findViewById(R.id.button_sexe)).getCheckedRadioButtonId();
+*/
+      /*  int radioButtonID = ((RadioGroup) findViewById(R.id.button_sexe)).getCheckedRadioButtonId();
         View radioButton = ((RadioGroup) findViewById(R.id.button_sexe)).findViewById(radioButtonID);
-        int idx = ((RadioGroup) findViewById(R.id.button_sexe)).indexOfChild(radioButton);
+        int idx = ((RadioGroup) findViewById(R.id.button_sexe)).indexOfChild(radioButton);*/
 
         int radioButtonID2 = ((RadioGroup) findViewById(R.id.button_attirance)).getCheckedRadioButtonId();
         View radioButton2 = ((RadioGroup) findViewById(R.id.button_attirance)).findViewById(radioButtonID2);
         int idx2 = ((RadioGroup) findViewById(R.id.button_attirance)).indexOfChild(radioButton2);
 
-        int radioButtonID3 = ((RadioGroup) findViewById(R.id.button_eyes)).getCheckedRadioButtonId();
+        /*int radioButtonID3 = ((RadioGroup) findViewById(R.id.button_eyes)).getCheckedRadioButtonId();
         View radioButton3 = ((RadioGroup) findViewById(R.id.button_eyes)).findViewById(radioButtonID3);
-        int idx3 = ((RadioGroup) findViewById(R.id.button_eyes)).indexOfChild(radioButton3);
+        int idx3 = ((RadioGroup) findViewById(R.id.button_eyes)).indexOfChild(radioButton3);*/
 
         int radioButtonID4 = ((RadioGroup) findViewById(R.id.button_color_hair)).getCheckedRadioButtonId();
         View radioButton4 = ((RadioGroup) findViewById(R.id.button_color_hair)).findViewById(radioButtonID4);
@@ -163,32 +163,32 @@ public class SettingsActivity extends baseActivity
         else {
             description = "";
         }
-        if (((EditText) findViewById(R.id.langue)).getText() != null){
+      /*  if (((EditText) findViewById(R.id.langue)).getText() != null){
             langue = ((EditText) findViewById(R.id.langue)).getText().toString();
         }
         else {
             langue = "";
-        }
+        }*/
 
 
         String Sdispo = "";
         for(int i = 0;i<14;i++)Sdispo += times[i].split(":")[0]+times[i].split(":")+":";
         new DownloadWebpageTask().execute(
-                ((EditText) findViewById(R.id.pseudo)).getText().toString(),
-                ((EditText) findViewById(R.id.password)).getText().toString(),
-                ((EditText) findViewById(R.id.name)).getText().toString(),
-                ((EditText) findViewById(R.id.firstname)).getText().toString(),
-                idx+"",
+                DatabaseHelper.pseudo,
+                DatabaseHelper.password,
+                mainUser.getNom(),
+                mainUser.getPrenom(),
+                mainUser.getIDYeux()+"",
                 idx2+"",
-                date,
+                mainUser.getNaissance(),
                 ((EditText) findViewById(R.id.mail)).getText().toString(),
                 ((EditText) findViewById(R.id.phone)).getText().toString(),
                 ((EditText) findViewById(R.id.city)).getText().toString(),
-                idx3+"",
+                mainUser.getIdSexe()+"",
                 idx4+"",
                 hobby,
                 description,
-                langue,
+                mainUser.getLangue(),
                 Sdispo);
     }
 
@@ -199,7 +199,7 @@ public class SettingsActivity extends baseActivity
         @Override
         protected String doInBackground(String... urls)
         {
-            return ""+DatabaseHelper.register(SettingsActivity.this,urls);
+            return ""+DatabaseHelper.setRegister(SettingsActivity.this,urls);
         }
         @Override
         protected void onPostExecute(String result)
