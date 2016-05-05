@@ -73,8 +73,6 @@ public class baseActivity extends AppCompatActivity
             i = new Intent(this,HomeActivity.class ); // Your list's Intent
         else if(v.getTag().equals("preferences"))
             i = new Intent(this,SettingsActivity.class ); // Your list's Intent
-        else if(v.getTag().equals("reset"))
-        { new DownloadMainUser().execute();;return;}
         else if(v.getTag().equals("amis"))
             i = new Intent(this,friendsActivity.class ); // Your list's Intent
         else if(v.getTag().equals("requetes"))
@@ -98,18 +96,6 @@ public class baseActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    private class DownloadMainUser extends AsyncTask<String, Void, String> {
-        @Override
-        protected String doInBackground(String... urls)
-        {
-            return ""+DatabaseHelper.reset(baseActivity.this);
-        }
-        @Override
-        protected void onPostExecute(String result)
-        {
-
-        }
-    }
 
 
 

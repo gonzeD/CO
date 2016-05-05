@@ -527,22 +527,7 @@ public class DatabaseHelper {
         } else return NO_INTERNET;
     }
 
-    public static int reset(Context ctx) {
 
-        Log.e("dodormeur", "reseting");
-        if (checkInternet(ctx)) {
-            try {
-                Log.e("dodormeur", "reseting2");
-
-                String t = downloadUrl("http://dracognards.be/uclove/init.php?mdp=wouldyourmombeproud", null, null, false);
-                Log.e("dodormeur", "doneReseting");
-                Log.e("dodormeur", t);
-            } catch (Exception e) {
-                return INTERNET_ERROR;
-            }
-        }
-        return NO_INTERNET;
-    }
 
     public static int setDispo(String time, Context ctx) {
 
