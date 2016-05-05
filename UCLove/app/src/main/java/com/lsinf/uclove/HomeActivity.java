@@ -1,5 +1,6 @@
 package com.lsinf.uclove;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -30,7 +31,7 @@ public class HomeActivity extends baseActivity
 
         if(baseActivity.mainUser.getSexe(this) != null)((TextView)findViewById(R.id.sexe)).setText(baseActivity.mainUser.getSexe(this));
         //else ((TextView)findViewById(R.id.sexe)).setText("test");
-        if(baseActivity.mainUser.getAttirance() != null)((TextView)findViewById(R.id.attirance)).setText(baseActivity.mainUser.getAttirance());
+        if(baseActivity.mainUser.getAttirance(this) != null)((TextView)findViewById(R.id.attirance)).setText(baseActivity.mainUser.getAttirance(this));
         //else ((TextView)findViewById(R.id.attirance)).setText("test");
         String tab= baseActivity.mainUser.getHobby();
         if(tab != null){((TextView)findViewById(R.id.hobby)).setText(tab);}
@@ -47,13 +48,19 @@ public class HomeActivity extends baseActivity
         //else ((TextView)findViewById(R.id.cheveux)).setText("test");
         if(baseActivity.mainUser.getTel() != null)((TextView)findViewById(R.id.tel)).setText(baseActivity.mainUser.getTel());
         //else ((TextView)findViewById(R.id.tel)).setText("test");
+        if(baseActivity.mainUser.getLangue() != null)((TextView)findViewById(R.id.lang)).setText(baseActivity.mainUser.getLangue());
+        //else ((TextView)findViewById(R.id.lang)).setText("test");
         if(baseActivity.mainUser.getDescription() != null)((TextView)findViewById(R.id.description)).setText(baseActivity.mainUser.getDescription());
         else ((TextView)findViewById(R.id.description)).setText("test");
         String tab1[] = baseActivity.mainUser.getDisponibilite();
         String temp1 = " ";
+        String jours[] = getResources().getStringArray(R.array.days);
         if(tab1 != null)
         {
-            for(int i = 0;i<tab1.length;i++){temp1=temp1+tab1[i]+" ";}
+            for(int i = 0;i<tab1.length/2;i++)
+            {
+                temp1+=jours[i]+":  "+format(tab1[i*2])+"->"+format(tab1[i*2+1])+"\n";
+            }
             ((TextView)findViewById(R.id.dispo)).setText(temp1);
         }
         else ((TextView)findViewById(R.id.dispo)).setText("Mes Disponibilités");
@@ -67,10 +74,38 @@ public class HomeActivity extends baseActivity
         if(mainUser.getPhoto().length>2)new loadImageWeb((ImageView) findViewById(R.id.photo3)).execute(mainUser.getPhoto()[2]);
     }
 
+    public String format(String a)
+    {
+        try {
+            return Integer.parseInt(a)/100+":"+Integer.parseInt(a)%100;
+        }
+        catch (Exception e){return "00:00";}
+    }
 
    public void change(View v) {
 
        Intent i = new Intent(this, SettingsActivity.class);
-        startActivity(i);
+        startActivityForResult(i,1);
    }
+
+    public void onActivityResult (int requestCode, int resultCode, Intent data)
+    {
+        new DownloadMainUser().execute();
+    }
+
+    private class DownloadMainUser extends AsyncTask<String, Void, String> {
+        @Override
+        protected String doInBackground(String... urls)
+        {
+            baseActivity.mainUser = new User();
+            return ""+DatabaseHelper.getUser(baseActivity.mainUser, DatabaseHelper.idMain, HomeActivity.this);
+        }
+        @Override
+        protected void onPostExecute(String result)
+        {
+            if(result.equals("1")){
+                recreate();
+            }
+        }
+    }
 }

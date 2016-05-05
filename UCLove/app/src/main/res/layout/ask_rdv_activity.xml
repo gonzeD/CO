@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rdv_dispo"
+        android:textSize="25dp"
+        android:layout_gravity="center_horizontal"/>
+    <LinearLayout style="@style/llHome">
+        <TextView
+            style = "@style/homeDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/rdv_prenom"
+            android:id="@+id/firstUser" />
+        <TextView
+            style="@style/homeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/rdv_prenom"
+            android:id="@+id/secondUser" />
+
+    </LinearLayout>
+    <View style="@style/separator"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/rdv_monday"/>
+
+    <LinearLayout style="@style/llHome">
+        <TextView
+            style = "@style/homeDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/rdv_prenom"
+            android:id="@+id/monday1" />
+        <TextView
+            style="@style/homeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/rdv_prenom"
+            android:id="@+id/monday2" />
+
+    </LinearLayout>
+    <View style="@style/separator"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/rdv_tuesday"/>
+    <LinearLayout style="@style/llHome">
+        <TextView
+            style = "@style/homeDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/rdv_prenom"
+            android:id="@+id/tuesday1" />
+        <TextView
+            style="@style/homeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/rdv_prenom"
+            android:id="@+id/tuesday2" />
+
+    </LinearLayout>
+    <View style="@style/separator"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/rdv_wednesday"/>
+    <LinearLayout style="@style/llHome">
+        <TextView
+            style = "@style/homeDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/rdv_prenom"
+            android:id="@+id/wednesday1" />
+        <TextView
+            style="@style/homeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/rdv_prenom"
+            android:id="@+id/wednesday2" />
+
+    </LinearLayout>
+    <View style="@style/separator"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/rdv_thursday"/>
+    <LinearLayout style="@style/llHome">
+        <TextView
+            style = "@style/homeDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/rdv_prenom"
+            android:id="@+id/thursday1" />
+        <TextView
+            style="@style/homeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/rdv_prenom"
+            android:id="@+id/thursday2" />
+
+    </LinearLayout>
+    <View style="@style/separator"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/rdv_friday"/>
+    <LinearLayout style="@style/llHome">
+        <TextView
+            style = "@style/homeDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/rdv_prenom"
+            android:id="@+id/friday1" />
+        <TextView
+            style="@style/homeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/rdv_prenom"
+            android:id="@+id/friday2" />
+
+    </LinearLayout>
+    <View style="@style/separator"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/rdv_saturday"/>
+    <LinearLayout style="@style/llHome">
+        <TextView
+            style = "@style/homeDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/rdv_prenom"
+            android:id="@+id/saturday1" />
+        <TextView
+            style="@style/homeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/rdv_prenom"
+            android:id="@+id/saturday2" />
+
+    </LinearLayout>
+    <View style="@style/separator"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/rdv_sunday"/>
+    <LinearLayout style="@style/llHome">
+        <TextView
+            style = "@style/homeDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/rdv_prenom"
+            android:id="@+id/sunday1" />
+        <TextView
+            style="@style/homeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/rdv_prenom"
+            android:id="@+id/sunday2" />
+
+    </LinearLayout>
+    <View style="@style/separator"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rdv_send_message"
+        android:id="@+id/rdv_send_message"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:onClick="message"
+        android:layout_gravity="center"/>
+</LinearLayout>
+
+    <include layout="@layout/menu_layout"/>
+</android.support.v4.widget.DrawerLayout>

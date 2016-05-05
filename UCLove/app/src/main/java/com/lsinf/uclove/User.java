@@ -49,7 +49,6 @@ public class User
     public String[] getPhoto() {if(photo == null)return new String[]{"placeholder"};return photo;}
     public void setPhoto(String[] photo) {
         Log.e("dodormeur","set photo"+photo.length+" "+photo[0]);this.photo = photo;}
-    public String getAttirance() {return attirance;}
 
     public int getIdAttirance() {try{return Integer.parseInt(attirance);}catch (Exception e){return 0;}}
     public String getAttirance(Context ctx){return ctx.getResources().getStringArray(R.array.genre)[getIdSexe()];}
@@ -61,8 +60,10 @@ public class User
     public void setHobby(String hobby) {this.hobby = hobby;}
     public String getNaissance() {return naissance;}
     public void setNaissance(String naissance) {this.naissance = naissance;}
+
     public String[] getDisponibilite() {return disponibilite;}
     public void setDisponibilite(String[] disponibilite) {this.disponibilite = disponibilite;}
+
     public String getVille() {return ville;}
     public void setVille(String ville) {this.ville = ville;}
     public String getMail() {return mail;}
@@ -76,7 +77,7 @@ public class User
     public String getCheveux(Context ctx){return ctx.getResources().getStringArray(R.array.hair_color)[getIdCheveux()];}
     public void setCheveux(String cheveux) {this.cheveux = cheveux;}
 
-    public String getTel() {return tel;}
+    public String getTel() {return "0"+tel;}
     public void setTel(String tel) {this.tel = tel;}
     public ArrayList<Filtre> getFiltres() {return filtres;}
     public void setFiltres(ArrayList<Filtre> filtres) {this.filtres = filtres;}

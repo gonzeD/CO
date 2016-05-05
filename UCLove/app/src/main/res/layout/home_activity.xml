@@ -144,6 +144,12 @@
             <View style="@style/separator"/>
 
             <LinearLayout style="@style/llHome">
+                <TextView style="@style/homeDescription" android:text="@string/home_langue"/>
+                <TextView style="@style/homeValue" android:id="@+id/lang"/>
+            </LinearLayout>
+            <View style="@style/separator"/>
+
+            <LinearLayout style="@style/llHome">
                 <TextView style="@style/homeDescription" android:text="@string/home_description"/>
                 <TextView style="@style/homeValue" android:id="@+id/description"/>
             </LinearLayout>

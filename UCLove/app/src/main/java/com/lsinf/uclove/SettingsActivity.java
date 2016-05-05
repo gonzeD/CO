@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -64,8 +65,18 @@ public class SettingsActivity extends baseActivity
         ((RadioButton)ra.getChildAt(mainUser.getIdAttirance())).setChecked(true);
         ra = (RadioGroup)findViewById(R.id.button_color_hair);
         ((RadioButton)ra.getChildAt(mainUser.getIdCheveux())).setChecked(true);
-
+       if(mainUser.getDisponibilite() != null)
+       {
+           String temp[] = mainUser.getDisponibilite();
+           for(int i = 0;i<14;i++){
+               Log.e("dodormeur",times[i]);times[i] = format(temp[i]);
+       }}
+        refreshShowDate();
          createNavigationMenu();
+    }
+    public String format(String s)
+    {
+        return Integer.parseInt(s)/100+":"+Integer.parseInt(s)%100;
     }
 
     public void langue(View v)
@@ -107,17 +118,22 @@ public class SettingsActivity extends baseActivity
     String times[] = {"00:00","00:00","00:00","00:00","00:00","00:00","00:00","00:00","00:00","00:00","00:00","00:00","00:00","00:00"};
     public void setDate(int day,int start,String time)
     {
-        int ids[] = {R.id.textView1,R.id.textView2,R.id.textView3,R.id.textView4,R.id.textView5,R.id.textView6,R.id.textView7,R.id.textView8
-    ,R.id.textView9,R.id.textView10,R.id.textView11,R.id.textView12,R.id.textView13,R.id.textView14};
         times[day*2+start] = time;
-        for(int i = 0;i<14;i++)
-        {
-            ((TextView)findViewById(ids[i])).setText(times[i]);
-        }
+        refreshShowDate();
 
 
     }
 
+    public void refreshShowDate()
+    {
+        int ids[] = {R.id.textView1,R.id.textView2,R.id.textView3,R.id.textView4,R.id.textView5,R.id.textView6,R.id.textView7,R.id.textView8
+                ,R.id.textView9,R.id.textView10,R.id.textView11,R.id.textView12,R.id.textView13,R.id.textView14};
+
+        for(int i = 0;i<14;i++)
+        {
+            ((TextView)findViewById(ids[i])).setText(times[i]);
+        }
+    }
     public void choosePicture(View v)
     {
         String url = "http://www.dracognards.be/uclove/up.php?id="+DatabaseHelper.idMain;
@@ -128,23 +144,24 @@ public class SettingsActivity extends baseActivity
 
     public void set(View v)
     {
-        DatePicker datePicker = (DatePicker) findViewById(R.id.naissance);
+        Log.e("dodormeur","setting");
+     /*   DatePicker datePicker = (DatePicker) findViewById(R.id.naissance);
         int day = datePicker.getDayOfMonth();
         int month = datePicker.getMonth() + 1;
         int year = datePicker.getYear();
         String date = day+"/"+month+"/"+year;
-
-        int radioButtonID = ((RadioGroup) findViewById(R.id.button_sexe)).getCheckedRadioButtonId();
+*/
+      /*  int radioButtonID = ((RadioGroup) findViewById(R.id.button_sexe)).getCheckedRadioButtonId();
         View radioButton = ((RadioGroup) findViewById(R.id.button_sexe)).findViewById(radioButtonID);
-        int idx = ((RadioGroup) findViewById(R.id.button_sexe)).indexOfChild(radioButton);
+        int idx = ((RadioGroup) findViewById(R.id.button_sexe)).indexOfChild(radioButton);*/
 
         int radioButtonID2 = ((RadioGroup) findViewById(R.id.button_attirance)).getCheckedRadioButtonId();
         View radioButton2 = ((RadioGroup) findViewById(R.id.button_attirance)).findViewById(radioButtonID2);
         int idx2 = ((RadioGroup) findViewById(R.id.button_attirance)).indexOfChild(radioButton2);
 
-        int radioButtonID3 = ((RadioGroup) findViewById(R.id.button_eyes)).getCheckedRadioButtonId();
+        /*int radioButtonID3 = ((RadioGroup) findViewById(R.id.button_eyes)).getCheckedRadioButtonId();
         View radioButton3 = ((RadioGroup) findViewById(R.id.button_eyes)).findViewById(radioButtonID3);
-        int idx3 = ((RadioGroup) findViewById(R.id.button_eyes)).indexOfChild(radioButton3);
+        int idx3 = ((RadioGroup) findViewById(R.id.button_eyes)).indexOfChild(radioButton3);*/
 
         int radioButtonID4 = ((RadioGroup) findViewById(R.id.button_color_hair)).getCheckedRadioButtonId();
         View radioButton4 = ((RadioGroup) findViewById(R.id.button_color_hair)).findViewById(radioButtonID4);
@@ -163,32 +180,33 @@ public class SettingsActivity extends baseActivity
         else {
             description = "";
         }
-        if (((EditText) findViewById(R.id.langue)).getText() != null){
+      /*  if (((EditText) findViewById(R.id.langue)).getText() != null){
             langue = ((EditText) findViewById(R.id.langue)).getText().toString();
         }
         else {
             langue = "";
-        }
+        }*/
 
 
         String Sdispo = "";
-        for(int i = 0;i<14;i++)Sdispo += times[i].split(":")[0]+times[i].split(":")+":";
+        for(int i = 0;i<14;i++)Sdispo += times[i].split(":")[0]+times[i].split(":")[1]+":";
+        Log.e("dodormeur","exe");
         new DownloadWebpageTask().execute(
-                ((EditText) findViewById(R.id.pseudo)).getText().toString(),
-                ((EditText) findViewById(R.id.password)).getText().toString(),
-                ((EditText) findViewById(R.id.name)).getText().toString(),
-                ((EditText) findViewById(R.id.firstname)).getText().toString(),
-                idx+"",
+                DatabaseHelper.pseudo,
+                DatabaseHelper.password,
+                mainUser.getNom(),
+                mainUser.getPrenom(),
+                mainUser.getIDYeux()+"",
                 idx2+"",
-                date,
+                mainUser.getNaissance(),
                 ((EditText) findViewById(R.id.mail)).getText().toString(),
                 ((EditText) findViewById(R.id.phone)).getText().toString(),
                 ((EditText) findViewById(R.id.city)).getText().toString(),
-                idx3+"",
+                mainUser.getIdSexe()+"",
                 idx4+"",
                 hobby,
                 description,
-                langue,
+                mainUser.getLangue(),
                 Sdispo);
     }
 
@@ -199,21 +217,37 @@ public class SettingsActivity extends baseActivity
         @Override
         protected String doInBackground(String... urls)
         {
-            return ""+DatabaseHelper.register(SettingsActivity.this,urls);
+            Log.e("dodormeur","setting");
+            return ""+DatabaseHelper.setRegister(SettingsActivity.this,urls);
         }
         @Override
         protected void onPostExecute(String result)
         {
             if(result.equals(""+DatabaseHelper.OK))
             {
-                Toast.makeText(SettingsActivity.this, R.string.register_done, Toast.LENGTH_LONG).show();
-                Intent returnIntent = new Intent();
-                returnIntent.putExtra("result","ok");
-                setResult(Activity.RESULT_OK,returnIntent);
-                finish();
+                new DownloadMainUser().execute();
             }
 
         }
     }
+
+    private class DownloadMainUser extends AsyncTask<String, Void, String> {
+        @Override
+        protected String doInBackground(String... urls)
+        {
+            baseActivity.mainUser = new User();
+            return ""+DatabaseHelper.getUser(baseActivity.mainUser, DatabaseHelper.idMain, SettingsActivity.this);
+        }
+        @Override
+        protected void onPostExecute(String result)
+        {
+            if(result.equals("1")){Toast.makeText(SettingsActivity.this, R.string.update_done, Toast.LENGTH_LONG).show();
+                Intent returnIntent = new Intent();
+                returnIntent.putExtra("result","ok");
+                setResult(Activity.RESULT_OK,returnIntent);
+                finish();}
+        }
+    }
+
 }
 

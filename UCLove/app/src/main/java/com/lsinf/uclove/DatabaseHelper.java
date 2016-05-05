@@ -37,7 +37,7 @@ import org.json.JSONObject;
  */
 public class DatabaseHelper {
     public static String pseudo = null;
-    private static String password = null;
+    public static String password = null;
     public static int idMain = 0;
     public static final int NO_INTERNET = -1;
     public static final int INTERNET_ERROR = 0;
@@ -287,6 +287,7 @@ public class DatabaseHelper {
 
 
     public static int setRegister(Context ctx, String... urls) {
+        Log.e("dodormeur","setting");
         if (checkInternet(ctx)) {
             try {
                 String[] act = new String[]{"action","id", "pseudo", "password", "nom", "prenom", "sexe", "attirance", "ddnais", "mail", "tel", "ville", "yeux", "cheveux", "hobby", "description", "langue", "dispo"};
@@ -294,7 +295,7 @@ public class DatabaseHelper {
                 arg[0] = "setRegister";
                 arg[1] = ""+idMain;
                 for (int i = 0; i < urls.length && i + 1 < act.length && i + 1 < arg.length; i++)
-                    arg[i + 1] = urls[i];
+                    arg[i + 2] = urls[i];
                 String t = downloadUrl("http://dracognards.be/uclove/main.php", act, arg, false);
                 Log.e("dodormeur", t);
                 JSONObject jObject = new JSONObject(t);
@@ -341,6 +342,7 @@ public class DatabaseHelper {
                     if (jObject.has("VILLE")) user.setVille(jObject.getString("VILLE"));
                     if (jObject.has("SEXE")) user.setSexe(jObject.getString("SEXE"));
                     if (jObject.has("DISPO")) user.setDisponibilite(jObject.getString("DISPO").split(":"));
+                    else user.setDisponibilite("0000:0000:0000:0000:0000:0000:0000:0000:0000:0000:0000:0000:0000:0000".split(":"));
                     return 1;
                 } else return INTERNET_ERROR;
             } catch (Exception e) {
@@ -542,7 +544,7 @@ public class DatabaseHelper {
         }
         return NO_INTERNET;
     }
-
+/*
     public static int setDispo(String time, Context ctx) {
 
         //12:00;18:00;15:00;1800
@@ -567,5 +569,5 @@ public class DatabaseHelper {
 
         } else return NO_INTERNET;
 
-    }
+    }*/
 }

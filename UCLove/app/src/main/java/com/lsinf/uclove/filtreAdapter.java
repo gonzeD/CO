@@ -27,10 +27,12 @@ public class filtreAdapter extends RecyclerView.Adapter<filtreAdapter.ViewHolder
         public TextView text;
         public View root;
         public View button;
+        public View button1;
         public ViewHolder(ViewGroup v) {
             super(v);
             text = (TextView)v.findViewById(R.id.text);
             button = v.findViewById(R.id.modify);
+            button1 = v.findViewById(R.id.rdv);
             root = v.findViewById(R.id.root);
         }
     }
@@ -55,6 +57,7 @@ public class filtreAdapter extends RecyclerView.Adapter<filtreAdapter.ViewHolder
         // - replace the contents of the view with that element
         holder.text.setText(mDataset.get(position));
         holder.root.setTag(position);
+        //holder.button1.setTag(position);
         holder.button.setTag(position);
         /*holder.root.setTag(position);
         holder.root.findViewById(R.id.rdv).setTag(position);*/
