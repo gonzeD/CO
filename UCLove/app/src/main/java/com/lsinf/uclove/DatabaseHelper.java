@@ -342,6 +342,7 @@ public class DatabaseHelper {
                     if (jObject.has("VILLE")) user.setVille(jObject.getString("VILLE"));
                     if (jObject.has("SEXE")) user.setSexe(jObject.getString("SEXE"));
                     if (jObject.has("DISPO")) user.setDisponibilite(jObject.getString("DISPO").split(":"));
+                    else user.setDisponibilite("0000:0000:0000:0000:0000:0000:0000:0000:0000:0000:0000:0000:0000:0000".split(":"));
                     return 1;
                 } else return INTERNET_ERROR;
             } catch (Exception e) {

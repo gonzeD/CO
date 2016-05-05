@@ -67,9 +67,10 @@ public class SettingsActivity extends baseActivity
         ((RadioButton)ra.getChildAt(mainUser.getIdCheveux())).setChecked(true);
        if(mainUser.getDisponibilite() != null)
        {
-           times = mainUser.getDisponibilite();
-           for(int i = 0;i<14;i++)times[i] = format(times[i]);
-       }
+           String temp[] = mainUser.getDisponibilite();
+           for(int i = 0;i<14;i++){
+               Log.e("dodormeur",times[i]);times[i] = format(temp[i]);
+       }}
         refreshShowDate();
          createNavigationMenu();
     }
