@@ -60,6 +60,7 @@ public class baseActivity extends AppCompatActivity
 
     public void clickMenu(View v)
     {
+        boolean flag = true;
         Intent i = null;
         if(v.getTag().equals("disconnect"))
         {
@@ -72,7 +73,9 @@ public class baseActivity extends AppCompatActivity
         else if(v.getTag().equals("profil"))
             i = new Intent(this,HomeActivity.class ); // Your list's Intent
         else if(v.getTag().equals("preferences"))
-            i = new Intent(this,SettingsActivity.class ); // Your list's Intent
+        { i = new Intent(this,SettingsActivity.class );
+         flag = false;// Your list's Intentø
+        }
         else if(v.getTag().equals("reset"))
         { new DownloadMainUser().execute();;return;}
         else if(v.getTag().equals("amis"))
@@ -84,7 +87,7 @@ public class baseActivity extends AppCompatActivity
         else
             i = new Intent(this,friendsActivity.class ); // Your list's Intent
 
-        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        if(flag)i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(i);
     }
 
