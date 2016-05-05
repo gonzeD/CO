@@ -285,6 +285,32 @@ public class DatabaseHelper {
         } else return NO_INTERNET;
     }
 
+
+    public static int setRegister(Context ctx, String... urls) {
+        if (checkInternet(ctx)) {
+            try {
+                String[] act = new String[]{"action","id", "pseudo", "password", "nom", "prenom", "sexe", "attirance", "ddnais", "mail", "tel", "ville", "yeux", "cheveux", "hobby", "description", "langue", "dispo"};
+                String[] arg = new String[urls.length + 2];
+                arg[0] = "setRegister";
+                arg[1] = ""+idMain;
+                for (int i = 0; i < urls.length && i + 1 < act.length && i + 1 < arg.length; i++)
+                    arg[i + 1] = urls[i];
+                String t = downloadUrl("http://dracognards.be/uclove/main.php", act, arg, false);
+                Log.e("dodormeur", t);
+                JSONObject jObject = new JSONObject(t);
+                if (t == null || jObject == null) return INTERNET_ERROR;
+                else if (jObject.has("success")) {
+                    pseudo = urls[0];
+                    return 1;
+                } else return INTERNET_ERROR;
+            } catch (Exception e) {
+                return INTERNET_ERROR;
+            }
+        } else return NO_INTERNET;
+    }
+
+
+
     public static int getUser(User user, int id, Context ctx) {
         if (checkInternet(ctx)) {
             try {
@@ -314,6 +340,7 @@ public class DatabaseHelper {
                     if (jObject.has("TEL")) user.setTel(jObject.getString("TEL"));
                     if (jObject.has("VILLE")) user.setVille(jObject.getString("VILLE"));
                     if (jObject.has("SEXE")) user.setSexe(jObject.getString("SEXE"));
+                    if (jObject.has("DISPO")) user.setDisponibilite(jObject.getString("DISPO").split(":"));
                     return 1;
                 } else return INTERNET_ERROR;
             } catch (Exception e) {

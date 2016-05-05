@@ -50,7 +50,7 @@ public class InscriptionActivity extends AppCompatActivity
      //  "pseudo","password","nom","prenom","sexe","ddnais","mail","tel","ville"};
 
     }
-
+/*
     public void takePicture(View v)
     {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
