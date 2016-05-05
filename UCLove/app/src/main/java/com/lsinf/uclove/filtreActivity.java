@@ -27,10 +27,18 @@ public class filtreActivity extends baseActivity {
     public void create(View v)
     {
         Intent i = new Intent(this,modifyFiltreActivity.class);
-        i.putExtra("pos","-1");
-        startActivity(i);
+        i.putExtra("pos", "-1");
+        startActivityForResult(i,1);
     }
 
+
+    public void onActivityResult (int requestCode, int resultCode, Intent data)
+    {
+        Log.e("LSINF","result");
+        if (requestCode == 1 && resultCode == RESULT_OK) {
+            recreate();
+        }
+        }
     public void search(View v)
     {
         actualFiltre = Integer.parseInt(v.getTag().toString());

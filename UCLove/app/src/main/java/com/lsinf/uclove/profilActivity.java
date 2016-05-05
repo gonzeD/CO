@@ -65,11 +65,19 @@ public class profilActivity extends baseActivity {
 
 
                 public void onSwipeRight() {
-                    recreate();
+                    Intent i = getIntent();
+                    i.putExtra("refresh",-1);
+                    startActivity(i);
+                    finish();
+
                 }
 
                 public void onSwipeLeft() {
-                    recreate();
+
+                    Intent i = getIntent();
+                    i.putExtra("refresh",-1);
+                    startActivity(i);
+                    finish();
                 }
             });
         }
