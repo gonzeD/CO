@@ -287,6 +287,7 @@ public class DatabaseHelper {
 
 
     public static int setRegister(Context ctx, String... urls) {
+        Log.e("dodormeur","setting");
         if (checkInternet(ctx)) {
             try {
                 String[] act = new String[]{"action","id", "pseudo", "password", "nom", "prenom", "sexe", "attirance", "ddnais", "mail", "tel", "ville", "yeux", "cheveux", "hobby", "description", "langue", "dispo"};

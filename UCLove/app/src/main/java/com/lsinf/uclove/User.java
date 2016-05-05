@@ -60,8 +60,10 @@ public class User
     public void setHobby(String hobby) {this.hobby = hobby;}
     public String getNaissance() {return naissance;}
     public void setNaissance(String naissance) {this.naissance = naissance;}
+
     public String[] getDisponibilite() {return disponibilite;}
     public void setDisponibilite(String[] disponibilite) {this.disponibilite = disponibilite;}
+
     public String getVille() {return ville;}
     public void setVille(String ville) {this.ville = ville;}
     public String getMail() {return mail;}
