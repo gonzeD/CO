@@ -294,7 +294,7 @@ public class DatabaseHelper {
                 arg[0] = "setRegister";
                 arg[1] = ""+idMain;
                 for (int i = 0; i < urls.length && i + 1 < act.length && i + 1 < arg.length; i++)
-                    arg[i + 1] = urls[i];
+                    arg[i + 2] = urls[i];
                 String t = downloadUrl("http://dracognards.be/uclove/main.php", act, arg, false);
                 Log.e("dodormeur", t);
                 JSONObject jObject = new JSONObject(t);
