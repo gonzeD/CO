@@ -120,7 +120,7 @@
     <string name="modify_profile">Modifier le profil</string>
 
 
-    <string name="profile_actual_relation">Votre relation avec cette personne est :</string>
+    <string name="profile_actual_relation">Your relation with this person is Votre relation avec cette personne est :</string>
     <string name="profile_block">Lock</string>
     <string name="profile_unblock">Unlock</string>
     <string name="profile_unfavorite">remove from favorites ( -> friend)</string>
