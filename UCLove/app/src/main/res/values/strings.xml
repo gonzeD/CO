@@ -34,8 +34,8 @@
     <string name="menu_rencontres">Rencontres</string>
     <string name="menu_amis">Amis</string>
     <string name="menu_requetes">Requetes</string>
-    <string name="menu_name">your name</string>
-    <string name="menu_pseudo">your pseudo</string>
+    <string name="menu_name">Ton nom</string>
+    <string name="menu_pseudo">Ton pseudo</string>
 
     <string name="home_infos_perso">Informations Personnelles</string>
     <string name="home_click_to_edit">Appuyer pour éditer</string>
