@@ -1,5 +1,6 @@
 package com.lsinf.uclove;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -75,7 +76,10 @@ public class HomeActivity extends baseActivity
 
     public String format(String a)
     {
-        return Integer.parseInt(a)/100+":"+Integer.parseInt(a)%100;
+        try {
+            return Integer.parseInt(a)/100+":"+Integer.parseInt(a)%100;
+        }
+        catch (Exception e){return "00:00";}
     }
 
    public void change(View v) {
@@ -86,6 +90,22 @@ public class HomeActivity extends baseActivity
 
     public void onActivityResult (int requestCode, int resultCode, Intent data)
     {
-        recreate();
+        new DownloadMainUser().execute();
+    }
+
+    private class DownloadMainUser extends AsyncTask<String, Void, String> {
+        @Override
+        protected String doInBackground(String... urls)
+        {
+            baseActivity.mainUser = new User();
+            return ""+DatabaseHelper.getUser(baseActivity.mainUser, DatabaseHelper.idMain, HomeActivity.this);
+        }
+        @Override
+        protected void onPostExecute(String result)
+        {
+            if(result.equals("1")){
+                recreate();
+            }
+        }
     }
 }
