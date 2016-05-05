@@ -52,28 +52,53 @@ public class profilActivity extends baseActivity {
     }
     public void disp()
     {
+        Log.e("dodormeur","ok"+user.getPhoto().length);
         setContentView(R.layout.profile_activity);
         createNavigationMenu();
-        if(display != 0)findViewById(R.id.tuto).setVisibility(View.GONE);
+        if(display != 0)
+        {
+            findViewById(R.id.tuto).setVisibility(View.GONE);
+            if(user.getPhoto().length>1)
+            {
+                Log.e("dodormeur","ok");
+                findViewById(R.id.profile_picture2).setVisibility(View.VISIBLE);
+                new loadImageWeb((ImageView) findViewById(R.id.profile_picture2)).execute(user.getPhoto()[1]);
+            }
+            if(user.getPhoto().length>2)
+            {
+                Log.e("dodormeur","ok");
+                findViewById(R.id.profile_picture3).setVisibility(View.VISIBLE);
+                new loadImageWeb((ImageView) findViewById(R.id.profile_picture3)).execute(user.getPhoto()[2]);
+            }
+        }
         else
         {
             findViewById(R.id.wraperTel).setVisibility(View.GONE);
             findViewById(R.id.wraperDispo).setVisibility(View.GONE);
             findViewById(R.id.wraperMail).setVisibility(View.GONE);
             findViewById(R.id.wraperHobby).setVisibility(View.GONE);
-          /*  findViewById(R.id.llprofile).setOnTouchListener(new OnSwipeTouchListener(profilActivity.this) {
+            findViewById(R.id.llprofile).setOnTouchListener(new OnSwipeTouchListener(profilActivity.this) {
 
 
                 public void onSwipeRight() {
-                    recreate();
+                    Intent i = getIntent();
+                    i.putExtra("refresh", -1);
+                    startActivity(i);
+                    finish();
+
                 }
 
                 public void onSwipeLeft() {
-                    recreate();
+
+                    Intent i = getIntent();
+                    i.putExtra("refresh", -1);
+                    startActivity(i);
+                    finish();
                 }
-            });*///TODO : décommenter et faire add avant de commit !
+            });
+
         }
-        new loadImageWeb((ImageView) findViewById(R.id.profile_picture)).execute(mainUser.getPhoto());
+        new loadImageWeb((ImageView) findViewById(R.id.profile_picture1)).execute(user.getPhoto());
         ((TextView)findViewById(R.id.prenom)).setText(user.getPrenom()+" "+user.getNom());
         ((TextView)findViewById(R.id.sexe)).setText(user.getSexe(this));
         ((TextView)findViewById(R.id.attirance)).setText(user.getAttirance(this));

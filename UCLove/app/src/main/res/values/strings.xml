@@ -10,6 +10,7 @@
     <string name="register_field_error">l\'un des champs renseigné n\'est pas correct...</string>
     <string name="register_pseudo_taken">Ce pseudo est déjà pris</string>
     <string name="register_done">L\'inscription a réussie ! Vous pouvez dès a présent vous connecter</string>
+    <string name="update_done">Vos modifications ont bien été enregistrées</string>
     <string name="register_name">Nom</string>
     <string name="register_firstname">Prénom</string>
     <string name="register_sexe">Sexe</string>
@@ -33,8 +34,8 @@
     <string name="menu_rencontres">Rencontres</string>
     <string name="menu_amis">Amis</string>
     <string name="menu_requetes">Requetes</string>
-    <string name="menu_name">your name</string>
-    <string name="menu_pseudo">your pseudo</string>
+    <string name="menu_name">Ton nom</string>
+    <string name="menu_pseudo">Ton pseudo</string>
 
     <string name="home_infos_perso">Informations Personnelles</string>
     <string name="home_click_to_edit">Appuyer pour éditer</string>
@@ -129,6 +130,16 @@
 
     <string name="profile_default">default</string>
 
+    <string name="rdv_dispo">Disponibilités</string>
+    <string name="rdv_prenom">Prénom</string>
+    <string name="rdv_monday">Lundi</string>
+    <string name="rdv_tuesday">Mardi</string>
+    <string name="rdv_wednesday">Mercredi</string>
+    <string name="rdv_thursday">Jeudi</string>
+    <string name="rdv_friday">Vendredi</string>
+    <string name="rdv_saturday">Samedi</string>
+    <string name="rdv_sunday">Dimanche</string>
+    <string name="rdv_send_message">Envoyer un message</string>
     <string-array name="profile_relation">
         <item>pas de relation</item>
         <item>bloqué</item>
@@ -175,10 +186,27 @@
         <item>@string/eye4</item>
     </string-array>
 
+    <string-array name="days">
+        <item>@string/day0</item>
+        <item>@string/day1</item>
+        <item>@string/day2</item>
+        <item>@string/day3</item>
+        <item>@string/day4</item>
+        <item>@string/day5</item>
+        <item>@string/day6</item>
+    </string-array>
+        <string name="day0">Lundi</string>
+        <string name="day1">Mardi</string>
+        <string name="day2">Mercredi</string>
+        <string name="day3">Jeudi</string>
+        <string name="day4">Vendredi</string>
+        <string name="day5">Samedi</string>
+        <string name="day6">Dimanche</string>
     <string name="genre0">M</string>
     <string name="genre1">F</string>
     <string-array name="genre">
         <item>@string/genre0</item>
         <item>@string/genre1</item>
     </string-array>
+    <string name="to">à</string>
 </resources>
