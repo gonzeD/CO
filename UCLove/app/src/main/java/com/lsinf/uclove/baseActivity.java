@@ -65,6 +65,7 @@ public class baseActivity extends AppCompatActivity
     public void clickMenu(View v)
     {
         Intent i = null;
+        boolean flag = true;
         if(v.getTag().equals("disconnect"))
         {
             mainUser = null;
@@ -76,7 +77,7 @@ public class baseActivity extends AppCompatActivity
         else if(v.getTag().equals("profil"))
             i = new Intent(this,HomeActivity.class ); // Your list's Intent
         else if(v.getTag().equals("preferences"))
-            i = new Intent(this,SettingsActivity.class ); // Your list's Intent
+        {flag = false;i = new Intent(this,SettingsActivity.class );} // Your list's Intent
         else if(v.getTag().equals("amis"))
             i = new Intent(this,friendsActivity.class ); // Your list's Intent
         else if(v.getTag().equals("requetes"))
@@ -86,7 +87,7 @@ public class baseActivity extends AppCompatActivity
         else
             i = new Intent(this,friendsActivity.class ); // Your list's Intent
 
-        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        if(flag)i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(i);
     }
 
