@@ -16,7 +16,7 @@
     <string name="register_sexe">Sexe</string>
     <string name="register_naissance">Date de naissance</string>
     <string name="register_mail">Adresse e-mail</string>
-    <string name="register_phone">Numéro de téléphone</string>
+    <string name="register_phone">Numéro de téléphone(dans le format:0475654785)</string>
     <string name="register_city">Ville</string>
     <string name="register_eyes">Couleur des yeux</string>
 

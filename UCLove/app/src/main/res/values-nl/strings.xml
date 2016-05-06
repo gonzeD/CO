@@ -16,7 +16,7 @@
     <string name="register_sexe">Geslacht</string>
     <string name="register_naissance">Geboortedatum</string>
     <string name="register_mail">E-mail adress</string>
-    <string name="register_phone">Téléfoon nummer</string>
+    <string name="register_phone">Téléfoon nummer(voorbeeld:0475654785)</string>
     <string name="register_city">Stad</string>
     <string name="register_eyes">Oogkleur</string>
 
