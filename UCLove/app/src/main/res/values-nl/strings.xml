@@ -1,0 +1,212 @@
+<resources>
+    <string name="app_name">UCLove</string>
+
+    <string name="connexion_pseudo">Pseudo</string>
+    <string name="connexion_password">Wachtwoord</string>
+    <string name="connexion_connect">Inloggen</string>
+    <string name="connexion_register">Inschrijving</string>
+
+    <string name="register">Inschrijving</string>
+    <string name="register_field_error">één van de ingevulde tekstveld is niet correct....</string>
+    <string name="register_pseudo_taken">Deze pseudo is al in gebrijk</string>
+    <string name="register_done">De inschrijving is gelukt! U kunt u nu aanmelden</string>
+    <string name="update_done">U wijzigingen werden goed opgeslagen</string>
+    <string name="register_name">Naam</string>
+    <string name="register_firstname">Voornaam</string>
+    <string name="register_sexe">Geslacht</string>
+    <string name="register_naissance">Geboortedatum</string>
+    <string name="register_mail">E-mail adress</string>
+    <string name="register_phone">Téléfoon nummer</string>
+    <string name="register_city">Stad</string>
+    <string name="register_eyes">Oogkleur</string>
+
+    <string name="register_hobby">Belangencentrum</string>
+    <string name="register_description">Beschrijving</string>
+    <string name="register_attirance">affiniteit</string>
+    <string name="register_langue">Taal</string>
+    <string name="register_color_hair">Haarkleur</string>
+    <string name="register_picture">Profielfoto</string>
+    <string name="register_take_picture">Foto trekken</string>
+    <string name="register_choose_picture">Kies een foto</string>
+
+    <string name="menu_profil">Profiel</string>
+    <string name="menu_preferences">Voorkeur</string>
+    <string name="menu_rencontres">Ontmoetingen</string>
+    <string name="menu_amis">Vrienden</string>
+    <string name="menu_requetes">Request</string>
+    <string name="menu_name">Uw naam</string>
+    <string name="menu_pseudo">Uw pseudo</string>
+
+    <string name="home_infos_perso">Personele informatie</string>
+    <string name="home_click_to_edit">Klik om te bewerken</string>
+    <string name="home_pseudo">Pseudo</string>
+    <string name="home_name">Naam</string>
+    <string name="home_firstname">Voornaam</string>
+    <string name="home_sexe">Geslacht</string>
+    <string name="home_attirance">Affiniteit</string>
+    <string name="home_hobby">Hobbies</string>
+    <string name="home_naissance">Geboorte</string>
+    <string name="home_ville">Stad</string>
+    <string name="home_mail">Email adress</string>
+    <string name="home_yeux">Ogen</string>
+    <string name="home_cheveux">Haren</string>
+    <string name="home_tel">Téléfoon</string>
+    <string name="home_description">Beschrijving</string>
+    <string name="home_dispo">Beschikbaarheid</string>
+    <string name="home_langue">Taal</string>
+
+    <string name="menu_parametre">Istellingen</string>
+    <string name="menu_ami">Vrienden</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_requete">Request</string>
+
+
+    <string name="error_no_internet">Netwerkfout. Controleer u draadloze verbinding</string>
+    <string name="error_internet">Serverfout. Zorg ervoor dat u gegevens correct zijn</string>
+    <string name="error_no_matching">Geen enkele gebruiker voldoen aan u criteria. Probeer een andere filter.</string>
+
+    <string name="navigation_drawer_open">Openen</string>
+    <string name="navigation_drawer_close">Sluiten</string>
+    <string name="menu_disconnect">Afmelden</string>
+
+    <string name="friend_forever_alone">U hebt geen vrienden... U kunt er vinden in de tab ontmoetingen !</string>
+    <string name="friend_loading">Lading van u vrienden...</string>
+    <string name="friend_rdv">Afspraak</string>
+    <string name="friend_profile">profiel</string>
+
+    <string name="request_forever_alone">U hebt geen aanvraag voor het moment.</string>
+    <string name="request_loading">Lading van u aanvragen</string>
+    <string name="request_block">Blokkeren</string>
+    <string name="request_accept">Bevestigen</string>
+
+
+    <string name="setting_langue">Weergavetaal</string>
+    <string name="setting_apply">Toepassen</string>
+    <string name="setting_french">Frans</string>
+    <string name="setting_english">Engels</string>
+    <string name="setting_german">Duits</string>
+    <string name="setting_dutch">Nederlands</string>
+    <string name="setting_dispo">Beschikbaarheid afspraak</string>
+    <string name="setting_monday">Maandag</string>
+    <string name="setting_tuesday">Dinsdag</string>
+    <string name="setting_wednesday">Woensdag</string>
+    <string name="setting_thursday">Donderdag</string>
+    <string name="setting_friday">Vrijdag</string>
+    <string name="setting_saturday">Zaterdag</string>
+    <string name="setting_sunday">Zondag</string>
+    <string name="setting_de"> &#160;&#032;van&#160;&#032; </string>
+    <string name="setting_a"> &#032;&#160;tot&#160;&#032; </string>
+    <string name="setting_set_time_begin">Begin uur</string>
+    <string name="setting_set_time_end">Eind uur</string>
+
+    <string name="setting_init_time">00:00</string>
+
+
+
+    <string name="filtre_no_filtre">Geen filters</string>
+    <string name="filtre_modify">Wijzigen</string>
+    <string name="filtre_loading">Lading van uw filters</string>
+
+    <string name="modify_cheveux">haar</string>
+    <string name="modify_yeux">ogen</string>
+    <string name="modify_sexe">geslacht</string>
+    <string name="modify_attirance">affiniteit</string>
+    <string name="modify_reset">Alles verwijderen</string>
+    <string name="modify_end">Wijzingen beëindigen</string>
+    <string name="modify_pick_yeux">Welke ogen toestaan?</string>
+    <string name="modify_pick_hair">Welke haarkleur toestaan?</string>
+    <string name="modify_pick_genre">Welk geslacht toestaan?</string>
+    <string name="modify_name_filtre">Naam van uw filter</string>
+    <string name="modify_profile">Profiel bewerken</string>
+
+
+    <string name="profile_actual_relation">U relatie met deze persoon is:</string>
+    <string name="profile_block">Blokkeren</string>
+    <string name="profile_unblock">Deblokkeren</string>
+    <string name="profile_unfavorite">verwijderen van u favorieten ( -> vriend)</string>
+    <string name="profile_become_friend">Gunstig reageren op het verzoek</string>
+    <string name="profile_ask_friend">Aanvragen als vriend</string>
+    <string name="profile_become_favorite">Als favoriet toevoegen</string>
+
+    <string name="profile_default">default</string>
+
+    <string name="rdv_dispo">Besckikbaarheid</string>
+    <string name="rdv_prenom">Voornaam</string>
+    <string name="rdv_monday">Maandag</string>
+    <string name="rdv_tuesday">Dinsdag</string>
+    <string name="rdv_wednesday">Woensdag</string>
+    <string name="rdv_thursday">Donderdag</string>
+    <string name="rdv_friday">Vendredi</string>
+    <string name="rdv_saturday">Zaterdag</string>
+    <string name="rdv_sunday">Zondag</string>
+    <string name="rdv_send_message">Bericht sturen</string>
+    <string-array name="profile_relation">
+        <item>pas de relation</item>
+        <item>bloqué</item>
+        <item>Vous a demandé en amis</item>
+        <item>demande en cours</item>
+        <item>amis</item>
+        <item>favoris</item>
+    </string-array>
+
+    <string-array name="nameCara">
+        <item>Cheveux</item>
+        <item>Yeux</item>
+        <item>Genre</item>
+    </string-array>
+
+
+
+    <string name="hair0">blond</string>
+    <string name="hair1">bruin</string>
+    <string name="hair2">zwart</string>
+    <string name="hair3">ros</string>
+    <string name="hair4">Andere</string>
+
+    <string-array name="hair_color">
+        <item>@string/hair0</item>
+        <item>@string/hair1</item>
+        <item>@string/hair2</item>
+        <item>@string/hair3</item>
+        <item>@string/hair4</item>
+    </string-array>
+
+
+    <string name="eye0">Blauw</string>
+    <string name="eye1">Groen</string>
+    <string name="eye2">Bruin</string>
+    <string name="eye3">Grijs</string>
+    <string name="eye4">Andere</string>
+
+    <string-array name="eye_color">
+        <item>@string/eye0</item>
+        <item>@string/eye1</item>
+        <item>@string/eye2</item>
+        <item>@string/eye3</item>
+        <item>@string/eye4</item>
+    </string-array>
+
+    <string-array name="days">
+        <item>@string/day0</item>
+        <item>@string/day1</item>
+        <item>@string/day2</item>
+        <item>@string/day3</item>
+        <item>@string/day4</item>
+        <item>@string/day5</item>
+        <item>@string/day6</item>
+    </string-array>
+    <string name="day0">Maandag</string>
+    <string name="day1">Dinsdag</string>
+    <string name="day2">Woensdag</string>
+    <string name="day3">Donderdag</string>
+    <string name="day4">Vrijdag</string>
+    <string name="day5">Zaterdag</string>
+    <string name="day6">Zondag</string>
+    <string name="genre0">M</string>
+    <string name="genre1">F</string>
+    <string-array name="genre">
+        <item>@string/genre0</item>
+        <item>@string/genre1</item>
+    </string-array>
+    <string name="to">tot</string>
+</resources>
