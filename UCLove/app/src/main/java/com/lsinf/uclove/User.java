@@ -42,7 +42,7 @@ public class User
     public String getPrenom() {return prenom;}
     public void setPrenom(String prenom) {this.prenom = prenom;}
 
-    public int getIdSexe() {try{if(Integer.parseInt(cheveux)>1)return 0; return Integer.parseInt(cheveux);}catch (Exception e){return 0;}}
+    public int getIdSexe() {try{if(Integer.parseInt(sexe)>1)return 0; return Integer.parseInt(sexe);}catch (Exception e){return 0;}}
     public String getSexe(Context ctx){return ctx.getResources().getStringArray(R.array.genre)[getIdSexe()];}
     public void setSexe(String sexe) {this.sexe = sexe;}
 
@@ -51,7 +51,7 @@ public class User
         Log.e("dodormeur","set photo"+photo.length+" "+photo[0]);this.photo = photo;}
 
     public int getIdAttirance() {try{return Integer.parseInt(attirance);}catch (Exception e){return 0;}}
-    public String getAttirance(Context ctx){return ctx.getResources().getStringArray(R.array.genre)[getIdSexe()];}
+    public String getAttirance(Context ctx){return ctx.getResources().getStringArray(R.array.genre)[getIdAttirance()];}
     public void setAttirance(String attirance) {this.attirance = attirance;}
 
     public String getDescription() {return description;}
