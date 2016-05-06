@@ -1,5 +1,69 @@
 <resources>
-<string name="navigation_drawer_open">offen</string>
+    <string name="app_name">UCLove</string>
+
+    <string name="connexion_pseudo">Spitzname</string>
+    <string name="connexion_password">Kennwort</string>
+    <string name="connexion_connect">Verbinden</string>
+    <string name="connexion_register">Registrieren</string>
+
+    <string name="register">Registrieren</string>
+    <string name="register_field_error">Einer der gefüllten felder ist falsch...</string>
+    <string name="register_pseudo_taken">Dieser spitzname ist bereits vergeben</string>
+    <string name="register_done">Registrierung erfolgreich war! Sie können sich jetzt einloggen</string>
+    <string name="update_done">Ihre Änderungen wurden gespeichert</string>
+    <string name="register_name">Name</string>
+    <string name="register_firstname">Vorname</string>
+    <string name="register_sexe">Art</string>
+    <string name="register_naissance">Geburtsdatum</string>
+    <string name="register_mail">E-Mail-Adresse</string>
+    <string name="register_phone">Telefonnummer</string>
+    <string name="register_city">Stadt</string>
+    <string name="register_eyes">Augenfarbe</string>
+
+    <string name="register_hobby">Interessen</string>
+    <string name="register_description">Beschreibung</string>
+    <string name="register_attirance">Affinität</string>
+    <string name="register_langue">Sprache</string>
+    <string name="register_color_hair">Haarfarbe</string>
+    <string name="register_picture">Profilfoto</string>
+    <string name="register_take_picture">Nehmen Sie ein foto</string>
+    <string name="register_choose_picture">Wählen Sie ein foto</string>
+
+    <string name="menu_profil">Profil</string>
+    <string name="menu_preferences">Vorlieben</string>
+    <string name="menu_rencontres">Treffen</string>
+    <string name="menu_amis">Freunde</string>
+    <string name="menu_requetes">Abfragen</string>
+    <string name="menu_name">Ihren namen</string>
+    <string name="menu_pseudo">Ihren spitznamen</string>
+
+    <string name="home_infos_perso">Persönliche Informationen</string>
+    <string name="home_click_to_edit">Unterstützung für die bearbeitung</string>
+    <string name="home_pseudo">Spitzname</string>
+    <string name="home_name">Name</string>
+    <string name="home_firstname">Vorname</string>
+    <string name="home_sexe">Art</string>
+    <string name="home_attirance">Affinität</string>
+    <string name="home_hobby">Hobbys</string>
+    <string name="home_naissance">Geburt</string>
+    <string name="home_ville">Stadt</string>
+    <string name="home_mail">E-Mail-Adresse</string>
+    <string name="home_yeux">Augen</string>
+    <string name="home_cheveux">Haar</string>
+    <string name="home_tel">Telefonnummer</string>
+    <string name="home_description">Beschreibung</string>
+    <string name="home_dispo">Verfügbarkeit</string>
+    <string name="home_langue">Sprache</string>
+
+    <string name="menu_parametre">Einstellungen</string>
+    <string name="menu_ami">Freunde</string>
+    <string name="menu_home">Zuhause</string>
+    <string name="menu_requete">Abfragen</string>
+
+    <string name="error_no_internet">Netzwerkfehler. Stellen Sie sicher, dass Ihre drahtlose Verbindung aktiviert ist</string>
+    <string name="error_internet">Serverfehler. Sicherstellen, dass Ihre Daten korrekt sind</string>
+    <string name="error_no_matching">Kein Benutzer mit Ihren Kriterien. Versuchen Sie einen anderen Filter.</string>
+ <string name="navigation_drawer_open">offen</string>
 <string name="navigation_drawer_close">schließen</string>
 <string name="menu_disconnect">Trennen</string>
 
