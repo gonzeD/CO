@@ -1,0 +1,139 @@
+<resources>
+<string name="navigation_drawer_open">offen</string>
+<string name="navigation_drawer_close">schließen</string>
+<string name="menu_disconnect">Trennen</string>
+
+<string name="friend_forever_alone">Vous n\'avez pas d\'amis... Trouvez en dans l\'onglet rencontres !</string>
+<string name="friend_loading">Freunde werden geladen ...</string>
+<string name="friend_rdv">Termin</string>
+<string name="friend_profile">profil</string>
+
+<string name="request_forever_alone">Sie haben keine Anwendungen für jetzt</string>
+<string name="request_loading">Laden anhängige Anmeldungen ...</string>
+<string name="request_block">Block</string>
+<string name="request_accept">Bestätigen</string>
+
+<string name="setting_langue">Sprache Anzeige</string>
+<string name="setting_apply">Anwenden</string>
+<string name="setting_french">Französisch</string>
+<string name="setting_english">Englisch</string>
+<string name="setting_german">Deutsch</string>
+<string name="setting_dutch">Néerlandais</string>
+<string name="setting_dispo">Verfügbarkeit Termin</string>
+<string name="setting_monday">Montag</string>
+<string name="setting_tuesday">Dienstag</string>
+<string name="setting_wednesday">Mittwoch</string>
+<string name="setting_thursday">Donnerstag</string>
+<string name="setting_friday">Freitag</string>
+<string name="setting_saturday">Samstag</string>
+<string name="setting_sunday">Sonntag</string>
+<string name="setting_de"> &#160;&#032;von&#160;&#032; </string>
+<string name="setting_a"> &#032;&#160;auf&#160;&#032; </string>
+<string name="setting_set_time_begin">Startzeit</string>
+<string name="setting_set_time_end">Endzeit</string>
+
+<string name="setting_init_time">00:00</string>
+
+<string name="filtre_no_filtre">Kein Filter</string>
+<string name="filtre_modify">Veränderung</string>
+<string name="filtre_loading">Loading Filter</string>
+
+<string name="modify_cheveux">haar</string>
+<string name="modify_yeux">augen</string>
+<string name="modify_sexe">art</string>
+<string name="modify_attirance">Affinität</string>
+<string name="modify_reset">alle löschen</string>
+<string name="modify_end">Beenden Sie die Änderung</string>
+<string name="modify_pick_yeux">Was für Augen erlauben ?</string>
+<string name="modify_pick_hair">Welche Haare genehmigen ?</string>
+<string name="modify_pick_genre">Welche Arten genehmigen ?</string>
+<string name="modify_name_filtre">Filtername</string>
+<string name="modify_profile">Profil bearbeiten</string>
+
+<string name="profile_actual_relation">Ihre Beziehung zu dieser Person ist :</string>
+<string name="profile_block">Block</string>
+<string name="profile_unblock">entsperren</string>
+<string name="profile_unfavorite">entfernen (-> Freunde)</string>
+<string name="profile_become_friend">Reagieren Sie positiv auf die Anfrage</string>
+<string name="profile_ask_friend">Fordern Sie Freunde zu werden</string>
+<string name="profile_become_favorite">Zu Favoriten hinzufügen</string>
+
+<string name="profile_default">Default</string>
+
+<string name="rdv_dispo">Verfügbarkeit</string>
+<string name="rdv_prenom">Vorname</string>
+<string name="rdv_monday">Montag</string>
+<string name="rdv_tuesday">Dienstag</string>
+<string name="rdv_wednesday">Mittwoch</string>
+<string name="rdv_thursday">Donnerstag</string>
+<string name="rdv_friday">Freitag</string>
+<string name="rdv_saturday">Samstag</string>
+<string name="rdv_sunday">Sonntag</string>
+<string name="rdv_send_message">Senden Sie eine Nachricht</string>
+<string-array name="profile_relation">
+<item>keine Beziehung</item>
+<item>verstopft</item>
+<item>Sie von Freunden gefragt</item>
+<item>aktuelle Anfrage</item>
+<item>Freunde</item>
+<item>Favoriten</item>
+</string-array>
+
+<string-array name="nameCara">
+<item>Haar</item>
+<item>Augen</item>
+<item>Art</item>
+</string-array>
+
+<string name="hair0">blonde</string>
+<string name="hair1">braun</string>
+<string name="hair2">schwarz</string>
+<string name="hair3">rot</string>
+<string name="hair4">andere</string>
+
+<string-array name="hair_color">
+<item>@string/hair0</item>
+<item>@string/hair1</item>
+<item>@string/hair2</item>
+<item>@string/hair3</item>
+<item>@string/hair4</item>
+</string-array>
+
+<string name="eye0">blau</string>
+<string name="eye1">grün</string>
+<string name="eye2">braun</string>
+<string name="eye3">grau</string>
+<string name="eye4">andere</string>
+
+<string-array name="eye_color">
+<item>@string/eye0</item>
+<item>@string/eye1</item>
+<item>@string/eye2</item>
+<item>@string/eye3</item>
+<item>@string/eye4</item>
+</string-array>
+
+<string-array name="days">
+<item>@string/day0</item>
+<item>@string/day1</item>
+<item>@string/day2</item>
+<item>@string/day3</item>
+<item>@string/day4</item>
+<item>@string/day5</item>
+<item>@string/day6</item>
+</string-array>
+<string name="day0">Montag</string>
+<string name="day1">Dienstag</string>
+<string name="day2">Mittwoch</string>
+<string name="day3">Donnerstag</string>
+<string name="day4">Freitag</string>
+<string name="day5">Samstag</string>
+<string name="day6">Sonntag</string>
+<string name="genre0">M</string>
+<string name="genre1">W</string>
+<string-array name="genre">
+<item>@string/genre0</item>
+<item>@string/genre1</item>
+</string-array>
+<string name="to">auf</string>
+</resources>
