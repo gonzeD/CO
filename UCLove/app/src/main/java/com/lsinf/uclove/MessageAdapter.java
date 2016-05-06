@@ -17,6 +17,7 @@ import java.util.ArrayList;
 
 /**
  * Created by damien on 29/04/16.
+ * Affiche un message spécifique
  */
 public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHolder> {
     private ArrayList<Message> mDataset;

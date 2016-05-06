@@ -34,6 +34,7 @@ import org.json.JSONObject;
 
 /**
  * Created by damien on 23/04/16.
+ * Classe static gérant toutes les connexions au serveur. Etant donné qu'on ne peut faire une requete sur l'UI thread, il faut les lancer depuis une asycTask
  */
 public class DatabaseHelper {
     public static String pseudo = null;
@@ -164,104 +165,6 @@ public class DatabaseHelper {
         } else return "" + NO_INTERNET;
     }
 
-
-
-    /*
-
-        ByteArrayOutputStream stream = new ByteArrayOutputStream();
-            bitmap.compress(Bitmap.CompressFormat.PNG, 90, stream); //compress to which format you want.
-            byte [] byte_arr = stream.toByteArray();
-            String image_str = Base64.encodeBytes(byte_arr);
-            ArrayList<NameValuePair> nameValuePairs = new  ArrayList<NameValuePair>();
-
-            nameValuePairs.add(new BasicNameValuePair("image",image_str));
-
-             Thread t = new Thread(new Runnable() {
-
-            @Override
-            public void run() {
-                  try{
-                         HttpClient httpclient = new DefaultHttpClient();
-                         HttpPost httppost = new HttpPost("server-link/folder-name/upload_image.php");
-                         httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
-                         HttpResponse response = httpclient.execute(httppost);
-                         String the_string_response = convertResponseToString(response);
-                         runOnUiThread(new Runnable() {
-
-                                @Override
-                                public void run() {
-                                    Toast.makeText(UploadImage.this, "Response " + the_string_response, Toast.LENGTH_LONG).show();
-                                }
-                            });
-
-                     }catch(Exception e){
-                          runOnUiThread(new Runnable() {
-
-                            @Override
-                            public void run() {
-                                Toast.makeText(UploadImage.this, "ERROR " + e.getMessage(), Toast.LENGTH_LONG).show();
-                            }
-                        });
-                           System.out.println("Error in http connection "+e.toString());
-                     }
-            }
-        });
-         t.start();
-        }
-
-        public String convertResponseToString(HttpResponse response) throws IllegalStateException, IOException{
-
-             String res = "";
-             StringBuffer buffer = new StringBuffer();
-             inputStream = response.getEntity().getContent();
-             int contentLength = (int) response.getEntity().getContentLength(); //getting content length…..
-              runOnUiThread(new Runnable() {
-
-            @Override
-            public void run() {
-                Toast.makeText(UploadImage.this, "contentLength : " + contentLength, Toast.LENGTH_LONG).show();
-            }
-        });
-
-             if (contentLength < 0){
-             }
-             else{
-                    byte[] data = new byte[512];
-                    int len = 0;
-                    try
-                    {
-                        while (-1 != (len = inputStream.read(data)) )
-                        {
-                            buffer.append(new String(data, 0, len)); //converting to string and appending  to stringbuffer…..
-                        }
-                    }
-                    catch (IOException e)
-                    {
-                        e.printStackTrace();
-                    }
-                    try
-                    {
-                        inputStream.close(); // closing the stream…..
-                    }
-                    catch (IOException e)
-                    {
-                        e.printStackTrace();
-                    }
-                    res = buffer.toString();     // converting stringbuffer to string…..
-
-                    runOnUiThread(new Runnable() {
-
-                    @Override
-                    public void run() {
-                       Toast.makeText(UploadImage.this, "Result : " + res, Toast.LENGTH_LONG).show();
-                    }
-                });
-                    //System.out.println("Response => " +  EntityUtils.toString(response.getEntity()));
-             }
-             return res;
-        }
-}
-     */
 
     public static int register(Context ctx, String... urls) {
         if (checkInternet(ctx)) {

@@ -14,6 +14,7 @@ import java.util.ArrayList;
 
 /**
  * Created by damien on 28/04/16.
+ * affiche tous les messages d'un utilisateur
  */
 public class messageActivity extends baseActivity {
 

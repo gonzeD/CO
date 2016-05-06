@@ -28,6 +28,7 @@ import java.io.InputStream;
 
 /**
  * Created by damien on 13/04/16.
+ * Permet a un utilisateur de s'inscrire
  */
 public class InscriptionActivity extends AppCompatActivity
 {

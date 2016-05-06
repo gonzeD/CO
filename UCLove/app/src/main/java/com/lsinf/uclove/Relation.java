@@ -6,9 +6,9 @@ import java.util.ArrayList;
 
 /**
  * Created by damien on 26/04/16.
+ * gêre les relation de l'utilisateur
  */
 
-//gêre les relation de l'utilisateur
 public class Relation
 {
     public static final int NOTHING = 0;

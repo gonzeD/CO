@@ -11,6 +11,7 @@ import java.util.ArrayList;
 
 /**
  * Created by damien on 29/04/16.
+ * Affiche les données d'un amis
  */
 public class FriendAdapter extends RecyclerView.Adapter<FriendAdapter.ViewHolder> {
     private ArrayList<Friend> mDataset;

@@ -6,6 +6,11 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
 
+/*
+ * Permet de swiper a travers les profils.
+ * Ce code a été trouvé ici : http://stackoverflow.com/questions/4139288/android-how-to-handle-right-to-left-swipe-gestures
+ */
+
 public class OnSwipeTouchListener implements OnTouchListener {
 
     private final GestureDetector gestureDetector;

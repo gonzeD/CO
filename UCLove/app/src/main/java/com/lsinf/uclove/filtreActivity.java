@@ -13,6 +13,7 @@ import java.util.ArrayList;
 
 /**
  * Created by damien on 28/04/16.
+ * Affiche la liste des filtres de l'utilisateur
  */
 public class filtreActivity extends baseActivity {
 

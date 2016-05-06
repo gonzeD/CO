@@ -12,6 +12,10 @@ import android.widget.Toast;
 
 /**
  * Created by damien on 28/04/16.
+ * Affiche le profil de quelqu'un.
+ * arg :    refresh : l'id de la personne a afficher, -1 si il s'agit d'une recherche
+ *          dontdisplay : faut t(il afficher l'icone du swipe
+ *          idfiltre : si il s'agit d'une recherche, quel filtre faut-il utiliser
  */
 public class profilActivity extends baseActivity {
 

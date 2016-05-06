@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 /**
  * Created by damien on 28/04/16.
+ * Permet de voir les disponibilité de l'autre utilisateur, après chargement de ses données
  */
 public class askRdvActivity extends baseActivity {
 

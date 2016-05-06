@@ -17,6 +17,7 @@ import java.util.ArrayList;
 
 /**
  * Created by damien on 29/04/16.
+ * Affiche un filtre en particulier, ainsi que les boutons qui lui sont lié (mais qui appelleront les fonctions de filtreActivity
  */
 public class filtreAdapter extends RecyclerView.Adapter<filtreAdapter.ViewHolder> {
     private ArrayList<String> mDataset;

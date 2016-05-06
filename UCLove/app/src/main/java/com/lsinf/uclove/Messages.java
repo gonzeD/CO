@@ -5,9 +5,9 @@ import java.util.ArrayList;
 
 /**
  * Created by damien on 26/04/16.
+ * Contient et gère la liste des message de l'utilisateur
  */
 
-//Contient la liste des message de l'utilisateur
 
 public class Messages
 {

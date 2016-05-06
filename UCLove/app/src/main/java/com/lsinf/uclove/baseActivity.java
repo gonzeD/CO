@@ -18,7 +18,11 @@ import android.widget.TextView;
 import java.io.InputStream;
 import java.util.ArrayList;
 
-//Activity de base s'occupant du menu principal
+/*
+ * Activity de base s'occupant du menu principal
+ * Toutes les activities utilisant le menu (donc toutes sauf connexion et inscription) doivent hériter de celle ci
+ */
+
 public class baseActivity extends AppCompatActivity
 {
 

@@ -15,6 +15,7 @@ import java.util.ArrayList;
 
 /**
  * Created by damien on 28/04/16.
+ * Permet de modifier le filtre d'un utilisateur
  */
 public class modifyFiltreActivity extends baseActivity {
     ViewGroup root;

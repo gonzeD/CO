@@ -12,6 +12,7 @@ import android.widget.Toast;
 /**
  * Created by damien on 20/04/16.
  * extended by Alban on 27/04/16
+ * Ecran de départ, juste après la connexion. Affiche le profil de l'utilisateur
  */
 public class HomeActivity extends baseActivity
 {

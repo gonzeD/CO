@@ -12,6 +12,7 @@ import java.util.Calendar;
 
 /**
  * Created by henryv96 on 3/05/16.
+ * Permet de selectionner une heure pour les disponibilité de l'utilisateur
  */
 
 public class TimePickerFragment extends DialogFragment

@@ -13,6 +13,7 @@ import java.util.ArrayList;
 
 /**
  * Created by damien on 28/04/16.
+ * Affiche la liste des amis d'un utilisateur
  */
 public class friendsActivity extends baseActivity {
 

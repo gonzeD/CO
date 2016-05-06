@@ -12,6 +12,11 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+
+/*
+ * activity de départ, avec la connexion et l'inscrpition, elle s'occupe également du chargement des données après l'appui sur le bouton connexion
+ */
+
 public class ConnexionActivity extends AppCompatActivity
 {
     private int downloadDone = 0;

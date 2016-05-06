@@ -7,9 +7,9 @@ import java.util.ArrayList;
 
 /**
  * Created by damien on 26/04/16.
+ * Définit un utilisateur.
  */
 
-//Définit un utilisateur.
 
 public class User
 {

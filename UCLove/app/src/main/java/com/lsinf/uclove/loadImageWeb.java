@@ -10,6 +10,7 @@ import java.io.InputStream;
 
 /**
  * Created by damien on 30/04/16.
+ * Permet de charger les photos des utilisateur. Il faut fournir une imageview, ainsi que le nom de l'image.
  */
     public class loadImageWeb extends AsyncTask<String, Void, Bitmap> {
         ImageView bmImage;

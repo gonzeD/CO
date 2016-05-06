@@ -11,6 +11,7 @@ import java.util.ArrayList;
 
 /**
  * Created by damien on 28/04/16.
+ * Affiche les demande d'amis de l'utilisateur
  */
 public class requestActivity extends baseActivity {
 

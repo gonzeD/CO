@@ -22,9 +22,7 @@
         <activity android:name=".messageActivity" android:screenOrientation="portrait"></activity>
         <activity android:name=".modifyFiltreActivity" android:screenOrientation="portrait"></activity>
         <activity android:name=".profilActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name=".receiveRdvActivity" android:screenOrientation="portrait"></activity>
         <activity android:name=".requestActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name=".setDateActivity" android:screenOrientation="portrait"></activity>
         <activity android:name="HomeActivity" android:screenOrientation="portrait"/>
         <activity android:name="SettingsActivity" android:configChanges="locale|orientation" android:screenOrientation="portrait"/>
 

@@ -18,6 +18,7 @@ import java.util.ArrayList;
 
 /**
  * Created by damien on 29/04/16.
+ * Affiche une demande d'ami de l'utilisateur
  */
 public class requestAdapter extends RecyclerView.Adapter<requestAdapter.ViewHolder> {
     private ArrayList<String> name;

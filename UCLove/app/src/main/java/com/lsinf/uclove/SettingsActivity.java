@@ -30,6 +30,7 @@ import android.view.MenuItem;
 
 /**
  * Created by damien on 20/04/16.
+ * Permet de modifier les parametres de l'utilisateur
  */
 public class SettingsActivity extends baseActivity
 {
@@ -79,22 +80,6 @@ public class SettingsActivity extends baseActivity
     public String format(String s)
     {
         return Integer.parseInt(s)/100+":"+Integer.parseInt(s)%100;
-    }
-
-    public void langue(View v)
-    {
-        /*Locale myLocale;
-        if(((RadioButton)findViewById(R.id.language_french)).isChecked())myLocale= new Locale("en");
-        else myLocale= new Locale("fr");
-        Resources res = getResources();
-        DisplayMetrics dm = res.getDisplayMetrics();
-        Configuration conf = res.getConfiguration();
-        conf.locale = myLocale;
-        res.updateConfiguration(conf, dm);
-        Intent refresh = new Intent(this, SettingsActivity.class);
-        startActivity(refresh);
-        finish();*/
-
     }
 
     public void showTimePickerDialog(View v) {
