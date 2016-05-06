@@ -1,3 +1,5 @@
+Le mode d'emploi se trouve dans le rapport.
+
 organisation des fichiers :
 
 UCLove : dossier principal de l'application
