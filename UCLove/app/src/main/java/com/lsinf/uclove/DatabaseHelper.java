@@ -341,8 +341,8 @@ public class DatabaseHelper {
                     if (jObject.has("TEL")) user.setTel(jObject.getString("TEL"));
                     if (jObject.has("VILLE")) user.setVille(jObject.getString("VILLE"));
                     if (jObject.has("SEXE")) user.setSexe(jObject.getString("SEXE"));
+                    if (jObject.has("HOBBY")) user.setHobby(jObject.getString("HOBBY"));
                     if (jObject.has("DISPO")) user.setDisponibilite(jObject.getString("DISPO").split(":"));
-                    else user.setDisponibilite("0000:0000:0000:0000:0000:0000:0000:0000:0000:0000:0000:0000:0000:0000".split(":"));
                     return 1;
                 } else return INTERNET_ERROR;
             } catch (Exception e) {
@@ -528,23 +528,8 @@ public class DatabaseHelper {
         } else return NO_INTERNET;
     }
 
-    public static int reset(Context ctx) {
 
-        Log.e("dodormeur", "reseting");
-        if (checkInternet(ctx)) {
-            try {
-                Log.e("dodormeur", "reseting2");
 
-                String t = downloadUrl("http://dracognards.be/uclove/init.php?mdp=wouldyourmombeproud", null, null, false);
-                Log.e("dodormeur", "doneReseting");
-                Log.e("dodormeur", t);
-            } catch (Exception e) {
-                return INTERNET_ERROR;
-            }
-        }
-        return NO_INTERNET;
-    }
-/*
     public static int setDispo(String time, Context ctx) {
 
         //12:00;18:00;15:00;1800
@@ -569,5 +554,5 @@ public class DatabaseHelper {
 
         } else return NO_INTERNET;
 
-    }*/
+    }
 }

@@ -46,12 +46,12 @@
     <string name="home_sexe">Gender</string>
     <string name="home_attirance">Attraction</string>
     <string name="home_hobby">Hobbies</string>
-    <string name="home_naissance">Birth</string>
+    <string name="home_naissance">Birthday</string>
     <string name="home_ville">City</string>
     <string name="home_mail">Mail</string>
     <string name="home_yeux">Eyes</string>
     <string name="home_cheveux">Hair</string>
-    <string name="home_tel">Phone</string>
+    <string name="home_tel">Phone number</string>
     <string name="home_description">Description</string>
     <string name="home_dispo">Availabilities</string>
     <string name="home_langue">Language</string>
@@ -159,11 +159,11 @@
 
 
 
-    <string name="hair0">blond</string>
-    <string name="hair1">brown</string>
-    <string name="hair2">black</string>
-    <string name="hair3">red</string>
-    <string name="hair4">other</string>
+    <string name="hair0">Blond</string>
+    <string name="hair1">Brown</string>
+    <string name="hair2">Black</string>
+    <string name="hair3">Red</string>
+    <string name="hair4">Other</string>
 
     <string-array name="hair_color">
         <item>@string/hair0</item>
