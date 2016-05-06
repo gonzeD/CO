@@ -1,5 +1,3 @@
-# UCLove
-
 organisation des fichiers :
 
 UCLove : dossier principal de l'application
